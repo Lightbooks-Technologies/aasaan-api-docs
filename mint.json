@@ -50,6 +50,26 @@
   ],
   "navigation": [
     {
+      "group": "Fundamentals",
+      "pages": ["Getting set up"]
+    },
+    {
+      "group": "STOREFRONT",
+      "pages": ["Design", "SEO", "Domain", "Social Media", "About Us", "Store Policies", "Blogs", "QR Code", "Place Order", "Mobile App"]
+    },
+    {
+      "group": "COMMERCE",
+      "pages": ["Brands", "Categories", "Products", "Orders", "Customers", "Store Settings", "Warehouses", "Manage Staff", "Custom Fields", "KYC", "Coupons", "Channels"]
+    },
+    {
+      "group": "APP MARKET",
+      "pages": ["Introduction to the App Market", "Analytics", "Shopping", "Shipping", "Payments", "Verify", "Migration", "Support", "Communication", "Marketing"]
+    },
+    {
+      "group": "ACCOUNT",
+      "pages": ["Manage Account", "How to Subscribe"]
+    },
+    {
       "group": "Get Started",
       "pages": ["introduction", "quickstart", "development"]
     },
