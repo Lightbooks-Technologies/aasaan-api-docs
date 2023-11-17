@@ -1,0 +1,32 @@
+---
+title: "Introduction"
+---
+
+**Introduction**
+
+AASAAN Partner Integration APIs allow you to manage your store completely from a command line. It provides with all the necessary APIs to setup a new store, add new categories, brands, products, modify the store front and much more.
+
+The AASAAN Partner Integration APIs are organized around REST principles. It uses predictable resource-oriented URLs, standard HTTP verbs, and response codes. It also accepts and returns JSON-encoded request and response bodies.
+
+**API Basics**
+
+In order to be able to use these APIs you will need to create a user profile with AASAAN. Once you have created a user profile, you will need to work with us to get the necessary authorization key. This authorization key is needed for every subsequent API calls that you make which needs to be provided via `x-api-key` header.
+
+**HTTPS**
+
+All requests are done via HTTPs. Requests via insecure HTTP are not supported.
+
+## BASE Url
+
+```bash cURL
+https://apiservice.lightbooks-dev.io/api/v1/partner-integrations/stores/{externalStoreId}
+--header 'x-api-key: <your-api-key>'
+```
+
+**Conventions**
+
+The AASAAN Partner API follows RESTful conventions when possible, with most operations performed via GET, POST, PATCH, PUT, and DELETE requests on page and database resources. Request and response bodies are encoded as JSON.
+
+**Usage Policy**
+
+To protect us and our users from abusing, we strongly advise that you optimize your app code to make fewer API requests. Cache whenever possible. We constantly track and monitor the API usage for any anomalies. In case find any anomalies, we will reach out to you.

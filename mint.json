@@ -16,6 +16,10 @@
   },
   "tabs": [
     {
+      "name": "Backend API",
+      "url": "backend-api"
+    },
+    {
       "name": "Partner API",
       "url": "api-reference"
     }
@@ -37,6 +41,7 @@
     }
   ],
   "navigation": [
+
     {
       "group": "Fundamentals",
       "pages": [

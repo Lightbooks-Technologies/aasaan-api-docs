@@ -1,0 +1,3369 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "title": "AASAAN REST API",
+      "version": "1.0.0",
+      "description": "REST API endpoints are organized by resource type. You’ll need to use different endpoints depending on your app’s requirements."
+    },
+    "components": {
+      "securitySchemes": {
+        "apiKeyAuth": {
+          "type": "apiKey",
+          "in": "header",
+          "name": "x-api-key"
+        }
+      },
+      "schemas": {
+        "PaginatedResult": {
+          "type": "object",
+          "properties": {
+            "total": {
+              "type": "number",
+              "description": "Total number of records"
+            },
+            "page": {
+              "type": "number",
+              "description": "Page Number"
+            },
+            "perPage": {
+              "type": "number",
+              "description": "No of records per page"
+            },
+            "results": {
+              "type": "array",
+              "items": {}
+            }
+          }
+        },
+        "Account": {
+          "properties": {
+            "id": {
+              "type": "string",
+              "description": "Unique identifier for the resource",
+              "example": "623d3455ec3c4b3548eb4a322"
+            },
+            "accountName": {
+              "type": "string",
+              "description": "Name of the store",
+              "example": "AB Grocery"
+            },
+            "storeId": {
+              "type": "string",
+              "description": "Unique id of the store",
+              "example": "head_shoulders"
+            },
+            "businessCategory": {
+              "type": "string",
+              "description": "Business category of the store",
+              "example": "grocery"
+            },
+            "country": {
+              "type": "string",
+              "description": "Country code of the store",
+              "example": "IN"
+            },
+            "currency": {
+              "type": "string",
+              "description": "Currency code of the store",
+              "example": "INR"
+            },
+            "active": {
+              "type": "boolean",
+              "description": "Indicates whether the account is active",
+              "example": "true"
+            },
+            "image": {
+              "type": "object",
+              "description": "Store logo image",
+              "properties": {
+                "url": {
+                  "type": "string",
+                  "description": "Image URL",
+                  "example": "https://images.aasaan.app/123412421"
+                }
+              }
+            },
+            "date_created": {
+              "type": "string",
+              "description": "Created date",
+              "example": "2022-03-25T03:17:44.092Z"
+            },
+            "date_modified": {
+              "type": "string",
+              "description": "Modified date",
+              "example": "2022-06-10T07:51:12.510Z"
+            }
+          }
+        },
+        "Category": {
+          "properties": {
+            "id": {
+              "type": "string",
+              "description": "Unique identifier for the resource that was used to create this category",
+              "example": "623d3455ec3c4b3548eb4a322"
+            },
+            "name": {
+              "type": "string",
+              "description": "Name",
+              "example": "Shampoo"
+            },
+            "slug": {
+              "type": "string",
+              "description": "Slug",
+              "example": "shampoo"
+            },
+            "description": {
+              "type": "string",
+              "description": "Shampoos and conditioners",
+              "example": "Hair categories"
+            },
+            "hide": {
+              "type": "string",
+              "description": "Hide a category",
+              "example": false
+            },
+            "displayOrder": {
+              "type": "string",
+              "description": "Display order",
+              "example": 0
+            },
+            "parentCategoryId": {
+              "type": "string",
+              "description": "Parent category id",
+              "example": "6124bc492f3660f743776404"
+            },
+            "image": {
+              "type": "object",
+              "description": "Category image",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "description": "Image identifier",
+                  "example": 0
+                },
+                "url": {
+                  "type": "string",
+                  "description": "Image URL",
+                  "example": "https://images.aasaan.app/123412421"
+                },
+                "type": {
+                  "type": "string",
+                  "description": "Mime Type",
+                  "example": "image/png"
+                }
+              }
+            },
+            "date_created": {
+              "type": "string",
+              "description": "Created date",
+              "example": "2022-03-25T03:17:44.092Z"
+            },
+            "date_modified": {
+              "type": "string",
+              "description": "Modified date",
+              "example": "2022-06-10T07:51:12.510Z"
+            }
+          }
+        },
+        "CategoryBody": {
+          "required": [
+            "name"
+          ],
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "Name",
+              "example": "Shampoo"
+            },
+            "slug": {
+              "type": "string",
+              "description": "Slug",
+              "example": "shampoo"
+            },
+            "description": {
+              "type": "string",
+              "description": "Shampoos and conditioners",
+              "example": "Hair categories"
+            },
+            "hide": {
+              "type": "string",
+              "description": "Hide a category",
+              "example": false
+            },
+            "displayOrder": {
+              "type": "string",
+              "description": "Display order",
+              "example": 0
+            },
+            "parentCategoryId": {
+              "type": "string",
+              "description": "Parent category id",
+              "example": "6124bc492f3660f743776404"
+            },
+            "image": {
+              "type": "object",
+              "description": "Category image",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "description": "Image identifier",
+                  "example": 0
+                },
+                "url": {
+                  "type": "string",
+                  "description": "Image URL",
+                  "example": "https://images.aasaan.app/123412421"
+                },
+                "type": {
+                  "type": "string",
+                  "description": "Mime Type",
+                  "example": "image/png"
+                }
+              }
+            }
+          }
+        },
+        "CategoryBodyWithId": {
+          "required": [
+            "id",
+            "name"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "description": "id",
+              "example": "ae7219"
+            },
+            "name": {
+              "type": "string",
+              "description": "Name",
+              "example": "Shampoo"
+            },
+            "slug": {
+              "type": "string",
+              "description": "Slug",
+              "example": "shampoo"
+            },
+            "description": {
+              "type": "string",
+              "description": "Shampoos and conditioners",
+              "example": "Hair categories"
+            },
+            "hide": {
+              "type": "string",
+              "description": "Hide a category",
+              "example": false
+            },
+            "displayOrder": {
+              "type": "string",
+              "description": "Display order",
+              "example": 0
+            },
+            "parentCategoryId": {
+              "type": "string",
+              "description": "Parent category id",
+              "example": "6124bc492f3660f743776404"
+            },
+            "image": {
+              "type": "object",
+              "description": "Category image",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "description": "Image identifier",
+                  "example": 0
+                },
+                "url": {
+                  "type": "string",
+                  "description": "Image URL",
+                  "example": "https://images.aasaan.app/123412421"
+                },
+                "type": {
+                  "type": "string",
+                  "description": "Mime Type",
+                  "example": "image/png"
+                }
+              }
+            }
+          }
+        },
+        "Brand": {
+          "properties": {
+            "id": {
+              "type": "string",
+              "description": "Unique identifier for the resource",
+              "example": "623d3455ec3c4b3548eb4a322"
+            },
+            "name": {
+              "type": "string",
+              "description": "Name",
+              "example": "Head & Shoulders"
+            },
+            "slug": {
+              "type": "string",
+              "description": "Slug",
+              "example": "head_shoulders"
+            },
+            "description": {
+              "type": "string",
+              "description": "Head & Shoulders brand",
+              "example": "Head & Shoulders"
+            },
+            "hide": {
+              "type": "string",
+              "description": "Hide a brand",
+              "example": false
+            },
+            "displayOrder": {
+              "type": "string",
+              "description": "Display order",
+              "example": 0
+            },
+            "active": {
+              "type": "boolean",
+              "description": "Activate the brand",
+              "example": "true"
+            },
+            "image": {
+              "type": "object",
+              "description": "Brand image",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "description": "Image identifier",
+                  "example": 0
+                },
+                "url": {
+                  "type": "string",
+                  "description": "Image URL",
+                  "example": "https://images.aasaan.app/123412421"
+                },
+                "type": {
+                  "type": "string",
+                  "description": "Mime Type",
+                  "example": "image/png"
+                }
+              }
+            },
+            "date_created": {
+              "type": "string",
+              "description": "Created date",
+              "example": "2022-03-25T03:17:44.092Z"
+            },
+            "date_modified": {
+              "type": "string",
+              "description": "Modified date",
+              "example": "2022-06-10T07:51:12.510Z"
+            }
+          }
+        },
+        "BrandBody": {
+          "required": [
+            "name",
+            "image"
+          ],
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "Name",
+              "example": "Head & Shoulders"
+            },
+            "slug": {
+              "type": "string",
+              "description": "Slug",
+              "example": "head_shoulders"
+            },
+            "description": {
+              "type": "string",
+              "description": "Head & Shoulders brand",
+              "example": "Head & Shoulders"
+            },
+            "hide": {
+              "type": "string",
+              "description": "Hide a brand",
+              "example": false
+            },
+            "displayOrder": {
+              "type": "string",
+              "description": "Display order",
+              "example": 0
+            },
+            "active": {
+              "type": "boolean",
+              "description": "Activate the brand",
+              "example": "true"
+            },
+            "image": {
+              "type": "object",
+              "description": "Brand image",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "description": "Image identifier",
+                  "example": 0
+                },
+                "url": {
+                  "type": "string",
+                  "description": "Image URL",
+                  "example": "https://images.aasaan.app/123412421"
+                },
+                "type": {
+                  "type": "string",
+                  "description": "Mime Type",
+                  "example": "image/png"
+                }
+              }
+            }
+          }
+        },
+        "BrandBodyWithId": {
+          "required": [
+            "id",
+            "name"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "description": "id",
+              "example": "ae7219"
+            },
+            "name": {
+              "type": "string",
+              "description": "Name",
+              "example": "Head & Shoulders"
+            },
+            "slug": {
+              "type": "string",
+              "description": "Slug",
+              "example": "head_shoulders"
+            },
+            "description": {
+              "type": "string",
+              "description": "Head & Shoulders brand",
+              "example": "Head & Shoulders"
+            },
+            "hide": {
+              "type": "string",
+              "description": "Hide a brand",
+              "example": false
+            },
+            "displayOrder": {
+              "type": "string",
+              "description": "Display order",
+              "example": 0
+            },
+            "active": {
+              "type": "boolean",
+              "description": "Activate the brand",
+              "example": "true"
+            },
+            "image": {
+              "type": "object",
+              "description": "Brand image",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "description": "Image identifier",
+                  "example": 0
+                },
+                "url": {
+                  "type": "string",
+                  "description": "Image URL",
+                  "example": "https://images.aasaan.app/123412421"
+                },
+                "type": {
+                  "type": "string",
+                  "description": "Mime Type",
+                  "example": "image/png"
+                }
+              }
+            }
+          }
+        },
+        "Product": {
+          "properties": {
+            "id": {
+              "type": "string",
+              "description": "Unique identifier for the resource",
+              "example": "623d3455ec3c4b3548eb4a343"
+            },
+            "name": {
+              "type": "string",
+              "description": "Name",
+              "example": "Head & Shoulders Anti Hairfall Anti Dandruff Shampoo"
+            },
+            "slug": {
+              "type": "string",
+              "description": "Slug",
+              "example": "head_shoulders_anti_hairfall_anti_dandruff_shampoo_650_ml_22"
+            },
+            "salesPrice": {
+              "type": "string",
+              "description": "Sales price",
+              "example": 543
+            },
+            "regularPrice": {
+              "type": "string",
+              "description": "Actual price",
+              "example": 543
+            },
+            "quantity": {
+              "type": "integer",
+              "description": "Product quantity",
+              "example": 1
+            },
+            "description": {
+              "type": "string",
+              "description": "Product description",
+              "example": "Now, ensure the good health of your hair with Head & Shoulders Anti Hairfall Anti Dandruff Shampoo that strengthens hair from its roots and cures dandruff. Be it dry, frizzy, or damaged, this shampoo can bring back the younger days of your hair within just a few days. The shampoo is richly indulgent and improves the experience of washing your hair. It makes your hair dandruff-free up to 100%. Do not fret over chemicals as the product is gentle in use and can be used every day."
+            },
+            "shortDescription": {
+              "type": "string",
+              "description": "Product short description",
+              "example": "Anti Dandruff Shampoo that strengthens hair from its roots and cures dandruff"
+            },
+            "hide": {
+              "type": "boolean",
+              "description": "Hide this product",
+              "example": false
+            },
+            "active": {
+              "type": "boolean",
+              "description": "Active indicator",
+              "example": true
+            },
+            "outOfStock": {
+              "type": "boolean",
+              "description": "Out of stock product",
+              "example": false
+            },
+            "width": {
+              "type": "integer",
+              "description": "Width(cm)",
+              "example": 100
+            },
+            "height": {
+              "type": "integer",
+              "description": "Height(cm)",
+              "example": 200
+            },
+            "depth": {
+              "type": "integer",
+              "description": "Depth(cm)",
+              "example": 20
+            },
+            "weight": {
+              "type": "integer",
+              "description": "Weight(kg)",
+              "example": 500
+            },
+            "isShippingEnabled": {
+              "type": "boolean",
+              "description": "Enable to enter shipping details",
+              "example": true
+            },
+            "isProductLevelTaxEnabled": {
+              "type": "boolean",
+              "description": "Enable to enter CGST and SGST taxes",
+              "example": true
+            },
+            "tax": {
+              "type": "object",
+              "description": "Tax information for this product",
+              "properties": {
+                "CGST": {
+                  "type": "integer",
+                  "description": "Central Goods and Service tax (%)",
+                  "example": 2
+                },
+                "SGST": {
+                  "type": "integer",
+                  "description": "Stage Goods and Service tax (%)",
+                  "example": 2
+                },
+                "GST": {
+                  "type": "integer",
+                  "description": "Overall Goods and Service tax (%)",
+                  "example": 4
+                }
+              }
+            },
+            "isVariantEnabled": {
+              "type": "boolean",
+              "description": "Enable to enter product variants"
+            },
+            "seo": {
+              "type": "object",
+              "description": "SEO metadata for this product",
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "description": "SEO Title",
+                  "example": "Head and Shoulders"
+                },
+                "description": {
+                  "type": "string",
+                  "description": "SEO Description",
+                  "example": "Head & Shoulders Anti Hairfall Anti Dandruff Shampoo that strengthens hair"
+                },
+                "image": {
+                  "type": "object",
+                  "description": "SEO Image",
+                  "properties": {
+                    "url": {
+                      "type": "string",
+                      "description": "Image URL",
+                      "example": "https://images.aasaan.app/123412421"
+                    },
+                    "type": {
+                      "type": "string",
+                      "description": "Mime Type",
+                      "example": "image/png"
+                    }
+                  }
+                }
+              }
+            },
+            "categories": {
+              "type": "array",
+              "description": "Associated Categories",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "description": "id",
+                    "example": "1231231"
+                  },
+                  "name": {
+                    "type": "string",
+                    "description": "name",
+                    "example": "Shampoos and Soaps"
+                  }
+                }
+              }
+            },
+            "images": {
+              "type": "array",
+              "description": "Product images",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "description": "Image identifier",
+                    "example": 0
+                  },
+                  "url": {
+                    "type": "string",
+                    "description": "Image URL",
+                    "example": "https://images.aasaan.app/123412421"
+                  },
+                  "type": {
+                    "type": "string",
+                    "description": "Mime Type",
+                    "example": "image/png"
+                  }
+                }
+              }
+            },
+            "variantAttributeValues": {
+              "type": "array",
+              "description": "All Possible Variant Attribute Values that this parent product can have",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "Name of the variant attribute",
+                    "example": "color"
+                  },
+                  "value": {
+                    "type": "array",
+                    "description": "List of all possible values that this attribute can have as variants",
+                    "items": {
+                      "type": "string",
+                      "example": "blue, yellow, green"
+                    }
+                  }
+                }
+              }
+            },
+            "brand": {
+              "type": "object",
+              "description": "Brand",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "description": "id",
+                  "example": "636f2e876e9de14bfe1b02fa"
+                },
+                "name": {
+                  "type": "string",
+                  "description": "name",
+                  "example": "P&G"
+                }
+              }
+            },
+            "variants": {
+              "type": "array",
+              "description": "Images",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "description": "Unique identifier for a variant",
+                    "example": "567152378158871683"
+                  },
+                  "name": {
+                    "type": "string",
+                    "description": "Variant name",
+                    "example": "Head & Shoulders Anti Hairfall Anti Dandruff Shampoo 600ml"
+                  },
+                  "salesPrice": {
+                    "type": "string",
+                    "description": "Sales price",
+                    "example": 800
+                  },
+                  "regularPrice": {
+                    "type": "string",
+                    "description": "Actual price",
+                    "example": 800
+                  },
+                  "quantity": {
+                    "type": "integer",
+                    "description": "Variant quantity",
+                    "example": 10
+                  },
+                  "description": {
+                    "type": "string",
+                    "description": "Variant description",
+                    "example": ""
+                  },
+                  "shortDescription": {
+                    "type": "string",
+                    "description": "Variant short description",
+                    "example": ""
+                  },
+                  "hide": {
+                    "type": "boolean",
+                    "description": "Hide this variant",
+                    "example": false
+                  },
+                  "active": {
+                    "type": "boolean",
+                    "description": "Active indicator",
+                    "example": true
+                  },
+                  "outOfStock": {
+                    "type": "boolean",
+                    "description": "Out of stock",
+                    "example": false
+                  },
+                  "width": {
+                    "type": "integer",
+                    "description": "Width(cm)",
+                    "example": 10
+                  },
+                  "height": {
+                    "type": "integer",
+                    "description": "Height(cm)",
+                    "example": 10
+                  },
+                  "depth": {
+                    "type": "integer",
+                    "description": "Depth(cm)",
+                    "example": 10
+                  },
+                  "weight": {
+                    "type": "integer",
+                    "description": "Weight(kg)",
+                    "example": 10
+                  },
+                  "isShippingEnabled": {
+                    "type": "boolean",
+                    "description": "Enable to enter shipping details",
+                    "example": true
+                  },
+                  "isProductLevelTaxEnabled": {
+                    "type": "boolean",
+                    "description": "Enable to enter CGST and SGST taxes",
+                    "example": true
+                  },
+                  "images": {
+                    "type": "array",
+                    "description": "Variant images",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "description": "Image identifier",
+                          "example": 0
+                        },
+                        "url": {
+                          "type": "string",
+                          "description": "Image URL",
+                          "example": "https://images.aasaan.app/123412421"
+                        },
+                        "type": {
+                          "type": "string",
+                          "description": "Mime Type",
+                          "example": "image/png"
+                        }
+                      }
+                    }
+                  },
+                  "date_created": {
+                    "type": "string",
+                    "description": "Created date",
+                    "example": "2022-03-25T03:17:44.092Z"
+                  },
+                  "date_modified": {
+                    "type": "string",
+                    "description": "Modified date",
+                    "example": "2022-06-10T07:51:12.510Z"
+                  }
+                }
+              }
+            },
+            "date_created": {
+              "type": "string",
+              "description": "Created date",
+              "example": "2022-03-25T03:17:44.092Z"
+            },
+            "date_modified": {
+              "type": "string",
+              "description": "Modified date",
+              "example": "2022-06-10T07:51:12.510Z"
+            }
+          }
+        },
+        "ProductBody": {
+          "required": [
+            "name",
+            "salesPrice",
+            "regularPrice",
+            "quantity",
+            "weight",
+            "sku",
+            "categories"
+          ],
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "Name",
+              "example": "Head & Shoulders Anti Hairfall Anti Dandruff Shampoo"
+            },
+            "salesPrice": {
+              "type": "string",
+              "description": "Sales price",
+              "example": 543
+            },
+            "regularPrice": {
+              "type": "string",
+              "description": "Actual price",
+              "example": 543
+            },
+            "quantity": {
+              "type": "integer",
+              "description": "Product quantity",
+              "example": 1
+            },
+            "description": {
+              "type": "string",
+              "description": "Product description",
+              "example": "Now, ensure the good health of your hair with Head & Shoulders Anti Hairfall Anti Dandruff Shampoo that strengthens hair from its roots and cures dandruff. Be it dry, frizzy, or damaged, this shampoo can bring back the younger days of your hair within just a few days. The shampoo is richly indulgent and improves the experience of washing your hair. It makes your hair dandruff-free up to 100%. Do not fret over chemicals as the product is gentle in use and can be used every day."
+            },
+            "shortDescription": {
+              "type": "string",
+              "description": "Product short description",
+              "example": "Anti Dandruff Shampoo that strengthens hair from its roots and cures dandruff"
+            },
+            "hide": {
+              "type": "boolean",
+              "description": "Hide this product",
+              "example": false
+            },
+            "active": {
+              "type": "boolean",
+              "description": "Active indicator",
+              "example": true
+            },
+            "outOfStock": {
+              "type": "boolean",
+              "description": "Out of stock product",
+              "example": false
+            },
+            "width": {
+              "type": "integer",
+              "description": "Width(cm)",
+              "example": 100
+            },
+            "height": {
+              "type": "integer",
+              "description": "Height(cm)",
+              "example": 200
+            },
+            "depth": {
+              "type": "integer",
+              "description": "Depth(cm)",
+              "example": 20
+            },
+            "weight": {
+              "type": "integer",
+              "description": "Weight(kg)",
+              "example": 500
+            },
+            "isShippingEnabled": {
+              "type": "boolean",
+              "description": "Enable to enter shipping details",
+              "example": true
+            },
+            "isProductLevelTaxEnabled": {
+              "type": "boolean",
+              "description": "Enable to enter CGST and SGST taxes",
+              "example": true
+            },
+            "displayOrder": {
+              "type": "integer",
+              "description": "Product display order",
+              "example": 1
+            },
+            "tax": {
+              "type": "object",
+              "description": "Tax information for this product",
+              "properties": {
+                "CGST": {
+                  "type": "integer",
+                  "description": "Central Goods and Service tax (%)",
+                  "example": 2
+                },
+                "SGST": {
+                  "type": "integer",
+                  "description": "Stage Goods and Service tax (%)",
+                  "example": 2
+                },
+                "GST": {
+                  "type": "integer",
+                  "description": "Overall Goods and Service tax (%)",
+                  "example": 4
+                }
+              }
+            },
+            "seo": {
+              "type": "object",
+              "description": "SEO metadata for this product",
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "description": "SEO Title",
+                  "example": "Head and Shoulders"
+                },
+                "description": {
+                  "type": "string",
+                  "description": "SEO Description",
+                  "example": "Head & Shoulders Anti Hairfall Anti Dandruff Shampoo that strengthens hair"
+                },
+                "image": {
+                  "type": "object",
+                  "description": "SEO Image",
+                  "properties": {
+                    "url": {
+                      "type": "string",
+                      "description": "Image URL",
+                      "example": "https://images.aasaan.app/123412421"
+                    },
+                    "type": {
+                      "type": "string",
+                      "description": "Mime Type",
+                      "example": "image/png"
+                    }
+                  }
+                }
+              }
+            },
+            "variantAttributeValues": {
+              "type": "array",
+              "description": "All Possible Variant Attribute Values that this parent product can have",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "Name of the variant attribute",
+                    "example": "color"
+                  },
+                  "value": {
+                    "type": "array",
+                    "description": "List of all possible values that this attribute can have as variants",
+                    "items": {
+                      "type": "string",
+                      "example": "blue, yellow, green"
+                    }
+                  }
+                }
+              }
+            },
+            "prices": {
+              "type": "array",
+              "description": "Price Information across various channels",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "channelId": {
+                    "type": "string",
+                    "description": "ID of the channel for which price is being specified",
+                    "example": "636f2e876e9de14bfe1b02f1"
+                  },
+                  "salesPrice": {
+                    "type": "string",
+                    "description": "Current Selling Price",
+                    "example": "45"
+                  },
+                  "regularPrice": {
+                    "type": "string",
+                    "description": "Actual Price - should be greater than on equal to salesPrice",
+                    "example": "50"
+                  }
+                }
+              }
+            },
+            "quantities": {
+              "type": "array",
+              "description": "Quantity Information across various warehouses",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "warehouseId": {
+                    "type": "string",
+                    "description": "ID of the warehouse for which quantity needs to be specified",
+                    "example": "636f2e876e9de14bfe1b02f1"
+                  },
+                  "quantity": {
+                    "type": "string",
+                    "description": "Integer value representing the current available quantity in this warehouse for this product",
+                    "example": "45"
+                  }
+                }
+              }
+            },
+            "categories": {
+              "type": "array",
+              "description": "Associated Categories",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "description": "id",
+                    "example": "636f2e876e9de14bfe1b02f1"
+                  }
+                }
+              }
+            },
+            "images": {
+              "type": "array",
+              "description": "Product images",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "description": "Image identifier",
+                    "example": 0
+                  },
+                  "url": {
+                    "type": "string",
+                    "description": "Image URL",
+                    "example": "https://images.aasaan.app/123412421"
+                  },
+                  "type": {
+                    "type": "string",
+                    "description": "Mime Type",
+                    "example": "https://images.aasaan.app/123412421"
+                  }
+                }
+              }
+            },
+            "brand": {
+              "type": "object",
+              "description": "Brand",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "description": "id",
+                  "example": "636f2e876e9de14bfe1b02f2"
+                }
+              }
+            }
+          }
+        },
+        "ProductBodyWithId": {
+          "required": [
+            "id",
+            "name",
+            "salesPrice",
+            "regularPrice",
+            "quantity",
+            "weight",
+            "categories"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "description": "id",
+              "example": "ae7219"
+            },
+            "name": {
+              "type": "string",
+              "description": "Name",
+              "example": "Head & Shoulders Anti Hairfall Anti Dandruff Shampoo"
+            },
+            "salesPrice": {
+              "type": "string",
+              "description": "Sales price",
+              "example": 543
+            },
+            "regularPrice": {
+              "type": "string",
+              "description": "Actual price",
+              "example": 543
+            },
+            "quantity": {
+              "type": "integer",
+              "description": "Product quantity",
+              "example": 100
+            },
+            "weight": {
+              "type": "integer",
+              "description": "Weight(kg)",
+              "example": 2
+            },
+            "categoryInformation": {
+              "type": "array",
+              "description": "Associated Categories",
+              "items": {
+                "type": "string",
+                "description": "The id of the category that's associated",
+                "example": "breakfast menu"
+              }
+            },
+            "tagInformation": {
+              "type": "array",
+              "description": "Associated tags",
+              "items": {
+                "type": "string",
+                "description": "The id of the tag that needs to be associated with this product",
+                "example": "vegan"
+              }
+            },
+            "description": {
+              "type": "string",
+              "description": "Product description",
+              "example": "Now, ensure the good health of your hair with Head & Shoulders Anti Hairfall Anti Dandruff Shampoo that strengthens hair from its roots and cures dandruff. Be it dry, frizzy, or damaged, this shampoo can bring back the younger days of your hair within just a few days. The shampoo is richly indulgent and improves the experience of washing your hair. It makes your hair dandruff-free up to 100%. Do not fret over chemicals as the product is gentle in use and can be used every day."
+            },
+            "shortDescription": {
+              "type": "string",
+              "description": "Product short description",
+              "example": "Anti Dandruff Shampoo that strengthens hair from its roots and cures dandruff"
+            },
+            "hide": {
+              "type": "boolean",
+              "description": "Hide this product",
+              "example": false
+            },
+            "active": {
+              "type": "boolean",
+              "description": "Active indicator",
+              "example": true
+            },
+            "outOfStock": {
+              "type": "boolean",
+              "description": "Out of stock product",
+              "example": false
+            },
+            "displayOrder": {
+              "type": "integer",
+              "description": "Display Order within the category",
+              "example": 1
+            },
+            "width": {
+              "type": "integer",
+              "description": "Width(cm)",
+              "example": 100
+            },
+            "height": {
+              "type": "integer",
+              "description": "Height(cm)",
+              "example": 200
+            },
+            "depth": {
+              "type": "integer",
+              "description": "Depth(cm)",
+              "example": 20
+            },
+            "isShippingEnabled": {
+              "type": "boolean",
+              "description": "Enable to enter shipping details",
+              "example": true
+            },
+            "seo": {
+              "type": "object",
+              "description": "SEO metadata for this product",
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "description": "SEO Title",
+                  "example": "Head and Shoulders"
+                },
+                "description": {
+                  "type": "string",
+                  "description": "SEO Description",
+                  "example": "Head & Shoulders Anti Hairfall Anti Dandruff Shampoo that strengthens hair"
+                },
+                "image": {
+                  "type": "object",
+                  "description": "SEO Image",
+                  "properties": {
+                    "url": {
+                      "type": "string",
+                      "description": "Image URL",
+                      "example": "https://images.aasaan.app/123412421"
+                    },
+                    "type": {
+                      "type": "string",
+                      "description": "Mime Type",
+                      "example": "image/png"
+                    }
+                  }
+                }
+              }
+            },
+            "images": {
+              "type": "array",
+              "description": "Product images",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "description": "Image identifier",
+                    "example": 0
+                  },
+                  "url": {
+                    "type": "string",
+                    "description": "Image URL",
+                    "example": "https://images.aasaan.app/123412421"
+                  },
+                  "type": {
+                    "type": "string",
+                    "description": "Mime Type",
+                    "example": "https://images.aasaan.app/123412421"
+                  }
+                }
+              }
+            },
+            "brandInformation": {
+              "type": "string",
+              "description": "Brand",
+              "example": "Nike"
+            },
+            "metaData": {
+              "type": "object",
+              "description": "Any additional meta data that needs to be stored as a part of this entity"
+            },
+            "variantAttributeValues": {
+              "type": "array",
+              "description": "All Possible Variant Attribute Values that this parent product can have",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "Name of the variant attribute",
+                    "example": "color"
+                  },
+                  "value": {
+                    "type": "array",
+                    "description": "List of all possible values that this attribute can have as variants",
+                    "items": {
+                      "type": "string",
+                      "example": "blue, yellow, green"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "Variant": {
+          "properties": {
+            "id": {
+              "type": "string",
+              "description": "Unique identifier for the resource",
+              "example": "623d3455ec3c4b3548eb4a343"
+            },
+            "names": {
+              "type": "array",
+              "description": "Name",
+              "example": "XL, Brown"
+            },
+            "slug": {
+              "type": "string",
+              "description": "Slug",
+              "example": "head_shoulders_anti_hairfall_anti_dandruff_shampoo_650_ml_22"
+            },
+            "salesPrice": {
+              "type": "string",
+              "description": "Sales price",
+              "example": 543
+            },
+            "regularPrice": {
+              "type": "string",
+              "description": "Actual price",
+              "example": 543
+            },
+            "quantity": {
+              "type": "integer",
+              "description": "Product quantity",
+              "example": 1
+            },
+            "description": {
+              "type": "string",
+              "description": "Product description",
+              "example": "Now, ensure the good health of your hair with Head & Shoulders Anti Hairfall Anti Dandruff Shampoo that strengthens hair from its roots and cures dandruff. Be it dry, frizzy, or damaged, this shampoo can bring back the younger days of your hair within just a few days. The shampoo is richly indulgent and improves the experience of washing your hair. It makes your hair dandruff-free up to 100%. Do not fret over chemicals as the product is gentle in use and can be used every day."
+            },
+            "shortDescription": {
+              "type": "string",
+              "description": "Product short description",
+              "example": "Anti Dandruff Shampoo that strengthens hair from its roots and cures dandruff"
+            },
+            "hide": {
+              "type": "boolean",
+              "description": "Hide this product",
+              "example": false
+            },
+            "active": {
+              "type": "boolean",
+              "description": "Active indicator",
+              "example": true
+            },
+            "outOfStock": {
+              "type": "boolean",
+              "description": "Out of stock product",
+              "example": false
+            },
+            "width": {
+              "type": "integer",
+              "description": "Width(cm)",
+              "example": 100
+            },
+            "height": {
+              "type": "integer",
+              "description": "Height(cm)",
+              "example": 200
+            },
+            "depth": {
+              "type": "integer",
+              "description": "Depth(cm)",
+              "example": 20
+            },
+            "weight": {
+              "type": "integer",
+              "description": "Weight(kg)",
+              "example": 500
+            },
+            "isShippingEnabled": {
+              "type": "boolean",
+              "description": "Enable to enter shipping details",
+              "example": true
+            },
+            "seo": {
+              "type": "object",
+              "description": "SEO metadata for this product",
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "description": "SEO Title",
+                  "example": "Head and Shoulders"
+                },
+                "description": {
+                  "type": "string",
+                  "description": "SEO Description",
+                  "example": "Head & Shoulders Anti Hairfall Anti Dandruff Shampoo that strengthens hair"
+                },
+                "image": {
+                  "type": "object",
+                  "description": "SEO Image",
+                  "properties": {
+                    "url": {
+                      "type": "string",
+                      "description": "Image URL",
+                      "example": "https://images.aasaan.app/123412421"
+                    },
+                    "type": {
+                      "type": "string",
+                      "description": "Mime Type",
+                      "example": "image/png"
+                    }
+                  }
+                }
+              }
+            },
+            "images": {
+              "type": "array",
+              "description": "Product images",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "description": "Image identifier",
+                    "example": 0
+                  },
+                  "url": {
+                    "type": "string",
+                    "description": "Image URL",
+                    "example": "https://images.aasaan.app/123412421"
+                  },
+                  "type": {
+                    "type": "string",
+                    "description": "Mime Type",
+                    "example": "image/png"
+                  }
+                }
+              }
+            },
+            "date_created": {
+              "type": "string",
+              "description": "Created date",
+              "example": "2022-03-25T03:17:44.092Z"
+            },
+            "date_modified": {
+              "type": "string",
+              "description": "Modified date",
+              "example": "2022-06-10T07:51:12.510Z"
+            }
+          }
+        },
+        "VariantBody": {
+          "required": [
+            "salesPrice",
+            "regularPrice",
+            "quantity",
+            "weight",
+            "variantAttributeValues"
+          ],
+          "properties": {
+            "salesPrice": {
+              "type": "string",
+              "description": "Sales price",
+              "example": 543
+            },
+            "regularPrice": {
+              "type": "string",
+              "description": "Actual price",
+              "example": 543
+            },
+            "quantity": {
+              "type": "integer",
+              "description": "Product quantity",
+              "example": 1
+            },
+            "variantAttributeValues": {
+              "type": "array",
+              "description": "attributes and corresponding options",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "attribute name",
+                    "example": "color"
+                  },
+                  "value": {
+                    "type": "string",
+                    "description": "attribute option value",
+                    "example": "brown"
+                  }
+                }
+              }
+            },
+            "description": {
+              "type": "string",
+              "description": "Product description",
+              "example": "Now, ensure the good health of your hair with Head & Shoulders Anti Hairfall Anti Dandruff Shampoo that strengthens hair from its roots and cures dandruff. Be it dry, frizzy, or damaged, this shampoo can bring back the younger days of your hair within just a few days. The shampoo is richly indulgent and improves the experience of washing your hair. It makes your hair dandruff-free up to 100%. Do not fret over chemicals as the product is gentle in use and can be used every day."
+            },
+            "shortDescription": {
+              "type": "string",
+              "description": "Product short description",
+              "example": "Anti Dandruff Shampoo that strengthens hair from its roots and cures dandruff"
+            },
+            "active": {
+              "type": "boolean",
+              "description": "Active indicator",
+              "example": true
+            },
+            "outOfStock": {
+              "type": "boolean",
+              "description": "Out of stock product",
+              "example": false
+            },
+            "width": {
+              "type": "integer",
+              "description": "Width(cm)",
+              "example": 100
+            },
+            "height": {
+              "type": "integer",
+              "description": "Height(cm)",
+              "example": 200
+            },
+            "depth": {
+              "type": "integer",
+              "description": "Depth(cm)",
+              "example": 20
+            },
+            "weight": {
+              "type": "integer",
+              "description": "Weight(kg)",
+              "example": 500
+            },
+            "isShippingEnabled": {
+              "type": "boolean",
+              "description": "Enable to enter shipping details",
+              "example": true
+            },
+            "seo": {
+              "type": "object",
+              "description": "SEO metadata for this product",
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "description": "SEO Title",
+                  "example": "Head and Shoulders"
+                },
+                "description": {
+                  "type": "string",
+                  "description": "SEO Description",
+                  "example": "Head & Shoulders Anti Hairfall Anti Dandruff Shampoo that strengthens hair"
+                },
+                "image": {
+                  "type": "object",
+                  "description": "SEO Image",
+                  "properties": {
+                    "url": {
+                      "type": "string",
+                      "description": "Image URL",
+                      "example": "https://images.aasaan.app/123412421"
+                    },
+                    "type": {
+                      "type": "string",
+                      "description": "Mime Type",
+                      "example": "image/png"
+                    }
+                  }
+                }
+              }
+            },
+            "images": {
+              "type": "array",
+              "description": "Product images",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "description": "Image identifier",
+                    "example": 0
+                  },
+                  "url": {
+                    "type": "string",
+                    "description": "Image URL",
+                    "example": "https://images.aasaan.app/123412421"
+                  },
+                  "type": {
+                    "type": "string",
+                    "description": "Mime Type",
+                    "example": "https://images.aasaan.app/123412421"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "Order": {
+          "properties": {
+            "id": {
+              "type": "string",
+              "description": "The Order Object ID.",
+              "example": "623d3455ec3c4b3548eb4a349"
+            },
+            "reference": {
+              "type": "string",
+              "description": "The Order reference number.",
+              "example": null
+            },
+            "number": {
+              "type": "string",
+              "description": "The Order number.",
+              "example": 1234
+            },
+            "discount": {
+              "type": "string",
+              "description": "The total discount for given order.",
+              "example": 120
+            },
+            "tax": {
+              "type": "string",
+              "description": "The total tax for given order.",
+              "example": 100
+            },
+            "total": {
+              "type": "string",
+              "description": "The order total amount.",
+              "example": 1200
+            },
+            "subtotal": {
+              "type": "string",
+              "description": "The order subtotal amount.",
+              "example": 100
+            },
+            "date": {
+              "type": "string",
+              "description": "The order created date.",
+              "example": "2022-06-10T07:51:12.510Z"
+            },
+            "date_created": {
+              "type": "string",
+              "description": "Created date",
+              "example": "2022-03-25T03:17:44.092Z"
+            },
+            "date_modified": {
+              "type": "string",
+              "description": "Modified date",
+              "example": "2022-06-10T07:51:12.510Z"
+            },
+            "orderStatus": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "type": "string",
+                  "description": "Order Status.",
+                  "example": "New Order"
+                },
+                "date": {
+                  "type": "string",
+                  "description": "Order Status date",
+                  "example": "2022-06-10T07:51:12.510Z"
+                }
+              }
+            },
+            "products": {
+              "type": "object",
+              "description": "The ordered products",
+              "properties": {
+                "productId": {
+                  "type": "string",
+                  "description": "Ordered product Id.",
+                  "example": 1234
+                },
+                "variantId": {
+                  "type": "string",
+                  "description": "Ordered variant Id.",
+                  "example": 1234
+                },
+                "name": {
+                  "type": "string",
+                  "description": "Ordered product name.",
+                  "example": "Test"
+                },
+                "sku": {
+                  "type": "string",
+                  "description": "Ordered product sku.",
+                  "example": 1234
+                },
+                "price": {
+                  "type": "integer",
+                  "description": "Ordered product price.",
+                  "example": 120
+                },
+                "CGST": {
+                  "type": "integer",
+                  "description": "Ordered product cgst.",
+                  "example": 120
+                },
+                "SGST": {
+                  "type": "integer",
+                  "description": "Ordered product sgst",
+                  "example": 100
+                },
+                "total": {
+                  "type": "string",
+                  "description": "Ordered product total price.",
+                  "example": 124
+                },
+                "quantity": {
+                  "type": "integer",
+                  "description": "Ordered product quantity.",
+                  "example": 4
+                }
+              }
+            },
+            "shipping": {
+              "type": "object",
+              "description": "The shipping details for given order",
+              "properties": {
+                "firstName": {
+                  "type": "string",
+                  "description": "Customer first name",
+                  "example": "John"
+                },
+                "lastName": {
+                  "type": "string",
+                  "description": "Customer last name",
+                  "example": "mathews"
+                },
+                "trackingId": {
+                  "type": "string",
+                  "description": "Shipping tracking id",
+                  "example": 123456
+                },
+                "carrier": {
+                  "type": "string",
+                  "description": "Shipping carrier",
+                  "example": "pickrr"
+                },
+                "weight": {
+                  "type": "string",
+                  "description": "Shipping weight",
+                  "example": 10
+                },
+                "fee": {
+                  "type": "string",
+                  "description": "Shipping fees",
+                  "example": 100
+                },
+                "date": {
+                  "type": "string",
+                  "description": "Shipping created date",
+                  "example": "2022-06-10T07:51:12.510Z"
+                },
+                "mobileNumber": {
+                  "type": "string",
+                  "description": "Customer mobile number",
+                  "example": 9949891734
+                },
+                "countryCode": {
+                  "type": "string",
+                  "description": "Shipping country code",
+                  "example": "IN"
+                },
+                "email": {
+                  "type": "string",
+                  "description": "Customer email",
+                  "example": "john@gmail.com"
+                },
+                "address": {
+                  "type": "object",
+                  "description": "Shipping address",
+                  "properties": {
+                    "line1": {
+                      "type": "string",
+                      "description": "Address line 1.",
+                      "example": "7-52/1"
+                    },
+                    "line2": {
+                      "type": "string",
+                      "description": "Address line 2.",
+                      "example": "ram nagar"
+                    },
+                    "city": {
+                      "type": "string",
+                      "description": "City name.",
+                      "example": "Hyderabad"
+                    },
+                    "zipcode": {
+                      "type": "string",
+                      "description": "Zip code.",
+                      "example": 500098
+                    },
+                    "state": {
+                      "type": "string",
+                      "description": "State name.",
+                      "example": "Telangana"
+                    },
+                    "country": {
+                      "type": "string",
+                      "description": "Country name.",
+                      "example": "India"
+                    },
+                    "email": {
+                      "type": "string",
+                      "description": "email address.",
+                      "example": "john@lightbooks"
+                    }
+                  }
+                }
+              }
+            },
+            "payment": {
+              "type": "object",
+              "description": "The payment details for given order",
+              "properties": {
+                "transactionId": {
+                  "type": "string",
+                  "description": "Payment transactionId.",
+                  "example": 123456
+                },
+                "amount": {
+                  "type": "string",
+                  "description": "Payment amount.",
+                  "example": 123
+                },
+                "currency": {
+                  "type": "string",
+                  "description": "Payment currency.",
+                  "example": "INR"
+                },
+                "method": {
+                  "type": "string",
+                  "description": "Payment method.",
+                  "example": "pre-paid"
+                },
+                "date": {
+                  "type": "string",
+                  "description": "Payment created date.",
+                  "example": "2022-06-10T07:51:12.510Z"
+                },
+                "status": {
+                  "type": "string",
+                  "description": "Payment status.",
+                  "example": "success"
+                },
+                "statusReason": {
+                  "type": "string",
+                  "description": "Payment status reason.",
+                  "example": "Transaction failed due to network error"
+                }
+              }
+            }
+          }
+        },
+        "OrderStatus": {
+          "required": [
+            "status"
+          ],
+          "properties": {
+            "status": {
+              "type": "string",
+              "description": "Order Status",
+              "example": "'ORDER_PLACED', 'ACCEPTED', 'SHIPPED', 'UNSHIPPED', 'SENT'"
+            }
+          }
+        },
+        "Channel": {
+          "properties": {
+            "id": {
+              "type": "string",
+              "description": "The Channel Object ID.",
+              "example": "623d3455ec3c4b3548eb4a349"
+            },
+            "default": {
+              "type": "boolean",
+              "description": "Default indicator.",
+              "example": true
+            },
+            "active": {
+              "type": "boolean",
+              "description": "Active indicator.",
+              "example": true
+            },
+            "name": {
+              "type": "string",
+              "description": "Name of the channel.",
+              "example": "US"
+            },
+            "currency": {
+              "type": "string",
+              "description": "Channel currency.",
+              "example": "USD"
+            },
+            "country": {
+              "type": "string",
+              "description": "Channel country.",
+              "example": "US"
+            },
+            "slug": {
+              "type": "string",
+              "description": "Channel slug which appears in the website url.",
+              "example": "us"
+            },
+            "currencySymbol": {
+              "type": "string",
+              "description": "Symbol of the channel currency.",
+              "example": "$"
+            },
+            "date_created": {
+              "type": "string",
+              "description": "Created date",
+              "example": "2022-03-25T03:17:44.092Z"
+            }
+          }
+        }
+      }
+    },
+    "servers": [
+      {
+        "url": "https://api.lightnote.in/api/v1/stores",
+        "description": "Development server"
+      }
+    ],
+    "paths": {
+      "/": {
+        "get": {
+          "summary": "Get Store Account Information",
+          "tags": [
+            "Store"
+          ],
+          "description": "Get Store Account Information",
+          "security": [
+            {
+              "apiKeyAuth": []
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Store Retrieved.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Account"
+                  }
+                }
+              }
+            },
+            "403": {
+              "description": "Invalid Api Key"
+            },
+            "422": {
+              "description": "Data error"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        }
+      },
+      "/categories": {
+        "post": {
+          "summary": "Create a new category.",
+          "tags": [
+            "Category"
+          ],
+          "description": "Create a new category.",
+          "security": [
+            {
+              "apiKeyAuth": []
+            }
+          ],
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/CategoryBody"
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": "Category created.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Category"
+                  }
+                }
+              }
+            },
+            "403": {
+              "description": "Invalid Api Key"
+            },
+            "422": {
+              "description": "Data error"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        },
+        "get": {
+          "summary": "Get all categories.",
+          "tags": [
+            "Category"
+          ],
+          "description": "Get all categories.",
+          "security": [
+            {
+              "apiKeyAuth": []
+            }
+          ],
+          "parameters": [
+            {
+              "in": "query",
+              "name": "page",
+              "schema": {
+                "type": "number",
+                "description": "Current Page"
+              }
+            },
+            {
+              "in": "query",
+              "name": "perPage",
+              "schema": {
+                "type": "integer",
+                "description": "Number of categories per page"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "A list of all categories.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/PaginatedResult"
+                  }
+                }
+              }
+            },
+            "403": {
+              "description": "Invalid Api Key."
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        }
+      },
+      "/categories/{categoryId}": {
+        "patch": {
+          "summary": "Update a category.",
+          "tags": [
+            "Category"
+          ],
+          "description": "Update a category.",
+          "security": [
+            {
+              "apiKeyAuth": []
+            }
+          ],
+          "parameters": [
+            {
+              "name": "categoryId",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "description": "Category Id"
+              }
+            }
+          ],
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/CategoryBody"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Category updated.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Category"
+                  }
+                }
+              }
+            },
+            "403": {
+              "description": "Invalid Api Key"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        },
+        "get": {
+          "summary": "Get a category by Id.",
+          "tags": [
+            "Category"
+          ],
+          "description": "Returns a category.",
+          "security": [
+            {
+              "apiKeyAuth": []
+            }
+          ],
+          "parameters": [
+            {
+              "name": "categoryId",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "description": "Category Id"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Returns a category.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Category"
+                  }
+                }
+              }
+            },
+            "403": {
+              "description": "Invalid Api Key."
+            },
+            "404": {
+              "description": "Category not found."
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        },
+        "put": {
+          "summary": "Put a category.",
+          "tags": [
+            "Category"
+          ],
+          "description": "Create or Update a category.",
+          "parameters": [
+            {
+              "name": "categoryId",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "description": "Category Id"
+              }
+            }
+          ],
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/CategoryBody"
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": "Category created.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Category"
+                  }
+                }
+              }
+            },
+            "403": {
+              "description": "Invalid Api Key"
+            },
+            "422": {
+              "description": "Data error"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        },
+        "delete": {
+          "summary": "Delete a Category.",
+          "tags": [
+            "Category"
+          ],
+          "description": "Delete a Category.",
+          "parameters": [
+            {
+              "name": "categoryId",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "description": "Category id"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "A string response noting whether the category was deleted or not.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "403": {
+              "description": "Invalid Api Key"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        }
+      },
+      "/categories/": {
+        "put": {
+          "summary": "Put multiple categories",
+          "tags": [
+            "Category"
+          ],
+          "description": "Create or Update multiple categories'",
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "$ref": "#/components/schemas/CategoryBodyWithId"
+                  }
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": "Categories created or updated in the category array, errors for those categories that couldn't be updated or created.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "categories": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "$ref": "#/components/schemas/Category"
+                        }
+                      },
+                      "errors": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "example": "Category with CategoryId - category-id-1 is missing name"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "403": {
+              "description": "Invalid Api Key"
+            },
+            "422": {
+              "description": "Data error"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        }
+      },
+      "/brands": {
+        "post": {
+          "summary": "Create a new brand.",
+          "tags": [
+            "Brand"
+          ],
+          "description": "Create a new brand.",
+          "security": [
+            {
+              "apiKeyAuth": []
+            }
+          ],
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/BrandBody"
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": "Brand created.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Brand"
+                  }
+                }
+              }
+            },
+            "403": {
+              "description": "Invalid Api Key"
+            },
+            "422": {
+              "description": "Data error"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        },
+        "get": {
+          "summary": "Get all brands.",
+          "tags": [
+            "Brand"
+          ],
+          "description": "Get all brands.",
+          "security": [
+            {
+              "apiKeyAuth": []
+            }
+          ],
+          "parameters": [
+            {
+              "in": "query",
+              "name": "page",
+              "schema": {
+                "type": "number",
+                "description": "Current Page"
+              }
+            },
+            {
+              "in": "query",
+              "name": "perPage",
+              "schema": {
+                "type": "integer",
+                "description": "Number of brands per page"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "A list of all brands.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/PaginatedResult"
+                  }
+                }
+              }
+            },
+            "403": {
+              "description": "Invalid Api Key."
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        },
+        "put": {
+          "summary": "Put a multiple brands",
+          "tags": [
+            "Brand"
+          ],
+          "description": "Create or update multiple brand",
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "$ref": "#/components/schemas/BrandBodyWithId"
+                  }
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": "Brands created or update in an array and an array with errors for those brands which couldn't be updated.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "brands": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "$ref": "#/components/schemas/Brand"
+                        }
+                      },
+                      "errors": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "example": "Brand with BrandId - brand-id-1 is missing name"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "403": {
+              "description": "Invalid Api Key"
+            },
+            "422": {
+              "description": "Data error"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        }
+      },
+      "/brands/{brandId}": {
+        "patch": {
+          "summary": "Update a brand.",
+          "tags": [
+            "Brand"
+          ],
+          "description": "Update a brand.",
+          "security": [
+            {
+              "apiKeyAuth": []
+            }
+          ],
+          "parameters": [
+            {
+              "name": "brandId",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "description": "Brand id"
+              }
+            }
+          ],
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/BrandBody"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Brand updated.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Brand"
+                  }
+                }
+              }
+            },
+            "403": {
+              "description": "Invalid Api Key"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        },
+        "get": {
+          "summary": "Get a brand by Id.",
+          "tags": [
+            "Brand"
+          ],
+          "description": "Returns a brand.",
+          "security": [
+            {
+              "apiKeyAuth": []
+            }
+          ],
+          "parameters": [
+            {
+              "name": "brandId",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "description": "Brand id"
+              }
+            }
+          ],
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/BrandBody"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Returns a brand.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Brand"
+                  }
+                }
+              }
+            },
+            "403": {
+              "description": "Invalid Api Key."
+            },
+            "404": {
+              "description": "Brand not found."
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        },
+        "put": {
+          "summary": "Put a brand.",
+          "tags": [
+            "Brand"
+          ],
+          "description": "Create or update a new brand",
+          "parameters": [
+            {
+              "name": "brandId",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "description": "Brand id"
+              }
+            }
+          ],
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/BrandBody"
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": "Brand created.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Brand"
+                  }
+                }
+              }
+            },
+            "403": {
+              "description": "Invalid Api Key"
+            },
+            "422": {
+              "description": "Data error"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        },
+        "delete": {
+          "summary": "Delete a brand.",
+          "tags": [
+            "Brand"
+          ],
+          "description": "Delete a brand.",
+          "parameters": [
+            {
+              "name": "brandId",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "description": "Brand id"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Brand Delete.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "403": {
+              "description": "Invalid Api Key"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        }
+      },
+      "/products": {
+        "post": {
+          "summary": "Create a new product.",
+          "tags": [
+            "Product"
+          ],
+          "description": "Create a new product.",
+          "security": [
+            {
+              "apiKeyAuth": []
+            }
+          ],
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/ProductBody"
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": "Product created.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Product"
+                  }
+                }
+              }
+            },
+            "403": {
+              "description": "Invalid Api Key"
+            },
+            "422": {
+              "description": "Data error"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        },
+        "get": {
+          "summary": "Get all products.",
+          "tags": [
+            "Product"
+          ],
+          "description": "Get all products.",
+          "security": [
+            {
+              "apiKeyAuth": []
+            }
+          ],
+          "parameters": [
+            {
+              "in": "query",
+              "name": "page",
+              "schema": {
+                "type": "number",
+                "description": "Current Page"
+              }
+            },
+            {
+              "in": "query",
+              "name": "perPage",
+              "schema": {
+                "type": "integer",
+                "description": "Number of products per page"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "A list of all products.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/PaginatedResult"
+                  }
+                }
+              }
+            },
+            "403": {
+              "description": "Invalid Api Key."
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        },
+        "put": {
+          "summary": "Create or update multiple products.",
+          "tags": [
+            "Product"
+          ],
+          "description": "Create a new product or update existing product with this PUT operation.",
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "$ref": "#/components/schemas/ProductBodyWithId"
+                  }
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": "Product created.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "products": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "$ref": "#/components/schemas/Product"
+                        }
+                      },
+                      "errors": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "example": "Product with ProductId - product-id-1 is missing categories"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "403": {
+              "description": "Invalid Api Key"
+            },
+            "422": {
+              "description": "Data error"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        }
+      },
+      "/products/{id}": {
+        "patch": {
+          "summary": "Update a product.",
+          "tags": [
+            "Product"
+          ],
+          "description": "Update a product.",
+          "security": [
+            {
+              "apiKeyAuth": []
+            }
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "description": "Product Id"
+              }
+            }
+          ],
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/ProductBody"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Product updated.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Product"
+                  }
+                }
+              }
+            },
+            "403": {
+              "description": "Invalid Api Key"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        },
+        "get": {
+          "summary": "Get a product by id.",
+          "tags": [
+            "Product"
+          ],
+          "description": "Returns a product.",
+          "security": [
+            {
+              "apiKeyAuth": []
+            }
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "description": "Product Id"
+              }
+            }
+          ],
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/ProductBody"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Returns a product.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Product"
+                  }
+                }
+              }
+            },
+            "403": {
+              "description": "Invalid Api Key."
+            },
+            "404": {
+              "description": "Product not found."
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        }
+      },
+      "/products/{productId}": {
+        "put": {
+          "summary": "Create or update a  product.",
+          "tags": [
+            "Product"
+          ],
+          "description": "Create a new product or update existing product with this PUT operation.",
+          "parameters": [
+            {
+              "name": "productId",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "description": "Product Id"
+              }
+            }
+          ],
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/ProductBody"
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": "Product created.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Product"
+                  }
+                }
+              }
+            },
+            "403": {
+              "description": "Invalid Api Key"
+            },
+            "422": {
+              "description": "Data error"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        },
+        "delete": {
+          "summary": "Delete a Product.",
+          "tags": [
+            "Product"
+          ],
+          "description": "Delete a Product.",
+          "parameters": [
+            {
+              "name": "productId",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "description": "Product id"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Product Delete.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "403": {
+              "description": "Invalid Api Key"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        }
+      },
+      "/products/{productId}/variants/{variantId}": {
+        "post": {
+          "summary": "Create a new Variant of the specified base product.",
+          "tags": [
+            "Product"
+          ],
+          "description": "Create a new Variant of the specified base product.",
+          "parameters": [
+            {
+              "name": "productId",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "description": "Product Id"
+              }
+            },
+            {
+              "name": "variantId",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "description": "Variant Id"
+              }
+            }
+          ],
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/VariantBody"
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": "Variant created.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Variant"
+                  }
+                }
+              }
+            },
+            "403": {
+              "description": "Invalid Api Key"
+            },
+            "422": {
+              "description": "Data error"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          },
+          "x-amazon-apigateway-integration": {
+            "type": "aws_proxy",
+            "httpMethod": "POST",
+            "uri": "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:128512798967:function:aasaan-api-dev-serverless/invocations",
+            "passthroughBehavior": "when_no_match",
+            "responses": {
+              "default": {
+                "statusCode": 200
+              }
+            }
+          }
+        },
+        "patch": {
+          "summary": "Update a variant.",
+          "tags": [
+            "Product"
+          ],
+          "description": "Update a variant.",
+          "parameters": [
+            {
+              "name": "productId",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "description": "Product Id"
+              }
+            },
+            {
+              "name": "variantId",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "description": "Variant Id"
+              }
+            }
+          ],
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/VariantBody"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Variant updated.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Variant"
+                  }
+                }
+              }
+            },
+            "403": {
+              "description": "Invalid Api Key"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          },
+          "x-amazon-apigateway-integration": {
+            "type": "aws_proxy",
+            "httpMethod": "PATCH",
+            "uri": "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:128512798967:function:aasaan-api-dev-serverless/invocations",
+            "passthroughBehavior": "when_no_match",
+            "responses": {
+              "default": {
+                "statusCode": 200
+              }
+            }
+          }
+        }
+      },
+      "/orders": {
+        "get": {
+          "summary": "Get all orders.",
+          "tags": [
+            "Orders"
+          ],
+          "description": "Get all orders.",
+          "security": [
+            {
+              "apiKeyAuth": []
+            }
+          ],
+          "parameters": [
+            {
+              "in": "query",
+              "name": "page",
+              "schema": {
+                "type": "number",
+                "description": "Current Page"
+              }
+            },
+            {
+              "in": "query",
+              "name": "perPage",
+              "schema": {
+                "type": "integer",
+                "description": "Number of orders per page"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "A list of all orders.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/PaginatedResult"
+                  }
+                }
+              }
+            },
+            "403": {
+              "description": "Invalid Api Key."
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        }
+      },
+      "/orders/{orderId}": {
+        "get": {
+          "summary": "Get an order info.",
+          "tags": [
+            "Orders"
+          ],
+          "description": "Get order details.",
+          "security": [
+            {
+              "apiKeyAuth": []
+            }
+          ],
+          "parameters": [
+            {
+              "name": "orderId",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "description": "Order Id"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Get an order by id.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Order"
+                  }
+                }
+              }
+            },
+            "403": {
+              "description": "Invalid Api Key"
+            },
+            "422": {
+              "description": "Data error"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        }
+      },
+      "/orders/status/{orderId}:": {
+        "patch": {
+          "summary": "Update a order status.",
+          "tags": [
+            "Orders"
+          ],
+          "description": "Update Status.",
+          "security": [
+            {
+              "apiKeyAuth": []
+            }
+          ],
+          "parameters": [
+            {
+              "name": "orderId",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "description": "Order Id"
+              }
+            }
+          ],
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/OrderStatus"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Get an order by id.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Order"
+                  }
+                }
+              }
+            },
+            "403": {
+              "description": "Invalid Api Key"
+            },
+            "422": {
+              "description": "Data error"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        }
+      },
+      "/channels": {
+        "get": {
+          "summary": "Get all channels.",
+          "tags": [
+            "Channel"
+          ],
+          "description": "Get all channels.",
+          "security": [
+            {
+              "apiKeyAuth": []
+            }
+          ],
+          "responses": {
+            "201": {
+              "description": "A list of all channels.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Channel"
+                  }
+                }
+              }
+            },
+            "403": {
+              "description": "Invalid Api Key"
+            },
+            "422": {
+              "description": "Data error"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        }
+      },
+      "/channels/{id}": {
+        "get": {
+          "summary": "Get a channel by Id.",
+          "tags": [
+            "Channel"
+          ],
+          "description": "Returns a channel.",
+          "security": [
+            {
+              "apiKeyAuth": []
+            }
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "description": "Channel Id"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Returns a channel.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Channel"
+                  }
+                }
+              }
+            },
+            "403": {
+              "description": "Invalid Api Key."
+            },
+            "404": {
+              "description": "Channel not found."
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        }
+      }
+    },
+    "tags": []
+  }
