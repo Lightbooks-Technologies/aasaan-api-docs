@@ -1,98 +1,190 @@
 {
-  "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
-  "logo": {
-    "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
-  },
-  "favicon": "/favicon.svg",
-  "colors": {
-    "primary": "#0D9373",
-    "light": "#07C983",
-    "dark": "#0D9373",
-    "anchors": {
-      "from": "#0D9373",
-      "to": "#07C983"
-    }
-  },
-  "topbarLinks": [
-    {
-      "name": "Support",
-      "url": "mailto:hi@mintlify.com"
-    }
-  ],
-  "topbarCtaButton": {
-    "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
-  },
-  "tabs": [
-    {
-      "name": "API Reference",
-      "url": "api-reference"
-    }
-  ],
-  "anchors": [
-    {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
+    "name": "Aasaan",
+    "logo": {
+      "light": "/logo.png",
+      "dark": "/logo.png"
     },
-    {
-      "name": "Community",
-      "icon": "slack",
-      "url": "https://mintlify.com/community"
+    "favicon": "/favicon.png",
+    "colors": {
+      "primary": "#06B390",
+      "light": "#83CC57",
+      "dark": "#06B390"
     },
-    {
-      "name": "Blog",
-      "icon": "newspaper",
-      "url": "https://mintlify.com/blog"
-    }
-  ],
-  "navigation": [
-    {
-      "group": "Fundamentals",
-      "pages": ["Getting set up"]
+    "modeToggle": {
+        "default": "dark",
+        "isHidden": true
     },
-    {
-      "group": "STOREFRONT",
-      "pages": ["Design", "SEO", "Domain", "Social Media", "About Us", "Store Policies", "Blogs", "QR Code", "Place Order", "Mobile App"]
+    "tabs": [
+        {
+            "name": "Partner API",
+            "url": "api-reference"
+        }
+    ],
+    "topbarCtaButton": {
+      "name": "Sign Up",
+      "url": "https://admin.aasaan.app/auth/register"
     },
-    {
-      "group": "COMMERCE",
-      "pages": ["Brands", "Categories", "Products", "Orders", "Customers", "Store Settings", "Warehouses", "Manage Staff", "Custom Fields", "KYC", "Coupons", "Channels"]
-    },
-    {
-      "group": "APP MARKET",
-      "pages": ["Introduction to the App Market", "Analytics", "Shopping", "Shipping", "Payments", "Verify", "Migration", "Support", "Communication", "Marketing"]
-    },
-    {
-      "group": "ACCOUNT",
-      "pages": ["Manage Account", "How to Subscribe"]
-    },
-    {
-      "group": "Get Started",
-      "pages": ["introduction", "quickstart", "development"]
-    },
-    {
-      "group": "Essentials",
-      "pages": ["essentials/markdown", "essentials/code", "essentials/images", "essentials/settings", "essentials/navigation"]
-    },
-    {
-      "group": "API Documentation",
-      "pages": ["api-reference/introduction"]
-    },
-    {
-      "group": "Endpoint Examples",
-      "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
-      ]
-    }
-  ],
-  "footerSocials": {
-    "twitter": "https://twitter.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://www.linkedin.com/company/mintsearch"
+    "anchors": [
+      {
+        "name": "Connect to Shopify",
+        "icon": "shopify",
+        "url": "https://aasaan.app/connect/shopify/"
+      },
+      {
+        "name": "Connect to Woocommerce",
+        "icon": "money-check-dollar",
+        "url": "https://aasaan.app/connect/shopify/"
+      }
+    ],
+    "navigation": [
+      {
+        "group": "Fundamentals",
+        "pages": [
+          "Getting set up"
+        ]
+      },
+      {
+        "group": "STOREFRONT",
+        "pages": [
+          "storefront/design",
+          "SEO",
+          "Domain",
+          "Social Media",
+          "About Us",
+          "Store Policies",
+          "Blogs",
+          "QR Code",
+          "storefront/place-order",
+          "Mobile App"
+        ]
+      },
+      {
+        "group": "COMMERCE",
+        "pages": [
+          "Brands",
+          "Categories",
+          "Products",
+          "Orders",
+          "Customers",
+          "Store Settings",
+          "Warehouses",
+          "Manage Staff",
+          "Custom Fields",
+          "KYC",
+          "Coupons",
+          "Channels"
+        ]
+      },
+      {
+        "group": "APP MARKET",
+        "pages": [
+          "Introduction to the App Market",
+          "Analytics",
+          "Shopping",
+          "Shipping",
+          "Payments",
+          "Verify",
+          "Migration",
+          "Support",
+          "Communication",
+          "Marketing"
+        ]
+      },
+      {
+        "group": "ACCOUNT",
+        "pages": [
+          "Manage Account",
+          "How to Subscribe"
+        ]
+      }, 
+      {
+            "group": "GETTING STARTED",
+            "pages": [
+                "api-reference/introduction",
+                "api-reference/authentication",
+                "api-reference/versioning",
+                "api-reference/errors"
+            ]
+        },
+        {
+            "group": "Store",
+            "pages": [
+              "api-reference/store/get-all-stores-for-a-client",
+              "api-reference/store/get-store-information",
+              "api-reference/store/create-a-new-store",
+              "api-reference/store/update-store-information-email-address-metadata"
+            ]
+          },
+          {
+            "group": "Custom Domain",
+            "pages": [
+              "api-reference/custom-domain/create-a-custom-domain"
+            ]
+          },
+          {
+            "group": "Category",
+            "pages": [
+              "api-reference/category/get-a-category-by-id",
+              "api-reference/category/put-a-new-category",
+              "api-reference/category/create-a-new-category",
+              "api-reference/category/delete-a-category",
+              "api-reference/category/update-a-category",
+              "api-reference/category/put-a-multiple-categories",
+              "api-reference/category/get-all-categories"
+            ]
+          },
+          {
+            "group": "Brand",
+            "pages": [
+              "api-reference/brand/get-a-brand-by-id",
+              "api-reference/brand/put-a-brand",
+              "api-reference/brand/create-a-new-brand",
+              "api-reference/brand/delete-a-brand",
+              "api-reference/brand/update-a-brand",
+              "api-reference/brand/get-all-brands",
+              "api-reference/brand/put-a-multiple-brands"
+            ]
+          },
+          {
+            "group": "Tag",
+            "pages": [
+              "api-reference/tag/get-a-tag-by-id",
+              "api-reference/tag/put-a-tag",
+              "api-reference/tag/create-a-new-tag",
+              "api-reference/tag/delete-a-tag",
+              "api-reference/tag/update-a-tag",
+              "api-reference/tag/get-all-tags",
+              "api-reference/tag/put-a-multiple-tags"
+            ]
+          },
+          {
+            "group": "Store Front",
+            "pages": [
+              "api-reference/store-front/gets-the-current-product-ordering",
+              "api-reference/store-front/updates-the-product-ordering-within-a-category",
+              "api-reference/store-front/get-the-template-attributes",
+              "api-reference/store-front/update-a-template"
+            ]
+          },
+          {
+            "group": "Product",
+            "pages": [
+              "api-reference/product/get-a-product-by-id",
+              "api-reference/product/create-or-update-a-product",
+              "api-reference/product/create-a-new-product",
+              "api-reference/product/delete-a-product",
+              "api-reference/product/update-a-product",
+              "api-reference/product/get-all-products",
+              "api-reference/product/create-or-update-multiple-products",
+              "api-reference/product/create-a-new-variant-of-the-specified-base-product",
+              "api-reference/product/update-a-variant"
+            ]
+          }
+    ],
+    "footerSocials":
+      {
+          "twitter": "https://twitter.com/aasaan_app_/",
+          "instagram": "https://www.instagram.com/aasaan_app_/",
+          "linkedin": "https://www.linkedin.com/company/aasaanapp/"
+      }
   }
-}
