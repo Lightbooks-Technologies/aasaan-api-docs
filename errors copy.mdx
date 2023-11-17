@@ -1,0 +1,12 @@
+---
+title: "Errors"
+description: "Responses from the API use HTTP response codes are used to indicate general classes of success and error. Error responses contain more detail about the error in the response body, in the code and message properties."
+---
+
+| HTTP Status Code | Code                      | Description                                                                   |
+| ---------------- | ------------------------- | ----------------------------------------------------------------------------- |
+| 403              | "unauthorized"            | The api key is not valid                                                      |
+| 400              | "invalid\_request\_url"   | The request URL is not valid.                                                 |
+| 429              | "rate\_limited"           | This request exceeds the number of requests allowed. Slow down and try again. |
+| 500              | "internal\_server\_error" | An unexpected error occurred. Reach out to Aasaan support.                    |
+| 503              | "service\_unavailable"    | Aasaan is unavailable. Try again later.                                       |
