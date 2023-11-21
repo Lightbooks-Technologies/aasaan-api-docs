@@ -113,8 +113,8 @@
   {
     "group": "COMMERCE",
     "pages": [
-        "documentation/commerce/coupons",
         "documentation/commerce/kyc",
+        "documentation/commerce/coupons",
         "documentation/commerce/channels",
         "documentation/commerce/store-settings",
         {
@@ -382,6 +382,67 @@
         "api-reference/product/create-or-update-multiple-products",
         "api-reference/product/create-a-new-variant-of-the-specified-base-product",
         "api-reference/product/update-a-variant"
+      ]
+    },
+
+
+    {
+      "group": "Store",
+      "pages": [
+        "backend-api/store/get-store-account-information"
+      ]
+    },
+    {
+      "group": "Category",
+      "pages": [
+        "backend-api/category/get-all-categories",
+        "backend-api/category/create-a-new-category",
+        "backend-api/category/get-a-category-by-id",
+        "backend-api/category/put-a-category",
+        "backend-api/category/delete-a-category",
+        "backend-api/category/update-a-category",
+        "backend-api/category/put-multiple-categories"
+      ]
+    },
+    {
+      "group": "Brand",
+      "pages": [
+        "backend-api/brand/get-all-brands",
+        "backend-api/brand/put-a-multiple-brands",
+        "backend-api/brand/create-a-new-brand",
+        "backend-api/brand/get-a-brand-by-id",
+        "backend-api/brand/put-a-brand",
+        "backend-api/brand/delete-a-brand",
+        "backend-api/brand/update-a-brand"
+      ]
+    },
+    {
+      "group": "Product",
+      "pages": [
+        "backend-api/product/get-all-products",
+        "backend-api/product/create-or-update-multiple-products",
+        "backend-api/product/create-a-new-product",
+        "backend-api/product/get-a-product-by-id",
+        "backend-api/product/update-a-product",
+        "backend-api/product/create-or-update-a-product",
+        "backend-api/product/delete-a-product",
+        "backend-api/product/create-a-new-variant-of-the-specified-base-product",
+        "backend-api/product/update-a-variant"
+      ]
+    },
+    {
+      "group": "Orders",
+      "pages": [
+        "backend-api/orders/get-all-orders",
+        "backend-api/orders/get-an-order-info",
+        "backend-api/orders/update-a-order-status"
+      ]
+    },
+    {
+      "group": "Channel",
+      "pages": [
+        "backend-api/channel/get-all-channels",
+        "backend-api/channel/get-a-channel-by-id"
       ]
     }
   ],
