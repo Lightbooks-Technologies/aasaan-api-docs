@@ -1,0 +1,15 @@
+---
+title: "Introduction"
+---
+
+Use webhooks to get notified about events related to the Aasaan such as orders, inventory, products and customers.
+
+Webhooks (Web Callback, HTTP Push API or Reverse API) are one way that a web application can send information to another application in real-time when a specific event happens.
+
+### Webhook Vs API
+
+APIs send you the data when you request it. For Webhooks, you do not need to make a request. You receive the data when it is available.
+
+### Example
+
+If you need to know whether an Order has been placed or not, using APIs, you need to keep polling every few seconds until the api returns data containing a new order. However, if you are using Webhooks, you can configure a webhook event `Order Created` to receive notifications when a new order has been placed.

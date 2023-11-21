@@ -310,6 +310,24 @@
           "api-reference/errors"
       ]
   },
+  {
+    "group": "GETTING STARTED",
+    "pages": [
+        "backend-api/introduction",
+        "backend-api/authentication",
+        "backend-api/versioning",
+        "backend-api/errors"
+    ]
+},
+{
+  "group": "WEBHOOKS",
+  "pages": [
+      "backend-api/webhooks/introduction",
+      "backend-api/webhooks/setup_webhooks",
+      "backend-api/webhooks/edit_webhooks",
+      "backend-api/webhooks/sample_payload"
+  ]
+},
     {
       "group": "Store",
       "pages": [

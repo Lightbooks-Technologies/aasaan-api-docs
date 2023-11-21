@@ -1,0 +1,78 @@
+---
+title: "Sample Payload"
+---
+
+### Order Created
+
+```
+{
+  "eventId": "6bf0ae82-fc2a-4d93-a6c2-de8a7c3f208b",
+  "eventDate": 1691563585294,
+  "eventName": "ORDER_CREATED",
+  "data": {
+    "orderId": "64d336415395e7b67c163a9b",
+    "channelId": "646dbc60a81686ba06c5556a",
+    "orderNumber": "6O59XYVW6",
+    "createdDate": "2023-08-09T06:46:25.208Z",
+    "updatedDate": "2023-08-09T06:46:25.282Z"
+  },
+  "accountId": "646dbc5ba81686ba06c55542"
+}
+```
+
+### Product Created
+
+```
+{
+  "eventId": "12f8109b-72ef-4644-a326-cfd28a2398df",
+  "eventDate": 1691563816671,
+  "eventName": "PRODUCT_CREATED",
+  "data": {
+    "productId": "64d337285395e7b67c16408b",
+    "name": "Sample Product",
+    "createdAt": "2023-08-09T06:50:16.609Z",
+    "updatedAt": "2023-08-09T06:50:16.609Z"
+  },
+  "accountId": "646dbc5ba81686ba06c55542"
+}
+```
+
+### Inventory Updated
+
+```
+{
+  "eventId": "2ef72689-8ef3-41bf-b234-033de07171e3",
+  "eventDate": 1691563585262,
+  "eventName": "INVENTORY_UPDATED",
+  "data": {
+    "productId": "646dbc66a81686ba06c555c5",
+    "name": "Sample Product",
+    "warehouseId": [
+      "646dbc60a81686ba06c5556b"
+    ],
+    "createdAt": "2023-05-24T07:27:34.927Z",
+    "updatedAt": "2023-05-24T07:32:20.812Z"
+  },
+  "accountId": "646dbc5ba81686ba06c55542"
+}
+```
+
+### Customer Added
+
+```
+{
+  "eventId": "582905e9-13e7-4e93-8928-a26659ff18dd",
+  "eventDate": 1691563736991,
+  "eventName": "CUSTOMER_ADDED",
+  "data": {
+    "customerId": "64d336d85395e7b67c16403a",
+    "firstName": "John",
+    "lastName": "Doe",
+    "dateCreated": "2023-08-09T06:48:56.898Z",
+    "dateUpdated": "2023-08-09T06:48:56.898Z"
+  },
+  "accountId": "646dbc5ba81686ba06c55542"
+}
+```
+
+***
