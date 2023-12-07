@@ -118,7 +118,7 @@
             "example": "Hair categories"
           },
           "hide": {
-            "type": "string",
+            "type": "boolean",
             "description": "Hide a category",
             "example": false
           },
@@ -186,7 +186,7 @@
             "example": "Hair categories"
           },
           "hide": {
-            "type": "string",
+            "type": "boolean",
             "description": "Hide a category",
             "example": false
           },
@@ -250,7 +250,7 @@
             "example": "Hair categories"
           },
           "hide": {
-            "type": "string",
+            "type": "boolean",
             "description": "Hide a category",
             "example": false
           },
@@ -310,7 +310,7 @@
             "example": "Head & Shoulders"
           },
           "hide": {
-            "type": "string",
+            "type": "boolean",
             "description": "Hide a brand",
             "example": false
           },
@@ -379,7 +379,7 @@
             "example": "Head & Shoulders"
           },
           "hide": {
-            "type": "string",
+            "type": "boolean",
             "description": "Hide a brand",
             "example": false
           },
@@ -443,7 +443,7 @@
             "example": "Head & Shoulders"
           },
           "hide": {
-            "type": "string",
+            "type": "boolean",
             "description": "Hide a brand",
             "example": false
           },
@@ -486,6 +486,11 @@
             "type": "string",
             "description": "Unique identifier for the resource",
             "example": "623d3455ec3c4b3548eb4a343"
+          },
+          "sku": {
+            "type": "string",
+            "description": "Stock keeping Unit",
+            "example": "000-000-000-000"
           },
           "name": {
             "type": "string",
@@ -855,6 +860,11 @@
             "type": "string",
             "description": "Name",
             "example": "Head & Shoulders Anti Hairfall Anti Dandruff Shampoo"
+          },
+          "sku": {
+            "type": "string",
+            "description": "Stock keeping Unit",
+            "example": "000-000-000-000"
           },
           "salesPrice": {
             "type": "string",
@@ -1310,6 +1320,11 @@
             "description": "Name",
             "example": "XL, Brown"
           },
+          "sku": {
+            "type": "string",
+            "description": "Stock keeping Unit",
+            "example": "000-000-000-000"
+          },
           "slug": {
             "type": "string",
             "description": "Slug",
@@ -1466,6 +1481,11 @@
             "type": "string",
             "description": "Actual price",
             "example": 543
+          },
+          "sku": {
+            "type": "string",
+            "description": "Stock keeping Unit",
+            "example": "000-000-000-000"
           },
           "quantity": {
             "type": "integer",
