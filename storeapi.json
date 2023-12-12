@@ -502,16 +502,6 @@
             "description": "Slug",
             "example": "head_shoulders_anti_hairfall_anti_dandruff_shampoo_650_ml_22"
           },
-          "salesPrice": {
-            "type": "string",
-            "description": "Sales price",
-            "example": 543
-          },
-          "regularPrice": {
-            "type": "string",
-            "description": "Actual price",
-            "example": 543
-          },
           "quantity": {
             "type": "integer",
             "description": "Product quantity",
@@ -526,11 +516,6 @@
             "type": "string",
             "description": "Product short description",
             "example": "Anti Dandruff Shampoo that strengthens hair from its roots and cures dandruff"
-          },
-          "hide": {
-            "type": "boolean",
-            "description": "Hide this product",
-            "example": false
           },
           "active": {
             "type": "boolean",
@@ -726,16 +711,6 @@
                   "description": "Variant name",
                   "example": "Head & Shoulders Anti Hairfall Anti Dandruff Shampoo 600ml"
                 },
-                "salesPrice": {
-                  "type": "string",
-                  "description": "Sales price",
-                  "example": 800
-                },
-                "regularPrice": {
-                  "type": "string",
-                  "description": "Actual price",
-                  "example": 800
-                },
                 "quantity": {
                   "type": "integer",
                   "description": "Variant quantity",
@@ -750,11 +725,6 @@
                   "type": "string",
                   "description": "Variant short description",
                   "example": ""
-                },
-                "hide": {
-                  "type": "boolean",
-                  "description": "Hide this variant",
-                  "example": false
                 },
                 "active": {
                   "type": "boolean",
@@ -848,8 +818,6 @@
       "ProductBody": {
         "required": [
           "name",
-          "salesPrice",
-          "regularPrice",
           "quantity",
           "weight",
           "sku",
@@ -866,16 +834,6 @@
             "description": "Stock keeping Unit",
             "example": "000-000-000-000"
           },
-          "salesPrice": {
-            "type": "string",
-            "description": "Sales price",
-            "example": 543
-          },
-          "regularPrice": {
-            "type": "string",
-            "description": "Actual price",
-            "example": 543
-          },
           "quantity": {
             "type": "integer",
             "description": "Product quantity",
@@ -890,11 +848,6 @@
             "type": "string",
             "description": "Product short description",
             "example": "Anti Dandruff Shampoo that strengthens hair from its roots and cures dandruff"
-          },
-          "hide": {
-            "type": "boolean",
-            "description": "Hide this product",
-            "example": false
           },
           "active": {
             "type": "boolean",
@@ -1114,8 +1067,6 @@
         "required": [
           "id",
           "name",
-          "salesPrice",
-          "regularPrice",
           "quantity",
           "weight",
           "categories"
@@ -1130,16 +1081,6 @@
             "type": "string",
             "description": "Name",
             "example": "Head & Shoulders Anti Hairfall Anti Dandruff Shampoo"
-          },
-          "salesPrice": {
-            "type": "string",
-            "description": "Sales price",
-            "example": 543
-          },
-          "regularPrice": {
-            "type": "string",
-            "description": "Actual price",
-            "example": 543
           },
           "quantity": {
             "type": "integer",
@@ -1178,11 +1119,6 @@
             "type": "string",
             "description": "Product short description",
             "example": "Anti Dandruff Shampoo that strengthens hair from its roots and cures dandruff"
-          },
-          "hide": {
-            "type": "boolean",
-            "description": "Hide this product",
-            "example": false
           },
           "active": {
             "type": "boolean",
@@ -1330,16 +1266,6 @@
             "description": "Slug",
             "example": "head_shoulders_anti_hairfall_anti_dandruff_shampoo_650_ml_22"
           },
-          "salesPrice": {
-            "type": "string",
-            "description": "Sales price",
-            "example": 543
-          },
-          "regularPrice": {
-            "type": "string",
-            "description": "Actual price",
-            "example": 543
-          },
           "quantity": {
             "type": "integer",
             "description": "Product quantity",
@@ -1354,11 +1280,6 @@
             "type": "string",
             "description": "Product short description",
             "example": "Anti Dandruff Shampoo that strengthens hair from its roots and cures dandruff"
-          },
-          "hide": {
-            "type": "boolean",
-            "description": "Hide this product",
-            "example": false
           },
           "active": {
             "type": "boolean",
@@ -1460,33 +1381,40 @@
             "type": "string",
             "description": "Modified date",
             "example": "2022-06-10T07:51:12.510Z"
+          },
+          "prices": {
+            "type": "array",
+            "description": "Price Information across various channels",
+            "items": {
+              "type": "object",
+              "properties": {
+                "channelId": {
+                  "type": "string",
+                  "description": "ID of the channel for which price is being specified",
+                  "example": "636f2e876e9de14bfe1b02f1"
+                },
+                "salesPrice": {
+                  "type": "string",
+                  "description": "Current Selling Price",
+                  "example": "45"
+                },
+                "regularPrice": {
+                  "type": "string",
+                  "description": "Actual Price - should be greater than on equal to salesPrice",
+                  "example": "50"
+                }
+              }
+            }
           }
         }
       },
       "VariantBody": {
         "required": [
-          "salesPrice",
-          "regularPrice",
           "quantity",
           "weight",
           "variantAttributeValues"
         ],
         "properties": {
-          "salesPrice": {
-            "type": "string",
-            "description": "Sales price",
-            "example": 543
-          },
-          "regularPrice": {
-            "type": "string",
-            "description": "Actual price",
-            "example": 543
-          },
-          "sku": {
-            "type": "string",
-            "description": "Stock keeping Unit",
-            "example": "000-000-000-000"
-          },
           "quantity": {
             "type": "integer",
             "description": "Product quantity",
@@ -1507,6 +1435,30 @@
                   "type": "string",
                   "description": "attribute option value",
                   "example": "brown"
+                }
+              }
+            }
+          },
+          "prices": {
+            "type": "array",
+            "description": "Price Information across various channels",
+            "items": {
+              "type": "object",
+              "properties": {
+                "channelId": {
+                  "type": "string",
+                  "description": "ID of the channel for which price is being specified",
+                  "example": "636f2e876e9de14bfe1b02f1"
+                },
+                "salesPrice": {
+                  "type": "string",
+                  "description": "Current Selling Price",
+                  "example": "45"
+                },
+                "regularPrice": {
+                  "type": "string",
+                  "description": "Actual Price - should be greater than on equal to salesPrice",
+                  "example": "50"
                 }
               }
             }
