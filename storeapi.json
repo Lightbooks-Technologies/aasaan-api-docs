@@ -547,6 +547,35 @@
             "description": "Weight(kg)",
             "example": 500
           },
+          "prices": {
+            "type": "array",
+            "description": "Price Information across various channels",
+            "items": {
+              "type": "object",
+              "properties": {
+                "channelId": {
+                  "type": "string",
+                  "description": "ID of the channel for which price is being specified",
+                  "example": "636f2e876e9de14bfe1b02f1"
+                },
+                "salesPrice": {
+                  "type": "string",
+                  "description": "Current Selling Price",
+                  "example": "45"
+                },
+                "regularPrice": {
+                  "type": "string",
+                  "description": "Actual Price - should be greater than on equal to salesPrice",
+                  "example": "50"
+                },
+                "hide": {
+                  "type": "boolean",
+                  "description": "Hides the product in the channel",
+                  "example": false
+                }
+              }
+            }
+          },
           "isShippingEnabled": {
             "type": "boolean",
             "description": "Enable to enter shipping details",
@@ -989,6 +1018,11 @@
                   "type": "string",
                   "description": "Actual Price - should be greater than on equal to salesPrice",
                   "example": "50"
+                },
+                "hide": {
+                  "type": "boolean",
+                  "description": "Hides the product in the channel",
+                  "example": false
                 }
               }
             }
@@ -1091,6 +1125,35 @@
             "type": "integer",
             "description": "Weight(kg)",
             "example": 2
+          },
+          "prices": {
+            "type": "array",
+            "description": "Price Information across various channels",
+            "items": {
+              "type": "object",
+              "properties": {
+                "channelId": {
+                  "type": "string",
+                  "description": "ID of the channel for which price is being specified",
+                  "example": "636f2e876e9de14bfe1b02f1"
+                },
+                "salesPrice": {
+                  "type": "string",
+                  "description": "Current Selling Price",
+                  "example": "45"
+                },
+                "regularPrice": {
+                  "type": "string",
+                  "description": "Actual Price - should be greater than on equal to salesPrice",
+                  "example": "50"
+                },
+                "hide": {
+                  "type": "boolean",
+                  "description": "Hides the product in the channel",
+                  "example": false
+                }
+              }
+            }
           },
           "categoryInformation": {
             "type": "array",
