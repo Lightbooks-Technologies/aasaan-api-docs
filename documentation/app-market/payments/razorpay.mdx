@@ -1,3 +1,65 @@
-# Razorpay
+## Razorpay
 
-Content for Razorpay goes here.
+*How to Integrate Razorpay to aasaan*  
+*Set up Razorpay on your Store*
+
+*Note: Click [here](mobile-admin-link) to navigate to the mobile admin app version of this article*
+
+You can watch the video version of this article [here](video-link).
+
+Our regular method of setting up online payments involves setting up aasaan Pay by entering your bank account details. This works if you don't have a payment gateway account like Razorpay.
+
+*Note: Make sure to install Razorpay from the aasaan app market. Click [here](install-app-link) to learn how to install apps from your app market.*
+
+### STEP 1:
+
+1. Login to your existing Razorpay account and click on Account & Settings > API Keys.
+2. Since we already have existing API keys and need new ones, click on Regenerate Test Key.
+   - Important note: This guide illustrates the steps for integrating Razorpay in test mode. You will need to integrate Razorpay to your store in live mode to be able to accept real payments. The Razorpay integration process is the same in both the test mode and live mode. So if you are carrying out this step in live mode, you will need to click on Regenerate Live Key.
+   
+### STEP 4:
+
+3. To get new API keys, you will need to deactivate your existing ones. Choose Deactivate old key immediately and then click on Confirm and deactivate.
+   - Copy and save your Key ID and Key Secret. You can download them by clicking on Download Key Details.
+   - Important note: The key secret will be displayed only once.
+   
+### STEP 5:
+
+4. Go to your installed Razorpay app in aasaan. Enter your Key ID and Key Secret.
+5. Copy the Webhook URL.
+   
+### STEP 7:
+
+6. Now you need to add the aasaan app Webhook URL into your Razorpay account.
+   - In your Razorpay settings, click on Webhooks > Add New Webhook.
+   
+### STEP 8:
+
+7. Paste the webhook URL in the top field, and choose payment.failed and payment.captured as the active events. Then click on Create Webhook.
+   - Your webhook will be created.
+
+### STEP 10:
+
+8. Go back to your installed Razorpay app in aasaan and click on Verify.
+
+You have successfully set up Razorpay on your store.
+
+*Previous*  
+[PayU](previous-link)
+
+*Next*  
+[Stripe](next-link)
+
+[Last modified 7mo ago](last-modified-link)
+
+![Razorpay Step 1](https://cdn.aasaan.app/docs/razorpay/razorpay_1.png)
+![Razorpay Step 2](https://cdn.aasaan.app/docs/razorpay/razorpay_2.png)
+![Razorpay Step 3](https://cdn.aasaan.app/docs/razorpay/razorpay_3.png)
+![Razorpay Step 4](https://cdn.aasaan.app/docs/razorpay/razorpay_4.png)
+![Razorpay Step 5](https://cdn.aasaan.app/docs/razorpay/razorpay_5.png)
+![Razorpay Step 6](https://cdn.aasaan.app/docs/razorpay/razorpay_6.png)
+![Razorpay Step 7](https://cdn.aasaan.app/docs/razorpay/razorpay_7.png)
+![Razorpay Step 8](https://cdn.aasaan.app/docs/razorpay/razorpay_8.png)
+![Razorpay Step 9](https://cdn.aasaan.app/docs/razorpay/razorpay_9.png)
+![Razorpay Step 10](https://cdn.aasaan.app/docs/razorpay/razorpay_10.png)
+![Razorpay Step 11](https://cdn.aasaan.app/docs/razorpay/razorpay_11.png)

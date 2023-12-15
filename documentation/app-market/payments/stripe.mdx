@@ -1,3 +1,71 @@
-# Stripe
+## Stripe
 
-Content for Stripe goes here.
+*How to Set up Stripe Payment Gateway on Your Website*  
+*Set up Stripe Payment Gateway on your Store*
+
+*Note: Click [here](mobile-admin-link) to navigate to the mobile admin app version of this article*
+
+You can watch the video version of this article [here](video-link).
+
+If you have an existing account with the Stripe payment gateway, you can easily integrate it with Aasaan to receive your online payments. Here's how you do it.
+
+*Note: Make sure to install Stripe from the aasaan app market. Click [here](install-app-link) to learn how to install apps from your app market.*
+
+### STEP 1:
+
+1. Login to your Stripe account and click on Developers.
+2. Click on API Keys.
+3. Copy the publishable key and secret key and save them. The secret key will only be displayed once.
+   
+### STEP 4:
+
+4. Go to your installed Stripe app in aasaan. Paste the account publishable and secret keys from step 3.
+5. Copy the Webhook URL.
+   
+### STEP 7:
+
+6. Go back to your Stripe dashboard and click on Webhooks next to API Keys.
+7. Click on Add an Endpoint.
+8. Paste the Webhook URL from step 6 in the Endpoint URL field. Now we need to select the events for the webhook. Click on Select Events.
+   
+### STEP 11:
+
+9. Scroll down and select payment intent.
+10. Select these 4 events:
+    - payment_intent.canceled
+    - payment_intent.created
+    - payment_intent.payment_failed
+    - payment_intent.succeeded
+    Then click on Add Events.
+   
+### STEP 12:
+
+11. Click on Add endpoint.
+12. Click on Reveal Signing Secret.
+13. Copy the signing secret.
+14. Paste the signing secret in the "End Point Secret Key" field and click on Verify.
+
+You have successfully set up Stripe on your website.
+
+*Previous*  
+[Razorpay](previous-link)
+
+*Next - App Market*  
+[Verify](next-link)
+
+[Last modified 3mo ago](last-modified-link)
+
+![Stripe Step 1](https://cdn.aasaan.app/docs/stripe/stripe_1.png)
+![Stripe Step 2](https://cdn.aasaan.app/docs/stripe/stripe_2.png)
+![Stripe Step 3](https://cdn.aasaan.app/docs/stripe/stripe_3.png)
+![Stripe Step 4](https://cdn.aasaan.app/docs/stripe/stripe_4.png)
+![Stripe Step 5](https://cdn.aasaan.app/docs/stripe/stripe_5.png)
+![Stripe Step 6](https://cdn.aasaan.app/docs/stripe/stripe_6.png)
+![Stripe Step 7](https://cdn.aasaan.app/docs/stripe/stripe_7.png)
+![Stripe Step 8](https://cdn.aasaan.app/docs/stripe/stripe_8.png)
+![Stripe Step 9](https://cdn.aasaan.app/docs/stripe/stripe_9.png)
+![Stripe Step 10](https://cdn.aasaan.app/docs/stripe/stripe_10.png)
+![Stripe Step 11](https://cdn.aasaan.app/docs/stripe/stripe_11.png)
+![Stripe Step 12](https://cdn.aasaan.app/docs/stripe/stripe_12.png)
+![Stripe Step 13](https://cdn.aasaan.app/docs/stripe/stripe_13.png)
+![Stripe Step 14](https://cdn.aasaan.app/docs/stripe/stripe_14.png)
