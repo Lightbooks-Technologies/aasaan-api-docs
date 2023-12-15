@@ -1,3 +1,69 @@
-# SendGrid
+## SendGrid
 
-Content for SendGrid goes here.
+**How to Set up Sendgrid on Your Store**  
+*Integrate Sendgrid to your Store*  
+*Note: Click [here](mobile-admin-link) to navigate to the mobile admin app version of this article*
+
+Sendgrid is a cloud-based email delivery platform with which you can send transactional and marketing emails with your own branding. When you integrate Sendgrid to your aasaan store, you can send order notification emails to your customers from your own professional email address. The process of integrating Sendgrid is as follows:
+
+*Note: Make sure to install Sendgrid from the aasaan app market. Click [here](app-market-link) to learn how to install apps from your app market.*
+
+### Part 1: Setting up your Domain & Sender Authentication
+
+**What is Domain Authentication?**
+Domain authentication, formerly known as domain whitelabel, shows email providers that SendGrid has your permission to send emails on your behalf. To give SendGrid permission, you point DNS entries from your DNS provider (like GoDaddy, Rackspace, or Cloudflare) to SendGrid. Your recipients will no longer see the "via sendgrid.net" message on your emails.
+
+This has a huge positive impact on your reputation as a sender and your email deliverability. Email service providers distrust messages that don't have domain authentication set up because they can not be sure that the message comes from you. Explicitly stating that it comes from you increases your reputation with email service providers which makes it much less likely that they will filter your mail and not allow it to get to your recipient's inbox, which increases your deliverability. You are also explicitly showing your recipients that this email comes from you, so they are less likely to mark your mail as spam.
+
+To set up domain authentication, you must submit the DNS records provided by SendGrid to your DNS or hosting provider (for example, GoDaddy, Hover, CloudFlare, etc.). First, figure out who your hosting provider is and if you have access. If you don't have access to your DNS or hosting provider, you should figure out who in your company has this access before you begin setting up domain authentication.
+
+To set up domain authentication:
+
+1. In the SendGrid UI, select Settings > Sender Authentication.
+2. In the domain authentication section, click Get Started.
+3. Next, add in information about your DNS host, and indicate whether you also want to set up link branding. Click Next. For more information about link branding, check out: What is link branding?. Note: We recommend you select Yes to set up link branding.
+4. Fill in the domain that you want to send from and add advanced settings as needed. Make sure that you only enter the name of your root domain. Do not include www or http://www in this field. Your domain needs to match the domain of your FROM address on the emails you are sending out. For example, if I am sending an email from example@sendgrid.com, I would set my domain authentication domain to be sendgrid.com. Click Next. For more information about advanced settings, see Advanced settings.
+5. Next, you need to add all of the CNAME records on this screen to your DNS host. This process varies depending on your DNS host. For videos on how to add your CNAME to some popular DNS service providers, check out these videos. If you don't have access to modify your company's DNS records, you can also email a request to a co-worker. This email includes a direct link to the CNAME records. This link does expire. The recipient doesn't need login access to your SendGrid account.
+
+**Note:**
+GoDaddy, Amazon Route 53, and Namecheap are among providers that automatically add your domain to your new DNS record values, resulting in a CNAME entry with too much information that fails authentication. An example of this would be em123.yourdomain.com.yourdomain.com.  
+Be sure to check your CNAME for this behavior if your domain doesn't validate initially.
+
+Below is an example of the CNAME values under the HOST column as they are displayed and how you will need to enter them into your DNS management with one of these providers:
+
+**HOST/NAME** em123.yourdomain.com. **ENTER CNAME RECORD HOST/NAME AS:** em123  
+**HOST/NAME** s1._domainkey.yourdomain.com **ENTER CNAME RECORD HOST/NAME AS:** s1._domainkey  
+**HOST/NAME** s2._domainkey.yourdomain.com **ENTER CNAME RECORD HOST/NAME AS:** s2._domainkey  
+Entries made in the VALUE or POINTS TO field do not need to be changed.
+
+Once you add the CNAME records to your DNS host, return to the Sender authentication page and click Verify.
+
+Once the domain has been verified, you need to verify the single sender. Click [here](verify-sender-link) to learn how to verify your single sender identity.
+
+Any time that you send an email with a FROM address whose domain matches the domain set in the domain authentication, SendGrid applies that domain to your email. You only need to update your domain authentication if you want to update the domain you are emailing from.
+
+### Part 2: Getting your API key
+
+1. Navigate to Settings on the left navigation bar, and then select API Keys.
+2. Click Create API Key.
+3. Give your API key a name.
+4. Select Full Access.
+5. Click Create & View.
+
+### Part 3: Entering your API key in aasaan.
+
+**STEP 1:**  
+Login to your aasaan desktop admin panel and install Sendgrid from the app market. Click [here](install-app-link) to learn how to install apps from your Aasaan app market.
+
+**STEP 2:**  
+Go to your installed Sendgrid app in aasaan. Enter the API key and your sender email ID, and click on Verify.
+
+Once the verification process is complete, you can now send your order notification emails from your own email address.
+
+*Previous*  
+[MSG91](msg91-link)
+
+*Next*  
+[WhatsApp White Label](whatsapp-link)
+
+[Last modified 7mo ago](last-modified-link)
