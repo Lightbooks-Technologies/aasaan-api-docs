@@ -56,7 +56,11 @@ doc_structure = [
     },
     {
         "group": "ACCOUNT",
-        "pages": ["Manage Account", "How to Subscribe"]
+        "pages": [
+            "Manage Account", 
+            "How to Subscribe",
+            "How to Connect Shopify"
+        ]
     }
 ]
 

@@ -298,7 +298,8 @@
       "group": "ACCOUNT",
       "pages": [
           "documentation/account/manage-account",
-          "documentation/account/how-to-subscribe"
+          "documentation/account/how-to-subscribe",
+          "documentation/account/how-to-connect-shopify"
       ]
   },
     {

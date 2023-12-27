@@ -1,0 +1,232 @@
+---
+title: "Shopify Connect"
+description: "How to connect your shopify store to aasaan storefront"
+---
+
+<Tip>Your amazing Storefront experience is right here! Head over to this [link](https://admin.aasaan.app/auth/register) for a quick sign up.</Tip>
+
+### Setting up your Shopify store
+<Note>
+  **Shopify Custom Apps must be enabled**<br/><br/>
+  To enable custom apps in your Shopify store
+    - From your Shopify admin, click Settings > Apps and sales channels.
+    - Click Develop apps.
+    - Click Allow custom app development.
+    - Read the warning and information provided, and then click Allow custom app development.<br/><br/>
+  Learn more about custom apps here in the [Shopify documentation](https://help.shopify.com/en/manual/apps/custom-apps).
+</Note>
+<AccordionGroup>
+  <Accordion title="Creating Custom App for your aasaan account">
+    <Tabs>
+      <Tab title="Steps">
+        After enabling Custom Apps in your Shopify store, to get started you need to create a Custom App and install the Custom App. To do so:
+          - From your Shopify admin, click Settings > Apps and sales channels.
+          - Click **_Develop apps_**.
+          - Click **_Create an app_**.
+          - In the modal window, enter the App name and select an App developer. The app developer can be the store owner or any staff or collaborator account with the Develop apps permission.
+          - Click **_Create app_**.
+      </Tab>
+      <Tab title="Screenshots">
+          <Frame>
+            <img src="https://cdn.lightbooks-dev.io/docs/connectshop/SC_01.png" />
+          </Frame>
+          <Frame>
+            <img src="https://cdn.lightbooks-dev.io/docs/connectshop/SC_02.png" />
+          </Frame>
+          <Frame>
+            <img src="https://cdn.lightbooks-dev.io/docs/connectshop/SC_03.png" />
+          </Frame>
+          <Frame>
+            <img src="https://cdn.lightbooks-dev.io/docs/connectshop/SC_04.png" />
+          </Frame>
+          <Frame>
+            <img src="https://cdn.lightbooks-dev.io/docs/connectshop/SC_05.png" />
+          </Frame>
+      </Tab>
+    </Tabs>
+  </Accordion>
+  <Accordion title="Configuring your Custom App">
+    <Tabs>
+      <Tab title="Steps">
+        For **aasaan** to work correctly, you must configure two API scopes:
+          - **Admin API Scopes:** aasaan will use these scopes to sync and manage your products and store assets. 
+          - **Storefront API Scopes:** Which are required for the Shopify Storefront APIs functionality (Cart, Customers, Market, etc).<br/><br/>
+          - To start, first, configure your Admin API Scopes:
+            - In your Custom App, click Configure Admin API scopes.
+            - Select all the scopes.
+            - Once done, click Save.  
+          - Next, configure your Storefront API Scopes:
+            - In your Custom App, click Configure Storefront API scopes.
+            - Select all the scopes.
+            - Once done, click Save.
+      </Tab>
+      <Tab title="Screenshots">
+          <Frame>
+            <img src="https://cdn.lightbooks-dev.io/docs/connectshop/SC_06.png" />
+          </Frame>
+          <Frame>
+            <img src="https://cdn.lightbooks-dev.io/docs/connectshop/SC_07.png" />
+          </Frame>
+          <Frame>
+            <img src="https://cdn.lightbooks-dev.io/docs/connectshop/SC_08.png" />
+          </Frame>
+          <Frame>
+            <img src="https://cdn.lightbooks-dev.io/docs/connectshop/SC_09.png" />
+          </Frame>
+      </Tab>
+    </Tabs>
+  </Accordion>
+    <Accordion title="Installing your Custom App to Shopify and get API Keys">
+    <Tabs>
+      <Tab title="Steps">
+        When you are done setting up your API scopes, you now need to install the custom app to your Shopify Store, only then will you get your API keys.
+          - Click **_Install app_**.
+          - In the modal window, click **_Install app_**.
+          - Go to **_API Credentials_**.
+          - You will need to take note of the **_Admin API access token_** & **_Storefront API access token_** for the Shopify setup in aasaan.
+          <Warning>
+          You will only be able to view the **Admin API access token** once. So remember to store it somewhere safe or you will have to recreate and install another custom app.
+          </Warning>
+      </Tab>
+      <Tab title="Screenshots">
+          <Frame>
+            <img src="https://cdn.lightbooks-dev.io/docs/connectshop/SC_10.png" />
+          </Frame>
+          <Frame>
+            <img src="https://cdn.lightbooks-dev.io/docs/connectshop/SC_11.png" />
+          </Frame>
+          <Frame>
+            <img src="https://cdn.lightbooks-dev.io/docs/connectshop/SC_12.png" />
+          </Frame>
+          <Frame>
+            <img src="https://cdn.lightbooks-dev.io/docs/connectshop/SC_13.png" />
+          </Frame>
+          <Frame>
+            <img src="https://cdn.lightbooks-dev.io/docs/connectshop/SC_14.png" />
+          </Frame>
+          <Frame>
+            <img src="https://cdn.lightbooks-dev.io/docs/connectshop/SC_15.png" />
+          </Frame>
+          <Frame>
+            <img src="https://cdn.lightbooks-dev.io/docs/connectshop/SC_16.png" />
+          </Frame>
+          <Frame>
+            <img src="https://cdn.lightbooks-dev.io/docs/connectshop/SC_17.png" />
+          </Frame>
+      </Tab>
+    </Tabs>
+  </Accordion>
+</AccordionGroup>
+
+### Connecting your Shopify store to aasaan storefront
+<AccordionGroup>
+  <Accordion title="Sign up at aasaan">
+    <CardGroup cols={2}>
+      <Card title="Sign up at aasaan" icon="square-1">
+        - Goto aasaan [sign up](https://admin.aasaan.app/auth/register) page.
+        - Provide all the required information.
+        - Press Submit.
+      </Card>
+      <Card title="Business Category" icon="square-2">
+        - Choose the business category.
+      </Card>
+      <Card title="Theme" icon="square-3">
+        - Choose the theme of your choice.
+      </Card>
+      <Card title="Connect" icon="square-4">
+        - Select **_Shopify Connect_**.
+      </Card>
+    </CardGroup>
+  </Accordion>
+  <Accordion title="Linking your Shopify Store to aasaan">
+    <Tabs>
+      <Tab title="Steps">
+        Once you have successfully installed your new Custom App in Shopify, it is now time to go link your store to aasaan.
+          - Provide your **_Store name_**
+          - Choose the **_Country_**
+          - Add in your **_Shopify store URL_** xxxxxxx.myshopify.com.
+          - Paste in your **_Shopify Admin API Access Token_** that you had created earlier.
+          - Paste in your **_Shopify Storefront Access Token_** that you had created earlier.
+          - Paste in your **_Shopify API Key_** that you had created earlier.
+          - Paste in your **_Shopify API Secret Key_** that you had created earlier.
+          - Click **_Create Store_**.
+          - Once your Storefront linking is complete, click **_Setup Your Store_** to go to your aasaan dashboard.
+      </Tab>
+      <Tab title="Screenshots">
+          <Frame>
+            <img src="https://cdn.lightbooks-dev.io/docs/connectshop/SC_18.png" />
+          </Frame>
+          <Frame>
+            <img src="https://cdn.lightbooks-dev.io/docs/connectshop/SC_19.png" />
+          </Frame>
+          <Frame>
+            <img src="https://cdn.lightbooks-dev.io/docs/connectshop/SC_20.png" />
+          </Frame>
+      </Tab>
+    </Tabs>
+  </Accordion>
+</AccordionGroup>
+
+### Setup Callback URL for Checkout
+  How to Setup Callback URL for Checkout
+  <Tabs>
+    <Tab title="Steps">
+      After connecting your Shopify store to aasaan storefront, you need setup Callback URL for Checkout. To do so:
+        - From your Shopify admin,
+        - Click **_Settings_**.
+        - Click **_Checkout_**.
+        - Scroll down to **_Additional Scripts_** section and paste the script provided on the aasaan dashboard.
+        - Click **_Save_**.
+    </Tab>
+    <Tab title="Screenshots">
+        <Frame>
+          <img src="https://cdn.lightbooks-dev.io/docs/connectshop/SC_01.png" />
+        </Frame>
+        <Frame>
+          <img src="https://cdn.lightbooks-dev.io/docs/connectshop/SC_21.png" />
+        </Frame>
+        <Frame>
+          <img src="https://cdn.lightbooks-dev.io/docs/connectshop/SC_22.png" />
+        </Frame>
+    </Tab>
+  </Tabs>
+
+### Custom Domain to your Shopify Store
+  How to Add a Custom Domain to your Shopify Store
+  <Tabs>
+    <Tab title="Steps">
+      After connecting your Shopify store to aasaan storefront, you need a domain to your Shopify store to maintain URL consistency. To do so:
+      - First,
+        - Login to domain account
+        - Goto **_DNS_** Settings
+        - Add **_New Record_**
+        - Choose "CNAME" as Type
+        - Provide "checkout" as Name
+        - Provide "shops.myshopify.com" as Value
+        - Provide "600" as TTL-Custom value
+        - Click **_Save_** button
+      - Second,
+        - From your Shopify admin,
+        - Click **_Settings_**.
+        - Click **_Domain_**.
+        - Click **_Connect existing domain_**.
+        - Use "checkout.yourdomainname" and complete the steps to connect your domain setup.
+    </Tab>
+    <Tab title="Screenshots">
+        <Frame>
+          <img src="https://cdn.lightbooks-dev.io/docs/connectshop/SC_23.png" />
+        </Frame>
+        <Frame>
+          <img src="https://cdn.lightbooks-dev.io/docs/connectshop/SC_01.png" />
+        </Frame>
+        <Frame>
+          <img src="https://cdn.lightbooks-dev.io/docs/connectshop/SC_24.png" />
+        </Frame>
+        <Frame>
+          <img src="https://cdn.lightbooks-dev.io/docs/connectshop/SC_25.png" />
+        </Frame>
+    </Tab>
+  </Tabs>
+
+
+
