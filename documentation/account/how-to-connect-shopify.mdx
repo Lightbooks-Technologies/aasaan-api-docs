@@ -176,9 +176,21 @@ description: "How to connect your shopify store to aasaan storefront"
         - Click **_Settings_**.
         - Click **_Checkout_**.
         - Scroll down to **_Additional Scripts_** section and paste the script provided on the aasaan dashboard.
+          ```javascript Additional Scripts Example
+          <script>
+              var cartToken = localStorage.getItem('cartToken'); 
+              if (cartToken && cartToken.startsWith('"') && cartToken.endsWith('"')) {
+                  cartToken = cartToken.slice(1, -1)
+              }  
+              window.location.href = 'https://shoppy.aasaan.app/orders/tracking/' + cartToken;
+          </script>
+          ```
         - Click **_Save_**.
     </Tab>
     <Tab title="Screenshots">
+        <Frame>
+          <img src="https://cdn.lightbooks-dev.io/docs/connectshop/SC_27.png" />
+        </Frame>
         <Frame>
           <img src="https://cdn.lightbooks-dev.io/docs/connectshop/SC_01.png" />
         </Frame>
@@ -214,16 +226,16 @@ description: "How to connect your shopify store to aasaan storefront"
     </Tab>
     <Tab title="Screenshots">
         <Frame>
-          <img src="https://cdn.lightbooks-dev.io/docs/connectshop/SC_23.png" />
+          <img src="https://cdn.lightbooks-dev.io/docs/connectshop/SC_28.png" />
         </Frame>
         <Frame>
           <img src="https://cdn.lightbooks-dev.io/docs/connectshop/SC_01.png" />
         </Frame>
         <Frame>
-          <img src="https://cdn.lightbooks-dev.io/docs/connectshop/SC_24.png" />
+          <img src="https://cdn.lightbooks-dev.io/docs/connectshop/SC_29.png" />
         </Frame>
         <Frame>
-          <img src="https://cdn.lightbooks-dev.io/docs/connectshop/SC_25.png" />
+          <img src="https://cdn.lightbooks-dev.io/docs/connectshop/SC_30.png" />
         </Frame>
     </Tab>
   </Tabs>
