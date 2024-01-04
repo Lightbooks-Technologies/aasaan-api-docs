@@ -1,3 +1,55 @@
-# Hostinger
+## Connect your Hostinger Domain to your Website
 
-Content for Hostinger goes here.
+### How to Connect a Domain Purchased on Hostinger
+
+*Note: Click [here](#) to navigate to the mobile admin app version of this article*
+
+If you already own a custom Hostinger domain name for your store (for instance, example.com), you can easily link it to your Aasaan website.
+
+Here's how to do it.
+
+**STEP 1:**
+Log in to your Aasaan desktop admin panel and click on Store Front.
+
+**STEP 2:**
+Click on the settings icon.
+
+**STEP 3:**
+Click on Domain.
+
+**STEP 4:**
+Enter your domain name and click on Next.
+
+**STEP 5:**
+You will be prompted to log in to your domain provider. Log in to your domain provider and click on Next.
+
+**STEP 6:**
+You will have to perform this step of domain mapping. You have to add an "A" record.
+To complete this step, you will have to go to your domain DNS settings in Hostinger.
+
+**STEP 7:**
+Once you are in your DNS settings page, you need to add an "A" record.
+To add an "A" record, enter the following details.
+- Type: "A"
+- Name: "@"
+- Record: Either 76.76.21.21
+- TTL: 600 seconds.
+Click on Add Record.
+Note: Unlike GoDaddy, the TTL is always in seconds in Hostinger.
+Therefore, 1 hour = 3600, and 1/2 hour = 1800
+This information will be important for coming steps.
+
+*Important notes about DNS settings:*
+1. Please ensure there are no other DNS records of type A or type AAAA.
+2. Please ensure a record of type CNAME is present with name www and the data being the domain name you wish to connect to your store. This CNAME record is usually present by default. If it is missing, please create this record.
+
+**STEP 10:**
+Go back to the domain mapping section. Scroll down and click on Verify.
+
+Your custom domain should be connected successfully to your website. Here is an example of a domain mapping page after a successful connection.
+
+*Previous*
+[GoDaddy](#)
+
+*Next - STOREFRONT*
+[Social Media](#)
