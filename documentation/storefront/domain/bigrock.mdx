@@ -1,3 +1,55 @@
-# Bigrock
+## Connect your Bigrock Domain to Your Website
 
-Content for Bigrock goes here.
+### How to Connect a Domain Purchased on Bigrock
+
+*Note: Click [here](#) to navigate to the mobile admin app version of this article*
+
+If you already own a custom Bigrock domain name for your store (for instance, example.com), you can easily link it to your aasaan website.
+
+Here's how to do it.
+
+**STEP 1:**
+Log in to your aasaan desktop admin panel and click on Store Front.
+
+**STEP 2:**
+Click on the settings icon.
+
+**STEP 3:**
+Click on Domain.
+
+**STEP 4:**
+Enter your domain name and click on Next.
+
+**STEP 5:**
+You will be prompted to log in to your domain provider. Log in to your domain provider and click on Next.
+
+**STEP 6:**
+You will have to perform this step of domain mapping. You have to add an "A" record.
+To complete this step, you will have to go to the DNS settings page of your Bigrock domain.
+
+**STEP 7:**
+Once you are on the DNS settings page, it is now time to add the A record. Click on Add A Record.
+
+**STEP 9:**
+Follow the steps to add the A record.
+- Enter the host name as "@"
+- Enter either 76.76.21.21 as the IP address
+- Enter the TTL as 7200 seconds
+- Then click on Add Record.
+
+You have successfully created an A record.
+
+*Important notes about DNS settings:*
+1. Please ensure there are no other DNS records of type A or type AAAA.
+2. Please ensure a record of type CNAME is present with name www and the data being the domain name you wish to connect to your store. This CNAME record is usually present by default. If it is missing, please create this record.
+
+**STEP 10:**
+Go back to the domain mapping section. Click on Verify.
+
+Your custom domain should be connected successfully to your website. Here is an example of a domain mapping page after successful connection.
+
+*STOREFRONT - Previous*
+[Domain](#)
+
+*Next*
+[FastComet](#)
