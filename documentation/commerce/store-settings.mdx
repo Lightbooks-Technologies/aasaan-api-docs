@@ -1,13 +1,424 @@
-## Store Settings
+---
+title: "Store Settings"
+description: "Manage settings for your store"
+---
 
 Your store settings are where you customize the workings of your store. You get to customize your tax rates, payment methods, checkout login methods, minimum order value, delivery rates, and much more. You can also configure finer details such as the standard units for your product dimensions.
 
-In this section, you will learn how to configure your store settings.
+## General Settings
+In this section, you will learn how to manage notifications, tax fields, API authentication, Webhooks, KYC and staff settings.
 
-*COMMERCE - Previous*  
-[Customers](#)
+### Notifications
+    <Accordion title="Manage Notifications">
+        **STEP 1:**
+        Login to your aasaan admin panel and click on Manage.
 
-*Next*  
-[Checkout Settings](#)
+        **STEP 2:**
+        Click on Notification Settings.
 
-*Last modified 8mo ago*
+        **STEP 3:**
+        Enable the toggle for Allow Notifications to enable all push notifications for your store.
+        You have enabled all notifications.
+
+        **STEP 4:**
+        In the same way, enable the toggle for Stores to enable notifications for your orders.
+
+        **STEP 5:**
+        Finally, enable the toggle for Visits if you wish to be notified about store visits.
+        You have successfully configured your store notification settings.
+    </Accordion>
+
+### Tax Fields
+    <Accordion title="Manage Tax Fields">
+        **STEP 1:**
+        Login to your aasaan admin panel and click on Manage.
+
+        **STEP 2:**
+        Click on Tax Fields.
+
+        **STEP 3:**
+        Click on Create Tax Field.
+
+        **STEP 4:**
+        Enter the tax name, tax label, and tax value (the tax rate).
+        *Notes:*
+        1. The tax label will be visible to the customer during the checkout process and in the order receipt.
+        2. The tax value you choose here will apply to all the products in your store. If you wish to assign different tax rates to different products, you can do it in the Product level taxes section when you create/edit a product.
+        Choose the channel in which your tax rate will apply.
+        *Note: The feature of choosing a channel for the tax rate is only offered on the business plan.*
+
+        **STEP 5:**
+        Mark the tax field as "Enabled" and click on Save.
+
+        **STEP 6:**
+        Your tax field has been successfully saved.
+    </Accordion>
+
+### API Authentication
+    <Accordion title="API Authentication">
+        - API Authentication content
+    </Accordion>
+
+### Webhooks
+    <Accordion title="Webhooks">
+        - Webhooks Content
+    </Accordion>
+
+### KYC
+KYC verification is a mandatory step for Indian merchants using aasaan. Merchants need to verify their Aadhaar, PAN, and GST details.
+
+In this section, you will learn the guidelines for proper document submission and how to verify your details.
+    <Accordion title="Submit KYC">
+        <Tabs>
+            <Tab title="Guidelines">
+                Here are the guidelines for submitting your KYC documents.
+
+                **Aadhaar Card**
+
+                1. The accepted formats for Aadhaar card submission are jpg and png.
+                2. This is how the image should look. The image should be of reasonable quality, and the Aadhaar number should be legible.
+                ![Aadhaar Sample](https://help.aasaan.app/hc/article_attachments/11017841529745)
+
+                *Unacceptable Aadhaar Card Submissions*
+
+                - Aadhaar card submissions in the long format will NOT be accepted.
+                    ![Long Aadhaar](https://help.aasaan.app/hc/article_attachments/11360327184785)
+                - Aadhaar cards oriented vertically will NOT be accepted.
+                    ![Aadhaar Crossed Out](https://help.aasaan.app/hc/article_attachments/11360282897041)
+
+                **PAN Card**
+
+                1. The accepted formats for PAN card submission are jpg and png.
+                2. This is how the image should look. The image should be of reasonable quality, and the PAN number should be legible.
+                ![PAN Sample](https://help.aasaan.app/hc/article_attachments/11019016822801)
+
+                **GST Certificate**
+
+                1. The accepted GST certificate is the Form GST REG-06.
+                2. The accepted format for the GST certificate is pdf.
+            </Tab>
+            <Tab title="Verification">
+                Submitting documents for KYC verification is mandatory for aasaan sellers. In aasaan, you can submit your Aadhaar card, PAN card, and GST certificate. Aadhaar and PAN verification are mandatory.
+
+                Here's how you do it:
+
+                **STEP 1:**
+                Login to your aasaan app and click on Manage.
+
+                **STEP 2:**
+                Click on KYC Details.
+
+                **STEP 4:**
+                First verify your PAN card details. Click on Pan Card Verification.
+
+                **STEP 5:**
+                Upload an image of your PAN card.
+                Click on Submit.
+                Confirm your PAN number on your card by clicking on Verify.
+                It should be successfully verified.
+
+                **STEP 6:**
+                You will be taken to the main KYC page. Next, click on Aadhar Card.
+
+                **STEP 7:**
+                Upload a photo of your Aadhaar card(front).
+                Click on Submit.
+                Confirm your Aadhaar number on your card by clicking on Verify.
+                It should be successfully verified.
+
+                **STEP 8:**
+                Once again, you will be taken to the main KYC page. Click on GST Details.
+
+                **STEP 9:**
+                Upload a soft copy of your GST certificate(Form Reg 06).
+                Click on Submit.
+                Confirm your GST number in your certificate by clicking on Verify.
+                It should be successfully verified.
+
+                **STEP 10:**
+                You will be taken to the main KYC page. Finally, click on Digital Video Recording.
+
+                **STEP 11:**
+                Upload a video of you holding up your Aadhaar/PAN card next to your face for a few seconds.
+
+                **STEP 12:**
+                If done properly, the video upload should be verified instantly.
+                Now click on Submit KYC to complete the process.
+                You have successfully submitted your KYC details.
+            </Tab>
+        </Tabs>
+    </Accordion>
+
+### Staff
+As a store owner, you can add staff members to your so that they can complete specific tasks in the admin panel. You can determine what sections of your store they get to access by assigning them specific roles. Furthermore, you can also create custom roles to fit your business needs.
+
+In this section, you will learn how to add staff members and create custom roles for them in your admin panel.
+    <Accordion title="Manage Staff">
+        <Tabs>
+            <Tab title="Staff Members">
+                In aasaan, you can add your employees and assign them specific roles for managing your store. Here's how you do it:
+
+                **STEP 1:**
+                Login to your aasaan app and click on Manage.
+
+                **STEP 2:**
+                Click on Manage Staff.
+
+                **STEP 3:**
+                You are taken to the staff page. Here you can see that you are the owner of this store. This means that you have access to every single feature of running the store. To add a staff member, click on Invite Others.
+
+                **STEP 4:**
+                Enter the staff member's email address.
+
+                **STEP 5:**
+                Assign a particular role to the staff member. Each role has specified permissions; they are allowed to manage/view only certain features. You can either use the pre-existing roles or create new roles of your own based on your needs.
+                Here we will choose the role "MyRole". Check that box and click on Save.
+                The staff member should be visible and their status should be "Invited".
+
+                **STEP 6:**
+                Now the staff member needs to accept the invitation.
+                So they need to open the invite email, and click on Create Staff Account.
+
+                **STEP 7:**
+                They will be prompted to signup to aasaan.
+                They need to enter the authentication code sent to their email address, their personal information, and click on Submit.
+
+                **STEP 8:**
+                Once they enter their details, they will be prompted to click on Accept Invite.
+                Upon accepting the invitation, they will be able to see the admin panel.
+                In your admin panel, the status of your staff member will change to "Accepted".
+                You have successfully added a staff member to your store.
+            </Tab>
+            <Tab title="Staff Roles">
+                When you are adding your staff members to your aasaan store, you get a set of predefined roles to choose from. But you can also create your own custom roles. Here's how you do it:
+
+                **STEP 1:**
+                Login to your aasaan desktop admin panel and click on Manage.
+
+                **STEP 2:**
+                Click on Manage Staff.
+
+                **STEP 3:**
+                You are taken to the staff page. Click on Manage Roles.
+
+                **STEP 4:**
+                Click on Add Role.
+
+                **STEP 5:**
+                Enter the role name and description.
+
+                **STEP 6:**
+                Now we have to set the appropriate permissions. When it comes to permissions, the default setting for each part of the app is "No access". This means the staff member cannot view or edit that particular part of the app.
+                For a particular feature, you can set the permission as "View Access" or "Manage Access".
+                "View Access" means that the staff member assigned to this role can only view that particular feature.
+                "Manage Access" means that the staff member assigned to this role can manage or make changes in that particular feature.
+                If you wish, you can configure features as "No Access" which will prevent them from accessing that feature altogether.
+
+                **STEP 7:**
+                When you are done configuring the permissions for the role, click on Save.
+                Your custom role has been successfully saved.
+            </Tab>
+        </Tabs>
+    </Accordion>
+
+## Checkout Settings
+In this section, you will learn how to manage payment and checkout settings.
+
+### Payment
+    <Accordion title="Manage Payment">
+        In this guide, you will learn how to manage payment settings on your Aasaan store from your desktop admin panel.
+
+        **STEP 1:**
+        Log in to your aasaan admin panel and click on Manage.
+
+        **STEP 2:**
+        Click on Payment Settings.
+
+        **STEP 3:**
+        Click on the toggle to enable Cash on Delivery if you wish to offer that payment method.
+        *Note: If you have not integrated any online payment gateway to your store, cash on delivery is available on the website by default even if it is disabled.*
+        You have successfully enabled Cash on Delivery on your store.
+
+        **STEP 4:**
+        In Connect to a payment provider, you can see all the payment apps you have installed from the app market. [Click here to learn about the app market](#).
+        You have successfully configured your store's payment settings.
+    </Accordion>
+
+### Checkout
+    <Accordion title="Manage Checkout">
+        Here's how you configure your store checkout settings.
+
+        **STEP 1:**
+        Log into the desktop version of your aasaan app and click on Manage.
+
+        **STEP 2:**
+        Click on Checkout Settings.
+
+        **STEP 3:**
+        Expand the first row to add your minimum order amount.
+        Enter the amount.
+        Click on Save.
+
+        **STEP 4:**
+        Click on the toggle to enable Live Chat.
+        If you enable this function, customers will be able to reach out to you through WhatsApp if they have any queries about a product.
+
+        **STEP 5:**
+        Click on the toggle button to enable Inclusive of All Taxes. If you enable this function, your product price will be displayed including GST on the product page itself.
+        To show you how it works, this is the price of a product before we enabled "Inclusive of all taxes".
+        Now this is the price after we enabled "Inclusive of all taxes".
+
+        **STEP 6:**
+        Click on the next toggle button to enable the Contact us with Email feature.
+        Enter your email address.
+        Click on Save. Customers will now be able to send you emails.
+
+        **STEP 7:**
+        Click on the toggle to enable the Login with Phone Number.
+        Similarly, you can enable Signup with Email, Google and Facebook. This way, your customers will have multiple ways to login during checkout.
+        You have successfully configured your checkout settings.
+    </Accordion>
+
+## Warehouse & Shipping Settings
+In this section, you will learn how to manage warehouses and shipping settings.
+
+### Warehouses
+    <Accordion title="Manage Warehouses">
+        Here is how you add your store location.
+
+        **STEP 1:**
+        Login to your aasaan desktop admin panel and click on Manage.
+
+        **STEP 2:**
+        Click on Warehouses.
+
+        **STEP 3:**
+        A warehouse would already be created by default during the signup process. To add the address, click on the Edit button.
+
+        **STEP 4:**
+        Click on Add Address to add your warehouse address. You can also edit the name of your warehouse.
+
+        **STEP 5:**
+        Enter your postal code and choose the appropriate locality.
+
+        **STEP 6:**
+        Enter your complete address and contact information and click on Save.
+
+        **STEP 7:**
+        Click on the toggle button to enable local store pickup, wherein customers can visit your store to pick up their orders.
+
+        **STEP 8:**
+        Enter the expected pickup time and pickup instructions. Then click on Save.
+
+        **STEP 9:**
+        Your have successfully added your store warehouse address.
+    </Accordion>
+
+### Delivery
+    <Accordion title="Manage Delivery">
+        In this section, you will learn how to configure your delivery settings. The steps for doing so are as follows:
+
+        **STEP 1:**
+        Login to your aasaan desktop admin panel and click on Manage.
+
+        **STEP 2:**
+        Click on Delivery Settings.
+
+        **STEP 3:**
+        Click on Add Shipping Method.
+        Here you can configure your delivery settings for your store. Enter the name of the shipping method, and select the warehouse(s) it will apply to.
+        Read the articles in this section linked below to learn how to configure each setting.
+        - [Learn how to set up free shipping](#)
+        - [Learn how to set up flat shipping rates](#)
+        - [Learn how to set up custom shipping rates](#)
+        - [Learn how to set up weight-based shipping rates](#)
+        - [Learn how to set up provider-based shipping rates](#)
+        - [Learn how to set up advanced shipping settings](#)
+    </Accordion>
+
+## Channel Settings
+In this section, you will learn how to manage channels.
+
+### Channels
+    <Accordion title="Manage Channels">
+        You can use aasaan to sell your products on different online sales channels. Sales channels represent the different geographical regions where you sell your products. You can customize your product pricing, currency, taxes, warehouses, and shipping methods for each channel in your store. This feature is especially useful if you wish to launch your brand globally. For example, if you wish to sell in India and the United States, you can create the respective channels for both countries in your store, and customize the currency, tax rates, and other details for each channel.
+
+        *Note: The channels feature is only offered on the business plan.*
+
+        The steps for creating channels in your store are as follows:
+
+        **STEP 1:**
+        Login to your aasaan desktop admin panel and click on Manage.
+
+        **STEP 2:**
+        Click on Channels.
+
+        **STEP 3:**
+        You will see a default channel created based on the country selected while creating your store. To create a new channel, click on Add Channel.
+
+        **STEP 4:**
+        Enter the channel name.
+
+        **STEP 5:**
+        Choose the country you wish to assign to the channel. The channel currency will be automatically selected according to the country you choose.
+
+        **STEP 6:**
+        Select the warehouse you wish to assign to the sales channel.
+
+        **STEP 7:**
+        After adding all your channel details, click on Save to save your channel.
+
+        You have successfully added a new geographical channel to your store.
+    </Accordion>
+
+## Custom Settings
+In this section, you will learn how to manage custom fields, units & dimensions, reviews, trusted badges and size chart settings.
+
+### Custom Fields
+    <Accordion title="Manage Custom Fields">
+        - Manage custom fields in your store:
+    </Accordion>
+
+### Units & Dimensions
+    <Accordion title="Manage Units & Dimensions">
+        Here's how you can set your desired units and dimensions in aasaan.
+
+        **STEP 1:**
+        Login to your aasaan desktop admin panel and click on Manage.
+
+        **STEP 2:**
+        Click on Units and Dimensions.
+
+        **STEP 3:**
+        Click on the weight unit drop down to set the desired unit for your product weights.
+        Select your desired weight unit. Here we will select kilograms.
+
+        **STEP 5:**
+        Click on the dimensions unit drop down to set the desired unit for your product dimensions. Here we will select centimeters.
+
+        **STEP 6:**
+        Click on Save to save your settings.
+
+        **STEP 8:**
+        Click on Okay to confirm your changes.
+        Your settings have been successfully saved.
+        To verify this, you can go to any product to view the units you've set.
+    </Accordion>
+
+### Reviews
+    <Accordion title="Manage Reviews">
+        To manage product reviews on your store:
+        - Login to your aasaan desktop admin panel and click on Manage.
+        - Click on Reviews Setting.
+        - Here you can click the toggle to enable your reviews setting. Enabling it will automatically approve any review you get. Here we will keep it disabled. This will mark all new reviews as pending.
+    </Accordion>
+
+### Trusted Badges
+    <Accordion title="Manage Trusted Badges">
+        - Manage trusted badges.
+    </Accordion>
+
+### Size Chart
+    <Accordion title="Manage Size Chart">
+        - Manage size chart
+    </Accordion>

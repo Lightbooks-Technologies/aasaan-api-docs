@@ -30,305 +30,254 @@
   },
   "anchors": [
     {
-      "name": "Connect to Shopify",
-      "icon": "shopify",
-      "url": "https://aasaan.app/connect/shopify/"
+    "name": "Connect to Shopify",
+    "icon": "shopify",
+    "url": "https://aasaan.app/connect/shopify/"
     },
     {
-      "name": "Connect to Woocommerce",
-      "icon": "money-check-dollar",
-      "url": "https://aasaan.app/connect/shopify/"
+    "name": "Connect to Woocommerce",
+    "icon": "money-check-dollar",
+    "url": "https://aasaan.app/connect/shopify/"
     }
   ],
   "navigation": [
-
     {
       "group": "FUNDAMENTALS",
       "pages": [
-          "documentation/fundamentals/getting-set-up"
+        "documentation/fundamentals/getting-set-up"
       ]
-  },
-  {
-      "group": "STOREFRONT",
+    },
+    {
+      "group": "COMMERCE",
       "pages": [
-          "documentation/storefront/seo",
+          "documentation/commerce/brands",
+          "documentation/commerce/categories",
+          "documentation/commerce/products",
+          "documentation/commerce/orders",
+          "documentation/commerce/customers",
+          "documentation/commerce/coupons",
+          "documentation/commerce/reviews",
+          "documentation/commerce/store-settings"
+        ]
+      },
+      {
+        "group": "APP MARKET",
+        "pages": [
           {
-              "group": "design",
-              "pages": [
-                  "documentation/storefront/design/themes",
-                  "documentation/storefront/design/custom-pages",
-                  "documentation/storefront/design/widgets",
-                  "documentation/storefront/design/responsive-image",
-                  "documentation/storefront/design/recommended-image-dimensions",
-                  "documentation/storefront/design/announcement",
-                  "documentation/storefront/design/logo",
-                  "documentation/storefront/design/favicon",
-                  "documentation/storefront/design/fomo"
-              ]
-          },
-          {
-              "group": "blogs",
-              "pages": [
-                  "documentation/storefront/blogs/share-blogs",
-                  "documentation/storefront/blogs/create-blogs"
-              ]
-          },
-          "documentation/storefront/store-policies",
-          {
-              "group": "store-policies",
-              "pages": [
-                  "documentation/storefront/store-policies/terms-&-conditions",
-                  "documentation/storefront/store-policies/payment-policy",
-                  "documentation/storefront/store-policies/shipping-policy",
-                  "documentation/storefront/store-policies/returns-&-refunds-policy",
-                  "documentation/storefront/store-policies/privacy-policy"
-              ]
-          },
-          "documentation/storefront/qr-code",
-          "documentation/storefront/place-order",
-          "documentation/storefront/design",
-          "documentation/storefront/domain",
-          "documentation/storefront/mobile-app",
-          "documentation/storefront/blogs",
-          "documentation/storefront/social-media",
-          "documentation/storefront/about-us",
-          {
-              "group": "seo",
-              "pages": [
-                  "documentation/storefront/seo/product",
-                  "documentation/storefront/seo/homepage"
-              ]
-          },
-          {
-              "group": "domain",
-              "pages": [
-                  "documentation/storefront/domain/fastcomet",
-                  "documentation/storefront/domain/hostinger",
-                  "documentation/storefront/domain/bigrock",
-                  "documentation/storefront/domain/godaddy"
-              ]
-          }
-      ]
-  },
-  {
-    "group": "COMMERCE",
-    "pages": [
-        "documentation/commerce/kyc",
-        "documentation/commerce/coupons",
-        "documentation/commerce/channels",
-        "documentation/commerce/store-settings",
-        {
-            "group": "products",
+            "group": "payments",
             "pages": [
-                "documentation/commerce/products/manage-reviews",
-                "documentation/commerce/products/bulk-update",
-                "documentation/commerce/products/manage-variants",
-                "documentation/commerce/products/bulk-pricing",
-                "documentation/commerce/products/manage-product",
-                "documentation/commerce/products/bulk-upload"
+              "documentation/app-market/payments/aasaan-pay",
+              "documentation/app-market/payments/razorpay",
+              "documentation/app-market/payments/paypal",
+              "documentation/app-market/payments/stripe",
+              "documentation/app-market/payments/payu"
             ]
-        },
-        {
-            "group": "kyc",
-            "pages": [
-                "documentation/commerce/kyc/guidelines",
-                "documentation/commerce/kyc/verification"
-            ]
-        },
-        {
-            "group": "store-settings",
-            "pages": [
-                "documentation/commerce/store-settings/delivery-settings",
-                "documentation/commerce/store-settings/notification-settings",
-                "documentation/commerce/store-settings/payment-settings",
-                "documentation/commerce/store-settings/tax-fields",
-                "documentation/commerce/store-settings/checkout-settings",
-                "documentation/commerce/store-settings/units-&-dimensions"
-            ]
-        },
-        "documentation/commerce/warehouses",
-        {
-            "group": "manage-staff",
-            "pages": [
-                "documentation/commerce/manage-staff/staff-members",
-                "documentation/commerce/manage-staff/staff-roles"
-            ]
-        },
-        "documentation/commerce/brands",
-        "documentation/commerce/orders",
-        "documentation/commerce/categories",
-        "documentation/commerce/customers",
-        "documentation/commerce/custom-fields",
-        "documentation/commerce/products",
-        "documentation/commerce/manage-staff",
-        {
-            "group": "orders",
-            "pages": [
-                "documentation/commerce/orders/export-orders",
-                "documentation/commerce/orders/failed-payments",
-                "documentation/commerce/orders/abandoned-cart",
-                "documentation/commerce/orders/manual-order",
-                "documentation/commerce/orders/manage-orders"
-            ]
-        }
-    ]
-},
-  {
-      "group": "APP MARKET",
-      "pages": [
-          {
-              "group": "payments",
-              "pages": [
-                  "documentation/app-market/payments/aasaan-pay",
-                  "documentation/app-market/payments/razorpay",
-                  "documentation/app-market/payments/paypal",
-                  "documentation/app-market/payments/stripe",
-                  "documentation/app-market/payments/payu"
-              ]
           },
           "documentation/app-market/shopping",
           {
-              "group": "shopping",
-              "pages": [
-                  "documentation/app-market/shopping/facebook-shop",
-                  "documentation/app-market/shopping/google-shopping"
-              ]
+            "group": "shopping",
+            "pages": [
+              "documentation/app-market/shopping/facebook-shop",
+              "documentation/app-market/shopping/google-shopping"
+            ]
           },
           {
-              "group": "verify",
-              "pages": [
-                  "documentation/app-market/verify/google-search-console",
-                  "documentation/app-market/verify/facebook-domain-verification"
-              ]
+            "group": "verify",
+            "pages": [
+              "documentation/app-market/verify/google-search-console",
+              "documentation/app-market/verify/facebook-domain-verification"
+            ]
           },
           "documentation/app-market/shipping",
           "documentation/app-market/support",
           {
-              "group": "shipping",
-              "pages": [
-                  "documentation/app-market/shipping/ithink-logistics",
-                  "documentation/app-market/shipping/pickrr",
-                  "documentation/app-market/shipping/shiprocket",
-                  "documentation/app-market/shipping/shipstation",
-                  "documentation/app-market/shipping/borzo",
-                  "documentation/app-market/shipping/delhivery"
-              ]
+            "group": "shipping",
+            "pages": [
+              "documentation/app-market/shipping/ithink-logistics",
+              "documentation/app-market/shipping/pickrr",
+              "documentation/app-market/shipping/shiprocket",
+              "documentation/app-market/shipping/shipstation",
+              "documentation/app-market/shipping/borzo",
+              "documentation/app-market/shipping/delhivery"
+            ]
           },
           "documentation/app-market/introduction-to-the-app-market",
           "documentation/app-market/migration",
           "documentation/app-market/verify",
           {
-              "group": "support",
-              "pages": [
-                  "documentation/app-market/support/richpanel-live-chat",
-                  "documentation/app-market/support/zoho-chat",
-                  "documentation/app-market/support/freshchat",
-                  "documentation/app-market/support/tidio-live-chat",
-                  "documentation/app-market/support/jivochat",
-                  "documentation/app-market/support/drift-chat",
-                  "documentation/app-market/support/zendesk-chat",
-                  "documentation/app-market/support/intercom",
-                  "documentation/app-market/support/tawk-chat",
-                  "documentation/app-market/support/userlike:-live-chat",
-                  "documentation/app-market/support/kommunicate-chatbot,-live-chat",
-                  "documentation/app-market/support/livechat"
-              ]
+            "group": "support",
+            "pages": [
+              "documentation/app-market/support/richpanel-live-chat",
+              "documentation/app-market/support/zoho-chat",
+              "documentation/app-market/support/freshchat",
+              "documentation/app-market/support/tidio-live-chat",
+              "documentation/app-market/support/jivochat",
+              "documentation/app-market/support/drift-chat",
+              "documentation/app-market/support/zendesk-chat",
+              "documentation/app-market/support/intercom",
+              "documentation/app-market/support/tawk-chat",
+              "documentation/app-market/support/userlike:-live-chat",
+              "documentation/app-market/support/kommunicate-chatbot,-live-chat",
+              "documentation/app-market/support/livechat"
+            ]
           },
           {
-              "group": "marketing",
-              "pages": [
-                  "documentation/app-market/marketing/popupsmart",
-                  "documentation/app-market/marketing/privy",
-                  "documentation/app-market/marketing/wisepops",
-                  "documentation/app-market/marketing/adroll",
-                  "documentation/app-market/marketing/poptin",
-                  "documentation/app-market/marketing/optimonk",
-                  "documentation/app-market/marketing/mailchimp",
-                  "documentation/app-market/marketing/ecomail",
-                  "documentation/app-market/marketing/mailmunch",
-                  "documentation/app-market/marketing/wheelofpopups",
-                  "documentation/app-market/marketing/zotabox",
-                  "documentation/app-market/marketing/nudgify",
-                  "documentation/app-market/marketing/optinmonster",
-                  "documentation/app-market/marketing/fomo"
-              ]
+            "group": "marketing",
+            "pages": [
+              "documentation/app-market/marketing/popupsmart",
+              "documentation/app-market/marketing/privy",
+              "documentation/app-market/marketing/wisepops",
+              "documentation/app-market/marketing/adroll",
+              "documentation/app-market/marketing/poptin",
+              "documentation/app-market/marketing/optimonk",
+              "documentation/app-market/marketing/mailchimp",
+              "documentation/app-market/marketing/ecomail",
+              "documentation/app-market/marketing/mailmunch",
+              "documentation/app-market/marketing/wheelofpopups",
+              "documentation/app-market/marketing/zotabox",
+              "documentation/app-market/marketing/nudgify",
+              "documentation/app-market/marketing/optinmonster",
+              "documentation/app-market/marketing/fomo"
+            ]
           },
           "documentation/app-market/analytics",
           {
-              "group": "communication",
-              "pages": [
-                  "documentation/app-market/communication/msg91",
-                  "documentation/app-market/communication/sendgrid",
-                  "documentation/app-market/communication/whatsapp-white-label"
-              ]
+            "group": "communication",
+            "pages": [
+              "documentation/app-market/communication/msg91",
+              "documentation/app-market/communication/sendgrid",
+              "documentation/app-market/communication/whatsapp-white-label"
+            ]
           },
           "documentation/app-market/marketing",
           "documentation/app-market/communication",
           "documentation/app-market/payments",
           {
-              "group": "migration",
-              "pages": [
-                  "documentation/app-market/migration/woocommerce",
-                  "documentation/app-market/migration/shopify",
-                  "documentation/app-market/migration/magento"
-              ]
+            "group": "migration",
+            "pages": [
+              "documentation/app-market/migration/woocommerce",
+              "documentation/app-market/migration/shopify",
+              "documentation/app-market/migration/magento"
+            ]
           },
           {
-              "group": "google-search-console",
-              "pages": [
-                  "documentation/app-market/google-search-console/submit-your-sitemap",
-                  "documentation/app-market/google-search-console/request-indexing",
-                  "documentation/app-market/google-search-console/important-notes"
-              ]
+            "group": "google-search-console",
+            "pages": [
+              "documentation/app-market/google-search-console/submit-your-sitemap",
+              "documentation/app-market/google-search-console/request-indexing",
+              "documentation/app-market/google-search-console/important-notes"
+            ]
           },
           {
-              "group": "analytics",
-              "pages": [
-                  "documentation/app-market/analytics/google-analytics",
-                  "documentation/app-market/analytics/hotjar",
-                  "documentation/app-market/analytics/bing-webmaster",
-                  "documentation/app-market/analytics/lucky-orange-analytics",
-                  "documentation/app-market/analytics/clarity-by-microsoft",
-                  "documentation/app-market/analytics/meta-pixel"
-              ]
+            "group": "analytics",
+            "pages": [
+                "documentation/app-market/analytics/google-analytics",
+                "documentation/app-market/analytics/hotjar",
+                "documentation/app-market/analytics/bing-webmaster",
+                "documentation/app-market/analytics/lucky-orange-analytics",
+                "documentation/app-market/analytics/clarity-by-microsoft",
+                "documentation/app-market/analytics/meta-pixel"
+            ]
           }
       ]
-  },
-  {
+    },
+    {
+      "group": "STOREFRONT",
+      "pages": [
+        "documentation/storefront/seo",
+        {
+          "group": "design",
+          "pages": [
+            "documentation/storefront/design/themes",
+            "documentation/storefront/design/custom-pages",
+            "documentation/storefront/design/widgets",
+            "documentation/storefront/design/responsive-image",
+            "documentation/storefront/design/recommended-image-dimensions",
+            "documentation/storefront/design/announcement",
+            "documentation/storefront/design/logo",
+            "documentation/storefront/design/favicon",
+            "documentation/storefront/design/fomo"
+          ]
+        },
+        {
+          "group": "blogs",
+          "pages": [
+            "documentation/storefront/blogs/share-blogs",
+            "documentation/storefront/blogs/create-blogs"
+          ]
+        },
+        "documentation/storefront/store-policies",
+        {
+          "group": "store-policies",
+          "pages": [
+            "documentation/storefront/store-policies/terms-&-conditions",
+            "documentation/storefront/store-policies/payment-policy",
+            "documentation/storefront/store-policies/shipping-policy",
+            "documentation/storefront/store-policies/returns-&-refunds-policy",
+            "documentation/storefront/store-policies/privacy-policy"
+          ]
+        },
+        "documentation/storefront/qr-code",
+        "documentation/storefront/place-order",
+        "documentation/storefront/design",
+        "documentation/storefront/domain",
+        "documentation/storefront/mobile-app",
+        "documentation/storefront/blogs",
+        "documentation/storefront/social-media",
+        "documentation/storefront/about-us",
+        {
+          "group": "seo",
+          "pages": [
+            "documentation/storefront/seo/product",
+            "documentation/storefront/seo/homepage"
+          ]
+        },
+        {
+          "group": "domain",
+          "pages": [
+          "documentation/storefront/domain/fastcomet",
+          "documentation/storefront/domain/hostinger",
+          "documentation/storefront/domain/bigrock",
+          "documentation/storefront/domain/godaddy"
+          ]
+        }
+      ]
+    },
+    {
       "group": "ACCOUNT",
       "pages": [
-          "documentation/account/manage-account",
-          "documentation/account/how-to-subscribe",
-          "documentation/account/how-to-connect-shopify"
+        "documentation/account/manage-account",
+        "documentation/account/how-to-subscribe",
+        "documentation/account/how-to-connect-shopify"
       ]
-  },
+    },
     {
       "group": "GETTING STARTED",
       "pages": [
-          "api-reference/introduction",
-          "api-reference/authentication",
-          "api-reference/versioning",
-          "api-reference/errors"
+        "api-reference/introduction",
+        "api-reference/authentication",
+        "api-reference/versioning",
+        "api-reference/errors"
       ]
-  },
-  {
-    "group": "GETTING STARTED",
-    "pages": [
+    },
+    {
+      "group": "GETTING STARTED",
+      "pages": [
         "backend-api/introduction",
         "backend-api/authentication",
         "backend-api/versioning",
         "backend-api/errors"
-    ]
-},
-{
-  "group": "WEBHOOKS",
-  "pages": [
-      "backend-api/webhooks/introduction",
-      "backend-api/webhooks/setup_webhooks",
-      "backend-api/webhooks/edit_webhooks",
-      "backend-api/webhooks/sample_payload"
-  ]
-},
+      ]
+    },
+    {
+      "group": "WEBHOOKS",
+      "pages": [
+        "backend-api/webhooks/introduction",
+        "backend-api/webhooks/setup_webhooks",
+        "backend-api/webhooks/edit_webhooks",
+        "backend-api/webhooks/sample_payload"
+      ]
+    },
     {
       "group": "Store",
       "pages": [
@@ -403,8 +352,6 @@
         "api-reference/product/update-a-variant"
       ]
     },
-
-
     {
       "group": "Store",
       "pages": [
