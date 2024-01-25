@@ -1,0 +1,107 @@
+## Product Color
+### How to add Product Color
+#### Add Color to Product
+
+The "Product Color" feature lets you customize a product's visual presentation, including title, hover effects, price, sale items, reviews, and badges like "New," "Sale," and "Soldout." Enhance the look, engage users, and maintain brand consistency.
+
+**STEP 1:**
+Log in to your Aasaan desktop admin panel and click on Store Front.
+
+**STEP 2:**
+Click on the content template in which you wish to add Product color. You can also click on Create Template if you wish to create a new template for your website.
+
+**STEP 3:**
+Click on Themes.
+
+**STEP 4:**
+Click on the dropdown to select Product color.
+
+### Product Card
+
+To change the color of the product title, please follow these steps:
+
+**STEP 5:**
+Click on Product Title Color. This action will open up the color customization settings specifically for the product title.
+
+**STEP 6:**
+Choose your desired color by either selecting from the provided color palette or entering the exact color code if you have a specific color in mind. The changes will be reflected on the Product Title. Please refer to fig:Product title color.
+
+*fig:Product title color*
+
+**STEP 7:**
+To change the color of the product title when it's hovered over by a user, you can follow these steps:
+*Note: Hover color refers to the change in color of an element (such as a button or link) when a user hovers their cursor over it.*
+Click on Product Title Hover Color.
+
+**STEP 8:**
+Choose your desired color by either selecting from the provided color palette or entering the exact color code if you have a specific color in mind. The changes will be reflected on the Product Title when the user hovers the cursor over it. Please refer to fig:Product title hover color.
+
+*fig:Product title hover color*
+
+**STEP 9:**
+To change the color of the product price, click on Product Price Color.
+
+**STEP 10:**
+Choose your desired color by either selecting from the provided color palette or entering the exact color code. The changes will be reflected on the MSRP of the product. Please refer to fig:Product Price color.
+
+*fig:Product Price color*
+
+**STEP 11:**
+To change the color of the product price when it's on sale or discounted, click on Product Price Sale Color.
+
+**STEP 12:**
+Choose your desired color by either selecting from the provided color palette or entering the exact color code. The changes will be reflected on the Sale Price & Savings of the product. Please refer to fig:Product Price Sale Color.
+
+*fig:Product Price Sale Color*
+
+**STEP 13:**
+To change the color of review or rating text on a product, click on Product Review Color.
+
+**STEP 14:**
+Choose your desired color by either selecting from the provided color palette or entering the exact color code. The changes will be reflected on the review or rating symbols of the product. Please refer to fig:Product Review color.
+
+*fig:Product Review color*
+
+**STEP 15:**
+To change the color of empty review or rating symbols, click on Product Review Empty Color.
+
+**STEP 16:**
+You can now either add a new color or change the existing color for the empty review or rating symbols. Select the desired color from the available color palette or input the specific color code. The changes will be reflected on the color of the empty review or rating symbols. Please refer to fig:Product Review Empty color.
+
+*fig:Product Review Empty color*
+
+**STEP 17:**
+Click on Save. Click on Publish to apply the changes to your website. The changes have been published successfully.
+
+**Previous**
+[Body Color](#)
+
+**Next**
+[Product Badge](#)
+
+*Last modified 1mo ago*
+
+![Image 1](https://cdn.aasaan.app/docs/product/product_1.jpg)
+![Image 2](https://cdn.aasaan.app/docs/product/product_2.jpg)
+![Image 3](https://cdn.aasaan.app/docs/product/product_3.jpg)
+![Image 4](https://cdn.aasaan.app/docs/product/product_4.jpg)
+![Image 5](https://cdn.aasaan.app/docs/product/product_5.jpg)
+![Image 6](https://cdn.aasaan.app/docs/product/product_6.jpg)
+![Image 7](https://cdn.aasaan.app/docs/product/product_7.jpg)
+![Image 8](https://cdn.aasaan.app/docs/product/product_8.jpg)
+![Image 9](https://cdn.aasaan.app/docs/product/product_9.jpg)
+![Image 10](https://cdn.aasaan.app/docs/product/product_10.jpg)
+![Image 11](https://cdn.aasaan.app/docs/product/product_11.jpg)
+![Image 12](https://cdn.aasaan.app/docs/product/product_12.jpg)
+![Image 13](https://cdn.aasaan.app/docs/product/product_13.jpg)
+![Image 14](https://cdn.aasaan.app/docs/product/product_14.jpg)
+![Image 15](https://cdn.aasaan.app/docs/product/product_15.jpg)
+![Image 16](https://cdn.aasaan.app/docs/product/product_16.jpg)
+![Image 17](https://cdn.aasaan.app/docs/product/product_17.jpg)
+![Image 18](https://cdn.aasaan.app/docs/product/product_18.jpg)
+![Image 19](https://cdn.aasaan.app/docs/product/product_19.jpg)
+![Image 20](https://cdn.aasaan.app/docs/product/product_20.jpg)
+![Image 21](https://cdn.aasaan.app/docs/product/product_21.jpg)
+![Image 22](https://cdn.aasaan.app/docs/product/product_22.jpg)
+![Image 23](https://cdn.aasaan.app/docs/product/product_23.jpg)
+![Image 24](https://cdn.aasaan.app/docs/product/product_24.jpg)
