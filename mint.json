@@ -35,9 +35,9 @@
     "url": "https://aasaan.app/connect/shopify/"
     },
     {
-    "name": "Connect to Woocommerce",
+    "name": "Connect to Bigcommerce",
     "icon": "money-check-dollar",
-    "url": "https://aasaan.app/connect/shopify/"
+    "url": "https://aasaan.app/connect/bigcommerce/"
     }
   ],
   "navigation": [
@@ -45,6 +45,14 @@
       "group": "FUNDAMENTALS",
       "pages": [
         "documentation/fundamentals/getting-set-up"
+      ]
+    },
+    {
+      "group": "ACCOUNT",
+      "pages": [
+        "documentation/account/manage-account",
+        "documentation/account/how-to-subscribe",
+        "documentation/account/how-to-connect-shopify"
       ]
     },
     {
@@ -241,14 +249,6 @@
           "documentation/storefront/domain/godaddy"
           ]
         }
-      ]
-    },
-    {
-      "group": "ACCOUNT",
-      "pages": [
-        "documentation/account/manage-account",
-        "documentation/account/how-to-subscribe",
-        "documentation/account/how-to-connect-shopify"
       ]
     },
     {
