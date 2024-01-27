@@ -1,7 +1,164 @@
----
-title: "Migration"
+To format your documentation for WooCommerce, Shopify, and Magento in a professional way with steps and screenshots organized in tabs, you can use the following structure and format:
+
 ---
 
-If you have an existing store on Shopify or Woocommerce, **aasaan** offers an easy migration, wherein you can transfer all your existing store data into your new aasaan store in minutes.
+### WooCommerce Migration
 
-In this section, you will learn how to migrate your existing store from Shopify or Woocommerce to **aasaan**.
+*Migrate your WooCommerce Store to aasaan*  
+*Migrate your Store from WooCommerce to aasaan*
+
+*Note: Click [here](mobile-admin-link) to navigate to the mobile admin app version of this article*
+
+*You can watch the video version of this article [here](video-link)*
+
+If you have an existing WooCommerce store and you wish to migrate all your data (products, orders, customer info, etc.) to aasaan, you can easily do it with our WooCommerce migration app. Here's how you do it:
+
+*Note: Make sure to install the WooCommerce app from the aasaan app market. Click [here](install-app-link) to learn how to install apps from your app market.*
+
+<Tabs>
+  <Tab title="Steps">
+  
+  **Part 1: Getting the WooCommerce Consumer Key and Consumer Secret**
+
+  **STEP 1:**  
+  Login to your WordPress account and click on WooCommerce > Settings.
+
+  **STEP 2:**  
+  Click on Advanced.
+
+  **STEP 3:**  
+  Click on Rest API.
+
+  **STEP 4:**  
+  Click on Add Key.
+
+  **STEP 5:**  
+  Enter the description and choose the permission as Read/Write. The user can remain the same. Then click on Generate API Key.
+
+  **STEP 6:**  
+  Copy the consumer key and consumer secret immediately and paste them in a safe place.
+
+  *Note: The consumer secret is only displayed once. So take extra care to save it.*
+
+  **Part 2: Entering the API keys into aasaan**
+
+  **STEP 1:**  
+  Go to your installed WooCommerce app in aasaan. Enter your WooCommerce store URL, consumer key, and consumer secret. Then click on Link.
+
+  *Note: When you enter your WooCommerce store URL, make sure to enter "/wp-json" at the end. For example if your URL is example.com, you must enter example.com/wp-json.*
+
+  Your API keys are successfully verified.
+
+  **STEP 2:**  
+  Once the API keys are verified, go to your click on WooCommerce once more, and click on Migrate.
+
+  A message will appear indicating that the migration process has begun.
+
+  You can track the migration status by clicking on the icons shown to track the ongoing and completed migrations.
+
+  </Tab>
+
+  <Tab title="Screenshots">
+  
+  **Screenshots for WooCommerce Migration**
+
+  </Tab>
+</Tabs>
+
+---
+
+### Shopify Migration
+
+*Migrate your Shopify Store to aasaan*  
+*Migrate your Store from Shopify to aasaan*
+
+*Note: Click [here](mobile-admin-link) to navigate to the mobile admin app version of this article*
+
+*You can watch the video version of this article [here](video-link)*
+
+If you wish to bring all your data (products, orders, customer info, etc.) from Shopify to aasaan, you can easily do it with our migration feature. Here's how you do it:
+
+*Note: Make sure to install the Shopify app from the aasaan app market. Click [here](install-app-link) to learn how to install apps from your app market.*
+
+<Tabs>
+  <Tab title="Steps">
+  
+  **Part 1: Setting up the Shopify API**
+
+  **STEP 1:**  
+  Login to your Shopify admin panel and click on Apps.
+
+  **STEP 2:**  
+  Click on Develop Apps for your store.
+
+  **STEP 3:**  
+  Click on Allow Custom App Development.
+
+  **STEP 4:**  
+  Click on Allow Custom App Development.
+
+  *Note: If you have developed apps on Shopify before, you might not have to complete steps 3 and 4.*
+
+  **STEP 5:**  
+  Click on Create an app.
+
+  **STEP 6:**  
+  Enter the app name and click on Create App.
+
+  **STEP 7:**  
+  Click on API Credentials.
+
+  **STEP 8:**  
+  Click on Configure Admin API Scopes.
+
+  **STEP 9:**  
+  Now you have to define the Admin API Access Scopes. Here you get to decide what data you want to migrate from your Shopify store to your aasaan store.
+
+  *Note: Make sure you include at least these four access scopes: Inventory, Orders, Products and Customers. These are mandatory.*
+
+  **STEP 10:**  
+  Once you have defined your Access Scopes, click on Save.
+
+  **STEP 11:**  
+  Click on Install App.  
+  Click on Install.
+
+  **STEP 12:**  
+  Now your app is successfully installed. To migrate your data to aasaan, you need two things:  
+  - The Admin API Access Token
+
+  *Note: Click on Reveal token once to display the token, and then save it in a safe place. This token is only displayed once.*
+
+  - The API Key
+
+  We need to copy both these codes and paste them into the aasaan app.
+
+  **Part 2: Migrating your Data from Shopify to aasaan**
+
+  **STEP 1:**  
+  Go to your installed Shopify app in aasaan. Enter the store URL, the API key, and the Admin API Access Token. Then click on Link.
+
+  *Note: You need to enter your Shopify domain in the store URL field. It will look like this: example.myshopify.com*
+
+  **STEP 2:**  
+  Once the API keys are verified, go to your click on Shopify once more, and click on Migrate.
+
+  A message will appear indicating that the migration status has begun.
+
+  You can track the ongoing and completed migrations by clicking on the download and upload buttons respectively.
+
+  This is how your migration tracking screen will look.
+
+  </Tab>
+
+  <Tab title="Screenshots">
+  
+  **Screenshots for Shopify Migration**
+
+
+
+  </Tab>
+</Tabs>
+
+---
+

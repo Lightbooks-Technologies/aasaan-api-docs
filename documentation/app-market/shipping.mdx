@@ -2,15 +2,336 @@
 title: "Shipping"
 ---
 
-Before you receive your first order, you need to have a shipping strategy. You can either ship your orders on your own or partner with one or more shipping carriers.
+## Borzo Integration Guide
 
-**aasaan** offers easy integration with these shipping carriers:
-- Pickrr
-- Shiprocket
-- iThink Logistics
-- Delhivery
-- Borzo
-- Shipstation (for merchants in North America)
+**Integrate Borzo Delivery with Your Store for Local Shipping**
 
-In this section, you will learn how to integrate the carriers mentioned above into your store.
+Borzo is a renowned intracity courier delivery service that facilitates fast and reliable local shipping for businesses. Integrating Borzo with your aasaan store can streamline your local delivery process, enhancing efficiency and customer satisfaction.
 
+*Important:*
+- Ensure Borzo is installed from the aasaan app market. For installation guidance, click [here](install-app-link).
+
+<Tabs>
+  <Tab title="Borzo Setup Steps">
+
+  ### Setting Up Borzo for Local Shipping
+**STEP 1:**
+On your main Borzo dashboard, click on Register to register on the test server.
+
+**STEP 2:**
+On the test server (which can be reached at [https://apitest.borzodelivery.com/in](https://apitest.borzodelivery.com/in)), click on Login/Sign up.
+
+**STEP 3:**
+Click on Sign up.
+
+**STEP 4:**
+Enter the information requested and click on Sign up.
+
+**STEP 5:**
+Once your account has been created and you have logged in to the test server dashboard, click on Integration.
+
+**STEP 6:**
+In the API Settings, click on Copy Token to copy the test API token.
+
+**STEP 7:**
+Go to your installed Borzo app in the aasaan admin panel. Paste the token copied from step 6 and click on Verify. You have successfully verified the Borzo app.
+
+**STEP 8:**
+After verifying Borzo, you must send two orders to your Borzo test dashboard. Here's how:
+
+1. Set the delivery type in your shipping method to Borzo. [Click here](#) to learn more about shipping methods.
+2. Place two test orders on your store.
+3. Go to the orders page in your admin panel and change the status of those two orders to accepted. [Click here](#) to learn how to change order status.
+
+  </Tab>
+
+  <Tab title="Borzo Setup Screenshots">
+
+  ## Borzo Integration Screenshots
+
+  - Screenshots illustrating the process from Borzo account setup to entering the API key in aasaan and verifying the integration.
+
+  </Tab>
+</Tabs>
+
+---
+
+## Delhivery Integration Guide
+
+**Integrate Delhivery with Your aasaan Store**
+
+Delhivery offers comprehensive logistics services across India, making it a preferred choice for businesses seeking reliable shipping solutions. Integrating Delhivery with your aasaan store simplifies the shipping process, enabling seamless order fulfillment.
+
+*Important:*
+- Ensure Delhivery is installed from the aasaan app market. For installation guidance, click [here](install-app-link).
+
+<Tabs>
+  <Tab title="Delhivery Setup Steps">
+
+  ### Integrating Delhivery with Your Store
+**STEP  1:**
+
+1. Login to your Delhivery unified platform and click on the Settings button shown.
+2. Click on API Setup.
+3. In your API Setup, click on Request Live API Token.
+4. Click on View to view your API token, and then click on Copy to copy it to your clickboard.
+   
+**STEP  2:**
+
+5. Once you copied your API token, click on Pickup Locations.
+6. Copy the pickup location name shown.
+7. Go to your installed Delhivery app in aasaan. Enter your Access Token(the API key from step 4) and Pickup Address ID(the pickup location name from step 6) and click on Verify.
+
+You have successfully linked your Delhivery account to your aasaan store. The status should say Active.
+
+  </Tab>
+
+  <Tab title="Delhivery Setup Screenshots">
+
+  ## Delhivery Integration Screenshots
+
+  - Visual guide showing each step of integrating Delhivery with your store, ensuring a smooth setup process.
+
+  </Tab>
+</Tabs>
+
+---
+
+## iThink Logistics Integration Guide
+
+**Integrate iThink Logistics with Your Store**
+
+iThink Logistics, an AI-based logistics aggregator, offers a streamlined shipping solution with multiple courier partners. Integrating iThink Logistics with your aasaan store can optimize your shipping operations and enhance customer satisfaction.
+
+*Important:*
+- Ensure iThink Logistics is installed from the aasaan app market. For installation guidance, click [here](install-app-link).
+
+<Tabs>
+  <Tab title="iThink Logistics Setup Steps">
+
+  ### Setting Up iThink Logistics on Your Store
+
+**STEP  1:**
+
+1. Login to your iThink Logistics dashboard and click on Settings > API Key.
+2. Copy the API and Secret keys and store them in a safe place. These will be needed later on.
+3. Click on Account > Warehouse Address.
+4. Copy your Warehouse ID as shown below.
+
+**STEP  2:**
+
+5. Go to your installed iThink Logistics app in aasaan. Enter the Access Token(API key from step 3), Client Secret(Secret key from step 3) and Pickup Address ID(warehouse ID from step 5). Choose the delivery type as domestic and click on Verify.
+
+Your iThink Logistics account will be successfully connected. The status should say Active.
+
+  </Tab>
+
+  <Tab title="iThink Logistics Setup Screenshots">
+
+  ## iThink Logistics Integration Screenshots
+
+  - Step-by-step screenshots to assist in the iThink Logistics setup process, from dashboard navigation to integration verification.
+
+  </Tab>
+</Tabs>
+
+---
+
+## Pickrr Integration Guide
+
+**Set Up Pickrr for Efficient Shipping**
+
+Pickrr, a leading logistics aggregator in India, provides cost-effective shipping solutions with an extensive reach. By integrating Pickrr with your aasaan store, you can automate your shipping process, making order fulfillment more efficient.
+
+*Important:*
+- Ensure Pickrr is installed from the aasaan app market. For installation guidance, click [here](install-app-link).
+
+<Tabs>
+  <Tab title="Pickrr Setup Steps">
+
+  ### Integrating Pickrr with Your Store
+
+**STEP  1:**
+
+1. Click on the URL- [https://dashboard.pickrr.com/](https://dashboard.pickrr.com/)
+2. You will reach the Pickrr signup page. Enter the following details.
+   - Company/Store name
+   - Email (Each account is tied to a unique email ID)
+   - Mobile number
+   - New Password
+   - Monthly order (Need to select the approx. range of orders)
+3. Click on Sign Up with OTP.
+   
+**STEP  2:**
+
+4. Enter the OTP sent to your registered mobile number and click on Submit OTP.
+5. You have successfully created your Pickrr account. You will have the option to either take a Product tour or to skip it. Click on Skip.
+6. To verify your KYC details, click on the arrow button.
+7. Click on Submit KYC.
+
+**STEP  3:**
+
+8. Enter your business details:
+   - Company name(Should already be filled)
+   - Company Type
+   - Which business proof you're going to use. You can choose your bank statement, Aadhaar card, or GST certificate.
+   - Upload the business proof.
+   - Select whether you have a GST number.
+   - Complete Billing Address
+   - PAN Number, with PAN card uploaded
+   - Select whether you have an MSME certificate.
+9. Click on Submit.
+
+**STEP  4:**
+
+10. Go back to your dashboard. Scroll down on the left-hand side panel, and click on Integration.
+11. Click on Add New Channel.
+12. You will see a variety of websites that you can integrate with Pickrr. Click on Shopify.
+13. You have to copy the Pickrr auth token into the Aasaan app to integrate your store.
+
+**STEP  5:**
+
+14. Go to your Pickrr app in aasaan. Paste the Auth token from Step 10 and click on Verify.
+15. You have successfully integrated Pickrr to your aasaan store. The status should say "Active".
+
+  </Tab>
+
+  <Tab title="Pickrr Setup Screenshots">
+
+  ## Pickrr Integration Screenshots
+
+  - Detailed visuals covering each step of the Pickrr setup process, ensuring clear guidance for users.
+
+  </Tab>
+</Tabs>
+
+---
+
+## Shiprocket Integration Guide
+
+**Integrate Shiprocket with Your Store**
+
+Shiprocket, one of India's top eCommerce shipping solutions, offers low rates and extensive coverage. Integrating Shiprocket with your aasaan store enables you to manage shipping effortlessly, improving the overall logistics experience.
+
+*Important:*
+- Ensure Shiprocket is installed from the aasaan app market. For installation guidance, click [here](install-app-link).
+
+<Tabs>
+  <Tab title="Shiprocket Setup Steps">
+
+  ### Setting Up Shiprocket on Your Store
+**STEP  1:**
+
+1. Click on [www.shiprocket.in](https://www.shiprocket.in/) and click on Sign Up for Free.
+2. Enter your details.
+   - First and last names
+   - Company name
+   - Email address
+   - Password
+3. Then click on Sign Up for Free.
+
+**STEP 2:**
+
+4. Enter your phone number and click on Send Verification Code.
+5. Enter the OTP sent to your number and click on Verify My Phone.
+6. You have now successfully created your Shiprocket Account. You will see this Welcome page. Click on Dashboard on the left-hand side panel to reach your dashboard.
+   This is how your dashboard will look.
+   
+Now that you have successfully created your Shiprocket account, it's time to integrate it into your aasaan app.
+
+**Integrate Shiprocket Account to aasaan**
+
+**STEP  1:**
+
+7. To integrate your Shiprocket account, first, you have to add your pickup address and phone number. To do that, click on Settings.
+
+**STEP  2:**
+
+8. Click on Manage Pickup Addresses in the "Pickup Address" section.
+9. Click on Add Pickup Address.
+   Enter your pickup address (the same address you entered in your Aasaan app delivery settings) and verify your phone number. When you're done, click on Save Address.
+
+**STEP  3:**
+
+10. In the settings page, scroll down to API and click on Configure.
+
+**STEP  4:**
+
+11. Click on Create an API User.
+
+**STEP  5:**
+
+12. You now need to generate your API credential. Enter an email ID and a new password to generate the credentials.
+    Note: The email ID has to be different from the registered email ID.
+
+**STEP  6:**
+
+13. After entering your Email ID and password, click on Generate API Credential.
+
+**STEP  7:**
+
+14. You have successfully added an API user.
+
+**STEP  8:**
+
+15. Go to your installed Shiprocket app in aasaan. Enter the credentials you used to create the API user in step 6. Then click on Verify.
+16. You have successfully linked your aasaan store to Shiprocket.
+ 
+
+ </Tab>
+
+  <Tab title="Shiprocket Setup Screenshots">
+
+  ## Shiprocket Integration Screenshots
+
+  - Visual guide through the Shiprocket integration process, from account setup to final verification in aasaan.
+
+  </Tab>
+</Tabs>
+
+---
+
+## Shipstation Integration Guide
+
+**Set Up Shipstation for Global Shipping**
+
+Shipstation offers a robust shipping platform for businesses looking to streamline their shipping processes. Integrating Shipstation with your aasaan store allows you to manage orders and shipping from a single dashboard, enhancing efficiency and scalability.
+
+*Important:*
+- Ensure Shipstation is installed from the aasaan app market. For installation guidance, click [here](install-app-link).
+
+<Tabs>
+  <Tab title="Shipstation Setup Steps">
+
+  ### Integrating Shipstation with Your Store
+
+  
+**STEP 1:**
+
+1. Login to your Shipstation account and click on My Profile.
+
+**STEP 2:**
+
+2. Click on API Settings.
+
+**STEP 3:**
+
+3. Copy the given API keys.
+
+**STEP 4:**
+
+4. Go to your installed Shipstation app in aasaan. Enter the API keys from step 3 and click on Verify.
+   You have successfully set up Shipstation on your store.
+
+  </Tab>
+
+  <Tab title="Shipstation Setup Screenshots">
+
+  ## Shipstation Integration Screenshots
+
+  - Screenshots detailing the Shipstation setup process, ensuring users can follow along and successfully integrate Shipstation with their store.
+
+  </Tab>
+</Tabs>
+
+---
