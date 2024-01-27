@@ -1,0 +1,303 @@
+---
+title: "Design Panel"
+description: "Learn how to set up Actions in Aasaan to enhance customer interaction"
+---
+
+## Actions
+
+With Actions in Aasaan, you define the customer's journey upon interacting with various Elements on your site. By setting up Actions, you can dictate what occurs when a customer clicks on a selected Element. These interactions can include:
+
+- **Link to a Page**: Directs the customer to another page on your site.
+- **Link to a Section**: Takes the customer to a specific section within your site.
+- **Email Prompt**: Opens the customer's default email application to create a new email with a pre-filled subject.
+- **Add to Cart**: Adds a specific product variant to the cart and redirects the customer to a designated page.
+
+Actions play a vital role in enhancing the functionality of Button elements. However, their utility extends beyond just buttons; you can apply Actions to Image elements, Box elements, and many other Elements to effectively guide and engage your customers.
+
+## Position
+
+In Aasaan, all Elements come with two primary position settings: Relative and Absolute. Understanding these settings allows you to precisely control the placement of Elements on your pages.
+
+### Relative Positioning
+
+A relatively positioned Element behaves similarly to a statically positioned Element. However, the key difference lies in your ability to assign it an offset from its original static position. For instance:
+
+- You can shift an Element 20 pixels to the left of where it would normally be if statically positioned.
+- Or, you might move it 100 pixels downwards from its default static position.
+
+This flexibility allows for subtle adjustments without altering the fundamental flow of your page layout.
+
+### Absolute Positioning
+
+For absolutely positioned Elements, their placement is defined based on the outer limits of the Box element they are contained within. Key characteristics include:
+
+- You can set their offset from any side of the Box element.
+- These Elements may overlap with other Elements on the page.
+
+Absolute positioning is particularly useful when you need to layer Elements or create a specific spatial relationship between components that is independent of the normal document flow.
+
+By mastering these positioning techniques, you can enhance the visual appeal and functionality of your Aasaan site, creating layouts that are both engaging and responsive to your design needs.
+
+
+## Size
+
+In Aasaan, sizing Elements involves setting their height and width through various methods:
+
+- **Fixed**
+- **Relative to the Element it is in**
+- **Fitting the content**
+- **Filling the Element it is in**
+
+Width and height are set independently for each Element.
+
+### Fixed
+
+With Fixed dimensions, you define the exact size of an Element in pixels (PX). The Element retains this size regardless of changes in its content or the size of the Element it is in.
+
+### Relative
+
+Relative sizing means setting the height or width of an Element as a percentage of its container Element. For instance:
+
+- A width of 50% implies the Element occupies half the width of its container.
+- A height of 75% means it takes up 75% of the height of the container.
+
+### Fit
+
+When set to Fit, an Element adjusts its size to match the size of its content and spacing. For example:
+
+- An Element with its width set to Fit and containing an image:
+  - If the image's width changes from 200PX to 400PX, the Element's width also adjusts from 200PX to 400PX.
+  - With the image's width at 200PX and 50PX of horizontal spacing on each side, the Element's width becomes 300PX (200PX + 2 * 50PX).
+
+### Fill
+
+Fill setting causes an Element to occupy all available space within its container. The available space is determined by the area not occupied by Spacing or other Elements. If multiple Elements in a container are set to Fill, they divide this available space among themselves.
+
+## Overflow
+
+Overflow settings determine how Elements behave when they exceed the boundaries of their container:
+
+### Show
+
+Setting an Element to Show means all its contents, including those extending beyond its boundaries, remain visible.
+
+### Hide
+
+With Hide, only the parts of Elements within the container's boundaries are visible.
+
+### Scroll
+
+An Element set to Scroll will display a scrollbar if its contents are too large. It creates a scroll both horizontally and vertically. However, enabling Wrap in the Layout section limits scrolling to one direction, as Wrap prevents overflow in the primary direction.
+
+
+## Spacing
+
+Spacing in Aasaan allows you to define the area between and around elements within a Box element. This feature enhances the layout and overall visual appeal of your site. Spacing is measured in pixels (PX).
+
+### Types of Spacing
+
+There are two main types of spacing:
+
+- **Spacing Around**: This refers to the area between Elements within a Box element. It determines the gap between different Elements.
+- **Spacing Inside**: This is the space between the outer limits of a Box element and the Elements it contains. It defines the padding within the Box element.
+
+### Configuring Spacing
+
+You have the flexibility to configure spacing in two ways:
+
+1. **Uniform Spacing**: Choose to have a single horizontal and vertical spacing size that applies uniformly around and inside the Box element. This option is ideal for creating a consistent look and feel.
+
+2. **Individual Spacing**: Opt for four separate spacing sizes, giving you the ability to set distinct top, bottom, left, and right spacing values. This level of customization is perfect for creating unique and intricate layouts.
+
+To switch between these spacing configurations, simply click the icons located on the right side of the Spacing section in the Design Panel. This allows for quick adjustments and fine-tuning of your page layouts, ensuring precise control over the visual spacing of your Elements.
+
+
+
+## Layout
+
+The Layout in Aasaan is designed to be stacked, meaning a Box element fills up with other Elements in the direction you set, allowing for stacking Elements next to or on top of each other. Understanding how Layers work is crucial in visualizing how Elements relate to each other in Aasaan.
+
+### Direction
+
+The Direction setting in a Box element determines whether the Elements within are stacked Horizontally or Vertically. This choice dictates the overall flow and organization of content within the Box.
+
+### Gap
+
+The Gap between Elements in a Box element can be precisely controlled. It's measured in pixels, with the first number indicating the horizontal Gap and the second the vertical Gap. Clicking the icon between these numbers synchronizes the horizontal and vertical Gaps.
+
+### Distribution
+
+Distribution within a Box element relates to the starting point of Element positioning in the selected Direction. It's important to note that Distribution does not alter the order of Elements. Regardless of the Distribution setting, the first Element in the Layers tab remains the top-most or left-most Element on the page. Distribution options include:
+
+- Alignment to the top or left border.
+- Centering in the middle.
+- Alignment to the bottom or right border.
+- Even distribution between both sides without a gap.
+- Even distribution with equal gaps at the sides.
+
+### Alignment
+
+Alignment positions Elements in the Box element along the secondary direction. Like Distribution, Alignment does not change the order of Elements; the first Element in the Layers tab remains the top-most or left-most. Alignment options are:
+
+- Along the left or top border.
+- Centered.
+- Along the right or bottom border.
+- Stretching every element to fill the space.
+
+### Wrap
+
+The Wrap setting controls how Elements behave when they exceed the outer limits of the Box element:
+
+- **No Wrap**: Elements falling outside the Box's boundary are either cut off or shown outside the Box, depending on the Overflow setting under Size.
+- **Yes Wrap**: Elements exceeding the Box's boundary are neatly stacked in the next available space, maintaining the layout's flow and continuity.
+
+By effectively using these Layout settings, you can create intricate and visually appealing designs that enhance the user experience on your Aasaan site.
+
+
+## Text
+
+The Text panel in Aasaan is where you customize Text elements to fit your brand and design preferences.
+
+### Text Customization Options
+
+- **Choose a Style**: Select from pre-set Brand styles if available.
+- **Content**: Enter the text you wish to display.
+- **Color**: Pick a color for your text.
+- **Font**: Choose from a range of fonts.
+- **Weight**: Adjust the weight of the text, making it bold or thin.
+- **Size**: Change the size of your text.
+- **Alignment and Distribution**: Align text vertically and distribute it horizontally.
+- **Spacing**: Set the spacing between lines and characters.
+- **Case**: Make all letters uppercase or lowercase.
+- **Line Breaking Options**:
+  - *Normal*: Line breaks only occur between words.
+  - *Break words*: Lines are filled as much as possible, sometimes breaking words with hyphens.
+  - *Break all*: Line breaks at the exact limit of the Element, possibly splitting words.
+  - *No break*: Maintains word integrity in languages like Chinese/Japanese/Korean, while others follow normal line breaks.
+
+### Custom Fonts
+
+Customize your store further by uploading custom fonts:
+
+- **Uploading Process**:
+  - Select a Text element.
+  - Choose an existing Text style or add a new one.
+  - Click the Font field and then the Upload button.
+  - Choose your fonts or drag and drop them into the upload field.
+
+Custom fonts become available across your site and can be included in Brand styles.
+
+### Text in eCommerce Elements
+
+When working with Text elements within eCommerce elements, the Design panel adapts to show relevant options:
+
+- **Content Section**: Displays the selected product or collection with a 'Change source' button.
+- **Content Selector**:
+  - *Static*: Displays copy added in Aasaan.
+  - *Dynamic*: Shows copy associated with the product/collection in Shopify.
+
+With these Text customization tools, you can create visually engaging and brand-consistent content throughout your Aasaan store.
+
+
+## Image
+
+In Aasaan, the Image panel is where you select and manage images for your site's design.
+
+### Selecting and Uploading Images
+
+- **Choosing an Asset**: Select the Asset to display in the Image element by clicking +. 
+- **Uploading New Images**: If your desired image isn't already uploaded as an Asset, you can upload it by clicking + and then Upload.
+
+### Image Sizing Options
+
+The Sizing selector provides two options for how your Asset will be displayed within the Image element:
+
+- **Fit**: Displays the entire Asset within the Image element. If the Image element and Asset have different aspect ratios, some parts of the Image element may remain empty.
+- **Fill**: Fills the Image element with as much of the Asset as possible. The Asset is centered, and parts that do not fit within the Image element's size are cropped.
+
+### Images in eCommerce Elements
+
+When an Image element is part of an eCommerce element, the Design panel offers specific options:
+
+- **Content Section**: Shows the selected product with a 'Change source' button to alter the selection.
+- **Content Selector**:
+  - *Static*: Use an Asset uploaded to Aasaan.
+  - *Dynamic*: Display an image associated with the product/collection in Shopify.
+
+These customization features in the Image panel of Aasaan empower you to enhance the visual appeal of your online store, ensuring that each image aligns perfectly with your brand and product presentation.
+
+## Style
+
+In Aasaan, styling an Element involves various options that allow you to customize its appearance to fit your design vision.
+
+### Styling Options
+
+- **Fill Color**: Set the background color of the Element.
+- **Border**: Add a border around the Element. You can customize its thickness, color, and style.
+- **Radius**: Apply rounded corners to the Element. You have the flexibility to:
+  - Apply the same radius to all four corners.
+  - Set different radii for each corner, offering more detailed shaping.
+- **Rotation**: Rotate the Element to a specific angle, offering dynamic layout possibilities.
+- **Shadow**: Add a shadow effect outside or inside the Element. This can enhance depth and prominence.
+- **Opacity**: Adjust the transparency of the Element. Lowering the opacity can create subtle design effects or focus on other overlapping elements.
+
+### Considerations
+
+Please note that not every styling option is available for each Element type. The available styling choices depend on the nature and function of each Element, ensuring optimal design compatibility and user experience.
+
+Through these styling features in Aasaan, you can create visually compelling and unique designs that resonate with your brand identity and user interface.
+
+## Icons
+
+Icons are versatile elements that can enhance the user interface of your Aasaan site. You can easily add and customize them to fit your design needs.
+
+### Adding Icons
+
+- **Inserting Icons**: Navigate to the structure panel, select Elements, and drag the Icon element from the Image group onto your canvas.
+
+### Customizing Icons
+
+- **Changing the Icon**: Click on the icon on your canvas to bring up the Icon group in the design panel. Use the Icon selector in the design panel to open the Icon menu, where you can search for and select the desired icon. You also have the option to set the icon type here.
+- **Color**: Customize the color of the icon by clicking on the color field.
+- **Size, Rotation, and Visibility**: Within the design panel, you can adjust the icon's size and rotation. Additionally, set the icon's visibility to ensure it fits perfectly within your page layout and design.
+
+### Optimization and Styling
+
+By manipulating these settings, you can optimize and style the icon to suit your specific use case, ensuring it contributes effectively to the aesthetic and functionality of your site.
+
+Icons in Aasaan offer a powerful way to communicate visually with your users, enhancing both the appeal and the usability of your site's design.
+
+
+## Device Visibility
+
+In Aasaan, you have the flexibility to control the visibility of website elements based on the device being used by your audience. This feature allows for a tailored user experience across different devices such as desktops, tablets, and mobile phones.
+
+### Setting Device-Based Visibility
+
+Device visibility options provide control over which devices display certain blocks or elements on your site.
+
+#### Default Settings
+
+- **All Devices Enabled**: By default, the visibility settings for Desktop, Tablet, and Mobile are enabled. This means the block or element is visible on all device types.
+
+#### Customizing Visibility
+
+- **Disabling Specific Devices**: You can disable visibility for any device category by clicking on the respective option. For example, if you disable the Tablet option, the block will not be shown to users accessing your site from a tablet.
+
+### Example of Device Visibility Application
+
+Consider a scenario where you want a block to be visible only to logged-in users who are accessing your site via a mobile device:
+
+- **Mobile-Only Visibility**: In this case, you would disable the Desktop and Tablet visibility options, leaving only the Mobile option enabled.
+
+![Applying device visibility](#image-link)
+
+This setup ensures that the particular block is exclusively visible to mobile users, enhancing the responsiveness and user experience of your site.
+
+### Best Practices
+
+- **Consistency Across Devices**: Ensure that disabling visibility on certain devices does not disrupt the overall user experience or leave out crucial information.
+- **Testing**: Always test the visibility settings across different devices to confirm the user experience is as intended.
+
+Device visibility settings in Aasaan offer a powerful way to customize the presentation of your site, ensuring that content is appropriately tailored for different screen sizes and user contexts.
+

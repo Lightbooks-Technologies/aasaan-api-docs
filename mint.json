@@ -30,14 +30,14 @@
   },
   "anchors": [
     {
-    "name": "Connect to Shopify",
-    "icon": "shopify",
-    "url": "https://aasaan.app/connect/shopify/"
+      "name": "Connect to Shopify",
+      "icon": "shopify",
+      "url": "https://aasaan.app/connect/shopify/"
     },
     {
-    "name": "Connect to Bigcommerce",
-    "icon": "money-check-dollar",
-    "url": "https://aasaan.app/connect/bigcommerce/"
+      "name": "Connect to Bigcommerce",
+      "icon": "money-check-dollar",
+      "url": "https://aasaan.app/connect/bigcommerce/"
     }
   ],
   "navigation": [
@@ -56,203 +56,160 @@
       ]
     },
     {
-      "group": "COMMERCE",
+      "group": "STOREFRONT BUILDER",
       "pages": [
-          "documentation/commerce/brands",
-          "documentation/commerce/categories",
-          "documentation/commerce/products",
-          "documentation/commerce/orders",
-          "documentation/commerce/customers",
-          "documentation/commerce/coupons",
-          "documentation/commerce/reviews",
-          "documentation/commerce/store-settings"
-        ]
-      },
-      {
-        "group": "APP MARKETP",
-        "pages": [
-            "documentation/app-market/payment"
-          ]
-        },
-      {
-        "group": "APP MARKET",
-        "pages": [
-          {
-            "group": "payments",
-            "pages": [
-              "documentation/app-market/payments/aasaan-pay",
-              "documentation/app-market/payments/razorpay",
-              "documentation/app-market/payments/paypal",
-              "documentation/app-market/payments/stripe",
-              "documentation/app-market/payments/payu"
-            ]
-          },
-          "documentation/app-market/shopping",
-          {
-            "group": "shopping",
-            "pages": [
-              "documentation/app-market/shopping/facebook-shop",
-              "documentation/app-market/shopping/google-shopping"
-            ]
-          },
-          {
-            "group": "verify",
-            "pages": [
-              "documentation/app-market/verify/google-search-console",
-              "documentation/app-market/verify/facebook-domain-verification"
-            ]
-          },
-          "documentation/app-market/shipping",
-          "documentation/app-market/support",
-          {
-            "group": "shipping",
-            "pages": [
-              "documentation/app-market/shipping/ithink-logistics",
-              "documentation/app-market/shipping/pickrr",
-              "documentation/app-market/shipping/shiprocket",
-              "documentation/app-market/shipping/shipstation",
-              "documentation/app-market/shipping/borzo",
-              "documentation/app-market/shipping/delhivery"
-            ]
-          },
-          "documentation/app-market/introduction-to-the-app-market",
-          "documentation/app-market/migration",
-          "documentation/app-market/verify",
-          {
-            "group": "support",
-            "pages": [
-              "documentation/app-market/support/richpanel-live-chat",
-              "documentation/app-market/support/zoho-chat",
-              "documentation/app-market/support/freshchat",
-              "documentation/app-market/support/tidio-live-chat",
-              "documentation/app-market/support/jivochat",
-              "documentation/app-market/support/drift-chat",
-              "documentation/app-market/support/zendesk-chat",
-              "documentation/app-market/support/intercom",
-              "documentation/app-market/support/tawk-chat",
-              "documentation/app-market/support/userlike:-live-chat",
-              "documentation/app-market/support/kommunicate-chatbot,-live-chat",
-              "documentation/app-market/support/livechat"
-            ]
-          },
-          {
-            "group": "marketing",
-            "pages": [
-              "documentation/app-market/marketing/popupsmart",
-              "documentation/app-market/marketing/privy",
-              "documentation/app-market/marketing/wisepops",
-              "documentation/app-market/marketing/adroll",
-              "documentation/app-market/marketing/poptin",
-              "documentation/app-market/marketing/optimonk",
-              "documentation/app-market/marketing/mailchimp",
-              "documentation/app-market/marketing/ecomail",
-              "documentation/app-market/marketing/mailmunch",
-              "documentation/app-market/marketing/wheelofpopups",
-              "documentation/app-market/marketing/zotabox",
-              "documentation/app-market/marketing/nudgify",
-              "documentation/app-market/marketing/optinmonster",
-              "documentation/app-market/marketing/fomo"
-            ]
-          },
-          "documentation/app-market/analytics",
-          {
-            "group": "communication",
-            "pages": [
-              "documentation/app-market/communication/msg91",
-              "documentation/app-market/communication/sendgrid",
-              "documentation/app-market/communication/whatsapp-white-label"
-            ]
-          },
-          "documentation/app-market/marketing",
-          "documentation/app-market/communication",
-          "documentation/app-market/payments",
-          {
-            "group": "migration",
-            "pages": [
-              "documentation/app-market/migration/woocommerce",
-              "documentation/app-market/migration/shopify",
-              "documentation/app-market/migration/magento"
-            ]
-          },
-          {
-            "group": "google-search-console",
-            "pages": [
-              "documentation/app-market/google-search-console/submit-your-sitemap",
-              "documentation/app-market/google-search-console/request-indexing",
-              "documentation/app-market/google-search-console/important-notes"
-            ]
-          },
-          {
-            "group": "analytics",
-            "pages": [
-                "documentation/app-market/analytics/google-analytics",
-                "documentation/app-market/analytics/hotjar",
-                "documentation/app-market/analytics/bing-webmaster",
-                "documentation/app-market/analytics/lucky-orange-analytics",
-                "documentation/app-market/analytics/clarity-by-microsoft",
-                "documentation/app-market/analytics/meta-pixel"
-            ]
-          }
+        "documentation/builder/pre-builts",
+        "documentation/builder/widgets",
+        "documentation/builder/themes",
+        "documentation/builder/pages",
+        "documentation/builder/Publishing",
+        "documentation/builder/settings",
+        "documentation/builder/design-panel",
+        "documentation/builder/seo",
+        "documentation/builder/mobile-app",
+        "documentation/builder/custom-domain"
+        
+        
+        
       ]
     },
     {
-      "group": "STOREFRONT",
+      "group": "COMMERCE",
       "pages": [
-        "documentation/storefront/seo",
+        "documentation/commerce/brands",
+        "documentation/commerce/categories",
+        "documentation/commerce/products",
+        "documentation/commerce/orders",
+        "documentation/commerce/customers",
+        "documentation/commerce/coupons",
+        "documentation/commerce/reviews",
+        "documentation/commerce/store-settings"
+      ]
+    },
+    {
+      "group": "APP MARKETP",
+      "pages": [
+        "documentation/app-market/payment"
+      ]
+    },
+
+    {
+      "group": "APP MARKET",
+      "pages": [
         {
-          "group": "design",
+          "group": "payments",
           "pages": [
-            "documentation/storefront/design/themes",
-            "documentation/storefront/design/custom-pages",
-            "documentation/storefront/design/widgets",
-            "documentation/storefront/design/responsive-image",
-            "documentation/storefront/design/recommended-image-dimensions",
-            "documentation/storefront/design/announcement",
-            "documentation/storefront/design/logo",
-            "documentation/storefront/design/favicon",
-            "documentation/storefront/design/fomo"
+            "documentation/app-market/payments/aasaan-pay",
+            "documentation/app-market/payments/razorpay",
+            "documentation/app-market/payments/paypal",
+            "documentation/app-market/payments/stripe",
+            "documentation/app-market/payments/payu"
+          ]
+        },
+        "documentation/app-market/shopping",
+        {
+          "group": "shopping",
+          "pages": [
+            "documentation/app-market/shopping/facebook-shop",
+            "documentation/app-market/shopping/google-shopping"
           ]
         },
         {
-          "group": "blogs",
+          "group": "verify",
           "pages": [
-            "documentation/storefront/blogs/share-blogs",
-            "documentation/storefront/blogs/create-blogs"
+            "documentation/app-market/verify/google-search-console",
+            "documentation/app-market/verify/facebook-domain-verification"
           ]
         },
-        "documentation/storefront/store-policies",
+        "documentation/app-market/shipping",
+        "documentation/app-market/support",
         {
-          "group": "store-policies",
+          "group": "shipping",
           "pages": [
-            "documentation/storefront/store-policies/terms-&-conditions",
-            "documentation/storefront/store-policies/payment-policy",
-            "documentation/storefront/store-policies/shipping-policy",
-            "documentation/storefront/store-policies/returns-&-refunds-policy",
-            "documentation/storefront/store-policies/privacy-policy"
+            "documentation/app-market/shipping/ithink-logistics",
+            "documentation/app-market/shipping/pickrr",
+            "documentation/app-market/shipping/shiprocket",
+            "documentation/app-market/shipping/shipstation",
+            "documentation/app-market/shipping/borzo",
+            "documentation/app-market/shipping/delhivery"
           ]
         },
-        "documentation/storefront/qr-code",
-        "documentation/storefront/place-order",
-        "documentation/storefront/design",
-        "documentation/storefront/domain",
-        "documentation/storefront/mobile-app",
-        "documentation/storefront/blogs",
-        "documentation/storefront/social-media",
-        "documentation/storefront/about-us",
+        "documentation/app-market/introduction-to-the-app-market",
+        "documentation/app-market/migration",
+        "documentation/app-market/verify",
         {
-          "group": "seo",
+          "group": "support",
           "pages": [
-            "documentation/storefront/seo/product",
-            "documentation/storefront/seo/homepage"
+            "documentation/app-market/support/richpanel-live-chat",
+            "documentation/app-market/support/zoho-chat",
+            "documentation/app-market/support/freshchat",
+            "documentation/app-market/support/tidio-live-chat",
+            "documentation/app-market/support/jivochat",
+            "documentation/app-market/support/drift-chat",
+            "documentation/app-market/support/zendesk-chat",
+            "documentation/app-market/support/intercom",
+            "documentation/app-market/support/tawk-chat",
+            "documentation/app-market/support/userlike:-live-chat",
+            "documentation/app-market/support/kommunicate-chatbot,-live-chat",
+            "documentation/app-market/support/livechat"
           ]
         },
         {
-          "group": "domain",
+          "group": "marketing",
           "pages": [
-          "documentation/storefront/domain/fastcomet",
-          "documentation/storefront/domain/hostinger",
-          "documentation/storefront/domain/bigrock",
-          "documentation/storefront/domain/godaddy"
+            "documentation/app-market/marketing/popupsmart",
+            "documentation/app-market/marketing/privy",
+            "documentation/app-market/marketing/wisepops",
+            "documentation/app-market/marketing/adroll",
+            "documentation/app-market/marketing/poptin",
+            "documentation/app-market/marketing/optimonk",
+            "documentation/app-market/marketing/mailchimp",
+            "documentation/app-market/marketing/ecomail",
+            "documentation/app-market/marketing/mailmunch",
+            "documentation/app-market/marketing/wheelofpopups",
+            "documentation/app-market/marketing/zotabox",
+            "documentation/app-market/marketing/nudgify",
+            "documentation/app-market/marketing/optinmonster",
+            "documentation/app-market/marketing/fomo"
+          ]
+        },
+        "documentation/app-market/analytics",
+        {
+          "group": "communication",
+          "pages": [
+            "documentation/app-market/communication/msg91",
+            "documentation/app-market/communication/sendgrid",
+            "documentation/app-market/communication/whatsapp-white-label"
+          ]
+        },
+        "documentation/app-market/marketing",
+        "documentation/app-market/communication",
+        "documentation/app-market/payments",
+        {
+          "group": "migration",
+          "pages": [
+            "documentation/app-market/migration/woocommerce",
+            "documentation/app-market/migration/shopify",
+            "documentation/app-market/migration/magento"
+          ]
+        },
+        {
+          "group": "google-search-console",
+          "pages": [
+            "documentation/app-market/google-search-console/submit-your-sitemap",
+            "documentation/app-market/google-search-console/request-indexing",
+            "documentation/app-market/google-search-console/important-notes"
+          ]
+        },
+        {
+          "group": "analytics",
+          "pages": [
+            "documentation/app-market/analytics/google-analytics",
+            "documentation/app-market/analytics/hotjar",
+            "documentation/app-market/analytics/bing-webmaster",
+            "documentation/app-market/analytics/lucky-orange-analytics",
+            "documentation/app-market/analytics/clarity-by-microsoft",
+            "documentation/app-market/analytics/meta-pixel"
           ]
         }
       ]
