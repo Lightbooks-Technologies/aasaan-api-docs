@@ -2,6 +2,102 @@
 title: "Communication"
 ---
 
-**Aasaan** allows you to add your store branding in your order notification emails and text messages. This is done by integrating the Sendgrid and MSG91 apps respectively.
+## SendGrid Integration Guide
 
-In this section, you will learn how to integrate Sendgrid and MSG91 to be able to add your own store branding to your customer communications.
+**How to Set up SendGrid on Your Store**  
+*Integrate SendGrid to Your Store*  
+*Note: Click [here](mobile-admin-link) to navigate to the mobile admin app version of this article.*
+
+SendGrid, a leading cloud-based email delivery platform, allows you to send transactional and marketing emails with your own branding. Integrating SendGrid with your aasaan store enables sending order notification emails from your professional email address. This guide covers setting up your domain, sender authentication, obtaining an API key, and integrating SendGrid into your aasaan store.
+
+*Important:*
+- Ensure SendGrid is installed from the aasaan app market. For installation guidance, click [here](app-market-link).
+
+<Tabs>
+  <Tab title="Domain & Sender Authentication">
+  
+  ### Part 1: Setting up your Domain & Sender Authentication
+
+  Domain authentication, crucial for email deliverability and sender reputation, involves configuring DNS entries to authorize SendGrid to send emails on your behalf. Follow the steps in the SendGrid UI under Settings > Sender Authentication to add the provided DNS records to your DNS provider.
+
+To set up domain authentication:
+
+1. In the SendGrid UI, select Settings > Sender Authentication.
+2. In the domain authentication section, click Get Started.
+3. Next, add in information about your DNS host, and indicate whether you also want to set up link branding. Click Next. For more information about link branding, check out: What is link branding?. Note: We recommend you select Yes to set up link branding.
+4. Fill in the domain that you want to send from and add advanced settings as needed. Make sure that you only enter the name of your root domain. Do not include www or http://www in this field. Your domain needs to match the domain of your FROM address on the emails you are sending out. For example, if I am sending an email from example@sendgrid.com, I would set my domain authentication domain to be sendgrid.com. Click Next. For more information about advanced settings, see Advanced settings.
+5. Next, you need to add all of the CNAME records on this screen to your DNS host. This process varies depending on your DNS host. For videos on how to add your CNAME to some popular DNS service providers, check out these videos. If you don't have access to modify your company's DNS records, you can also email a request to a co-worker. This email includes a direct link to the CNAME records. This link does expire. The recipient doesn't need login access to your SendGrid account.
+
+  After adding the CNAME records, return to SendGrid to verify the setup. For detailed instructions on verifying a single sender, click [here](verify-sender-link).
+
+  </Tab>
+
+  <Tab title="Getting Your API Key">
+  
+  ### Part 2: Getting Your API Key
+1. Navigate to Settings on the left navigation bar, and then select API Keys.
+2. Click Create API Key.
+3. Give your API key a name.
+4. Select Full Access.
+5. Click Create & View.
+  </Tab>
+
+  <Tab title="Integration in aasaan">
+  
+  ### Part 3: Entering Your API Key in aasaan
+
+  #### STEP 1:
+  Install SendGrid from the aasaan app market and navigate to the installed app within aasaan.
+
+  #### STEP 2:
+  Enter the API key and your sender email ID in the SendGrid app settings in aasaan, then click 'Verify' to complete the integration.
+
+  With these steps, SendGrid is now ready to handle your store's email communications.
+
+  </Tab>
+</Tabs>
+
+---
+
+## WhatsApp White Label Integration
+
+*Integrate WhatsApp White Label to Your Store*  
+*Note: Click [here](mobile-admin-link) to navigate to the mobile admin app version of this article.*
+
+WhatsApp White Label service allows you to use WhatsApp for business communication with full branding control. This section will guide you through the process of integrating WhatsApp White Label service into your aasaan store, enabling direct communication with your customers through WhatsApp.
+
+*Installation and integration steps will be provided based on the specific requirements and setup process for the WhatsApp White Label service.*
+
+---
+
+## MSG91 Integration Guide
+
+**Integrate MSG91 to Your Store**  
+*Note: Click [here](mobile-admin-link) to navigate to the mobile admin app version of this article.*
+
+MSG91 offers robust SMS solutions for businesses, facilitating communication with customers through automated SMS notifications. This guide will walk you through the process of integrating MSG91 with your aasaan store to enhance customer engagement through timely SMS notifications.
+
+*Important:*
+- Ensure MSG91 is installed from the aasaan app market. For installation guidance, click [here](app-market-link).
+
+<Tabs>
+  <Tab title="Integration Steps">
+  
+  ### Integrating MSG91 with Your Store
+
+  Follow the steps to configure MSG91 within your aasaan store, enabling you to send automated SMS notifications for order confirmations, shipping updates, and more.
+
+  - **Detailed integration steps will be outlined here, including how to obtain an API key from MSG91, configuring SMS templates, and setting up triggers within the aasaan store for various customer interactions.**
+
+  </Tab>
+
+  <Tab title="Configuration and Usage">
+  
+  ### Configuring MSG91 for Optimal Use
+
+  - **This section will provide guidance on best practices for setting up SMS templates, scheduling messages, and using MSG91 features to maximize engagement and deliverability.**
+
+  </Tab>
+</Tabs>
+
+---

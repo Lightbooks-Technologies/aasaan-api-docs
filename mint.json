@@ -71,7 +71,15 @@
       {
         "group": "APP MARKETP",
         "pages": [
-            "documentation/app-market/payment"
+            "documentation/app-market/payments",
+            "documentation/app-market/shopping",
+            "documentation/app-market/verify",
+            "documentation/app-market/migration",
+            "documentation/app-market/analytics",
+            "documentation/app-market/communication",
+            "documentation/app-market/marketing",
+            "documentation/app-market/shipping",
+            "documentation/app-market/support"
           ]
         },
       {
