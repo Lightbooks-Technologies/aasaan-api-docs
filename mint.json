@@ -80,7 +80,8 @@
         "documentation/commerce/customers",
         "documentation/commerce/coupons",
         "documentation/commerce/reviews",
-        "documentation/commerce/store-settings"
+        "documentation/commerce/store-settings",
+        "documentation/commerce/analytics"
       ]
     },
     {
