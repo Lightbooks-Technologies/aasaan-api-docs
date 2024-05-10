@@ -32,45 +32,107 @@ In this section, you will learn how to manage notifications, tax fields, API aut
 
     </Accordion>
 
-### Tax Fields
-    <Accordion title="Manage Tax Fields">
+### Tax Rules
+    <Accordion title="Manage Tax Rules">
+        <Note>
+            This guide is for merchants who use Tax calculations to sell in their online store.
+
+            You need to determine whether you should charge tax before you start selling. You might need to register with tax agencies. After that, you can set up your taxes in aasaan to help ensure that you charge the correct rates wherever you sell. 
+            
+            It's your responsibility to consult with local tax authorities or a tax professional to verify that you charge your customers the correct tax rates, and to ensure that you file and remit your taxes correctly.
+        </Note>
+        To make sure that you're charging the correct amount of tax, configure your tax settings on the Taxes Rules page in your aasaan admin.
+
         **STEP 1:**
         Login to your aasaan admin panel and click on Manage.
         <Frame>
-        <img src="https://cdn.lightbooks-dev.io/docs/manage/taxfields/taxfields-01.png" />
+        <img src="https://cdn.lightbooks-dev.io/docs/manage/taxrules/taxrules-01.png" />
         </Frame>
 
         **STEP 2:**
-        Click on Tax Fields.
+        Click on Tax Rules.
         <Frame>
-        <img src="https://cdn.lightbooks-dev.io/docs/manage/taxfields/taxfields-02.png" />
+        <img src="https://cdn.lightbooks-dev.io/docs/manage/taxrules/taxrules-02.png" />
         </Frame>
 
-        **STEP 3:**
-        Click on Create Tax Field.
+        <Tip>
+        You would observe a sample tax rule already available that you can modify as per your business requirements.
         <Frame>
-        <img src="https://cdn.lightbooks-dev.io/docs/manage/taxfields/taxfields-03.png" />
+        <img src="https://cdn.lightbooks-dev.io/docs/manage/taxrules/taxrules-03.png" />
+        </Frame>
+        In the event there are no pre-defined tax rule available, create a new tax rule by clicking the button "**+ Create Tax Rules**"
+        </Tip>
+
+        <Tip>
+        There are additional settings you need to adjust as per your business requirements.
+        <Frame>
+        <img src="https://cdn.lightbooks-dev.io/docs/manage/taxrules/taxrules-04.png" />  
+        </Frame>
+        1.  **Product prices include tax** : Enable this option if all your products price is inclusive of taxes.
+        2.  **Apply tax after discounts** : Enable this option to apply taxes after the discount amount is deducted.
+        3.  **Taxable location** : Determining which location is used for tax calculations. As of now "Shipping Address" is the only option available.
+        4.  **Calculation source** : Determining which value is used for tax calculations. As of now "Product Price" is the only option available.
+        </Tip>
+
+        **STEP 3:**
+        Creating Tax Rules.
+        <Frame>
+        <img src="https://cdn.lightbooks-dev.io/docs/manage/taxrules/taxrules-05.png" />
         </Frame>
 
         **STEP 4:**
-        Enter the tax name, tax label, and tax value (the tax rate). Mark the tax field as "Enabled" and click on Save.
+        Enter the rule name and choose if the rule applies to all products or individual products. 
         <Frame>
-        <img src="https://cdn.lightbooks-dev.io/docs/manage/taxfields/taxfields-04.png" />
+        <img src="https://cdn.lightbooks-dev.io/docs/manage/taxrules/taxrules-06.png" />
         </Frame>
         <Note>
-        1. The tax label will be visible to the customer during the checkout process and in the order receipt.
-        2. The tax value you choose here will apply to all the products in your store. If you wish to assign different tax rates to different products, you can do it in the Product level taxes section when you create/edit a product.
-        Choose the channel in which your tax rate will apply.
+        If you choose that the rule is applicable for individual products, you need to include the rule at the product's tax override section. Otherwise those rules will not be considered during tax calculations.
         </Note>
-        <Info>
-        The feature of choosing a channel for the tax rate is only offered on the business plan.*
-        </Info>
 
         **STEP 5:**
-        Your tax field has been successfully saved.
+        Creating Tax Rates.
         <Frame>
-        <img src="https://cdn.lightbooks-dev.io/docs/manage/taxfields/taxfields-05.png" />
+        <img src="https://cdn.lightbooks-dev.io/docs/manage/taxrules/taxrules-07.png" />
         </Frame>
+
+        **STEP 6:**
+        Enter the rate name, choose country & state and the applicable tax rate %. Press the **Save** button. To provide multiple tax rates repeat steps 5 & 6.
+        <Frame>
+        <img src="https://cdn.lightbooks-dev.io/docs/manage/taxrules/taxrules-08.png" />
+        </Frame>
+        <Note>
+        If you choose to apply tax at a zipcode/pincode level, provide the appropriate zipcode while creating the tax rate.
+        </Note>
+
+        <Tip>
+        **Example:**
+        Let's take a simple scenario - 
+            
+            Business operating from - Telangana  
+	            Shipping to - Maharashtra/Andhra Pradesh etc - **IGST** needs to be applied  
+	            Shipping to - Telangana - **CGST**, **SGST** needs to be applied  
+            GST applicable is - 18%  
+
+            Three tax rules need to be created -
+            1. **Tax - IGST**  
+                Rate Name		- **IGST**  
+                Country			- India  
+                State/Province	- Andhra Pradesh/Maharastra/Tamilnadu/Kerala etc. (Except Telangana all other states should be included)  
+                Zipcode/Pincode - optional  
+                Rate			- 18%  
+            2. **Tax - CGST**  
+                Rate Name		- **CGST**  
+                Country			- India  
+                State/Province	- Telangana  
+                Zipcode/Pincode - optional  
+                Rate			- 9%  
+            3. **Tax - SGST**  
+                Rate Name		- **SGST**  
+                Country			- India  
+                State/Province	- Telangana  
+                Zipcode/Pincode - optional  
+                Rate			- 9%  
+        </Tip>
     </Accordion>
 
 ### API Authentication
